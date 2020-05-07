@@ -1,0 +1,7 @@
+*pdf
+**/.vscode/**
+*.log
+*.fls
+*.aux
+*.fdb_latexmk
+*.synctex.gz

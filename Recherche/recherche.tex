@@ -1,0 +1,86 @@
+\documentclass[DIN, pagenumber=false, fontsize=11pt, parskip=half]{scrartcl}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{commath}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tikz-timing}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{xstring}
+\usepackage{circuitikz}
+\usepackage{listings}
+\usepackage[final]{pdfpages}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{cleveref}
+\usepackage{bm}
+
+
+\title{Research Intel SGX}
+\author{Tim Luchterhand}
+
+\begin{document}
+    \maketitle
+    \section{What is Intel SGX}
+    \begin{itemize}
+        \item Protection of secrets (Personal ID, medical data, \dots) in isolated memory regions (enclaves)
+        \item Enclaves are reserved from system memory and cannot be addressed. Additionally they are encrypted
+        \item Applications can create enclaves and work inside them by using a "trusted function"
+        \item Other attempts to access the enclave are denied by the processor
+    \end{itemize}
+
+    \section{Motivation}
+    \begin{itemize}
+        \item Process sensible data in a trusted environment on untrusted platforms:
+            \begin{itemize}
+                \item Protecting data even if the OS is malicious or against malware with kernel privileges
+                \item Running operations on sensitive data in a cloud without having to trust the cloud provider
+            \end{itemize}
+        \item Faster than homomorphic encryption
+        \item All main computations are performed on CPU, no need of communication with TPMs
+    \end{itemize}
+
+    \section{Idea of system design}
+    Multiple mutually distrusting parties want to use a common service operating on sensible data (for example: Smart
+    grid meters and service provider). Operations on data are performed by a trusted remote entity (TRE). The service
+    provider has to trust the TRE that its calculations are correct, the smart meters have to trust the TRE that no personal
+    data is compromised even if the entity running the TRE is malicious. Therefore all parties have to be able to ascertain 
+    the code and operations running in the TRE (remote attestation).
+
+    \section{Features of SGX}
+    \begin{itemize}
+        \item Isolation of areas of memory plus memory encryption
+        \item Sealing of data, only allowing decryption by a specific enclave. This enables saving enclaves securely in 
+              non volatile memory
+        \item remote and local attestation of enclaves
+    \end{itemize}
+
+    \section{Principle of SGX}
+    Enclaves are areas of virtual memory of an application process which are mapped to physically protected pages of real
+    memory (encrypted in hardware). The mapping is done by the os but verified by the CPU which does not trust the OS in 
+    general. Since the OS can alter the enclave binary before it is loaded, SGX uses remote attestation to ensure that only 
+    correct code is run.
+
+    \section{Security issues}
+    SGX does not protect against side channel attacks: If the control flow or memory access pattern of the enclave
+    depends on the secret data, sensible information may potentially be leaked. Further more, malicious code inside an 
+    enclave is invisible to the OS and cannot be analyzed due to the SGX isolation, making it theoretically possible for 
+    malware to hide itself in an enclave.
+
+    Additionally, all enclaves lie on the same physical enclave page cache, thus enabling DRAM-bases side channel attacks. 
+
+    \section{OpenSGX}
+    Is a software emulation of Intel SGX supporting most instructions provided by the latter while also providing a 
+    toolchain for monitoring performance and debugging support. An important aspect is that OpenSGX does not provide the
+    same security guarantees as Intel SGX.
+
+\end{document}

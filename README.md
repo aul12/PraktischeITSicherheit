@@ -1,6 +1,6 @@
 # PraktischeITSicherheit
 ## Structure
-### Lecture
+### Lecture (45 min)
  * Motivation SGX
  * What is (Intel-) SGX
  * How does Intel-SGX work
@@ -9,7 +9,7 @@
    * SGX for concealing attacks
  * OpenSGX
  
-### Exercise
+### Exercise (90 min)
  * Preconfigured container/vm with OpenSGX, Compiler...
  * E-Voting Software
  * Decision: Step by Step vs. Existiing Framework with less guiding

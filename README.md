@@ -13,3 +13,7 @@
  * Preconfigured container/vm with OpenSGX, Compiler...
  * Existing Framework with less guiding
  * E-Voting Software
+ * Problems:
+   * Anonymous voting
+   * Authentication (not a feature of SGX)
+ * Challenge: see result after each voter -> not anonymous

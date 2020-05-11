@@ -15,5 +15,5 @@
  * E-Voting Software
  * Problems:
    * Anonymous voting
-   * Authentication (not a feature of SGX)
+   * Authentication (not a feature of SGX; Attribute based Credentials)
  * Challenge: see result after each voter -> not anonymous

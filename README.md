@@ -11,5 +11,5 @@
 ### Exercise (90 min)
  * OpenSGX
  * Preconfigured container/vm with OpenSGX, Compiler...
- * E-Voting Software
  * Existing Framework with less guiding
+ * E-Voting Software

@@ -7,9 +7,9 @@
  * Problems
    * Vulnerabilities
    * SGX for concealing attacks
- * OpenSGX
  
 ### Exercise (90 min)
+ * OpenSGX
  * Preconfigured container/vm with OpenSGX, Compiler...
  * E-Voting Software
  * Decision: Step by Step vs. Existiing Framework with less guiding

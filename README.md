@@ -12,4 +12,4 @@
  * OpenSGX
  * Preconfigured container/vm with OpenSGX, Compiler...
  * E-Voting Software
- * Decision: Step by Step vs. Existiing Framework with less guiding
+ * Existing Framework with less guiding

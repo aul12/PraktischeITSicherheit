@@ -1,17 +1,15 @@
 # PraktischeITSicherheit
-## Aufbau
-### Vorlesung
+## Structure
+### Lecture
  * Motivation SGX
- * Was ist Intel-SGX
- * Funktionsweise
- * Sicherheitsprobleme
-   * Angriffmöglichkeiten
-   * Entstehende Sicherheitsprobleme
+ * What is (Intel-) SGX
+ * How does Intel-SGX work
+ * Problems
+   * Vulnerabilities
+   * SGX for concealing attacks
  * OpenSGX
  
-### Übung
- * Fertiger Container/VM mit OpenSGX, Compiler,...
- * Wahl Software
- * Entscheidung:
-   * Step by Step
-   * Mit fertigem Gerüst und Verweis auf Guide
+### Exercise
+ * Preconfigured container/vm with OpenSGX, Compiler...
+ * E-Voting Software
+ * Decision: Step by Step vs. Existiing Framework with less guiding

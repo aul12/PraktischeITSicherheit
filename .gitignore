@@ -5,3 +5,7 @@
 *.aux
 *.fdb_latexmk
 *.synctex.gz
+*.out
+*.pdfpc
+*.snm
+*.toc

@@ -1,11 +1,12 @@
-*pdf
 **/.vscode/**
-*.log
-*.fls
 *.aux
 *.fdb_latexmk
-*.synctex.gz
+*.fls
+*.log
+*.nav
 *.out
 *.pdfpc
 *.snm
+*.synctex.gz
 *.toc
+*pdf

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <errno.h>
 
 #include <sgx.h>
 #include <sgx-user.h>
@@ -9,15 +10,23 @@
 
 #include "libpipe.h"
 
+void handle_vote(int in_fd, int out_fd) {
+	char buf[2];
+	size_t readed = 0;
+	do {
+		ssize_t res = read(in_fd, buf, 2-readed);
+		if (res < 0) {
+			fprintf(stderr, "Invalid response by read: %s", strerror(errno));
+			return;
+		}
+		readed += res;
+	} while (readed < 2);	
+	uint8_t id = buf[0];
+	uint8_t vote = buf[1];
 
-// For simplicity, this function do simple operation.
-// In the realistic scenario, key creation, signature generation and etc will be
-// the possible example.
-void do_secret(char *buf) 
-{
-	for(int i=0; i<strlen(buf); i++) {
-		buf[i]++;
-	}
+	printf("%d voted for %d\n", id, vote);
+	char response[] = "Vote succesfull!";
+	write(out_fd, response, strlen(response)+1);
 }
 
 /* main operation. communicate with tor-gencert & tor process */
@@ -44,22 +53,9 @@ void enclave_main(int argc, char **argv)
 		sgx_exit(NULL);
 	}
 
-	// Read the request operations
-	int len;
-	char msg[20];
-	char tmp_buf[20];
-
-	read(fd_ae, &len, sizeof(int));
-	read(fd_ae, msg, len+1);
-
-	if(!strncmp(msg, "Do Something", len)) {
-		// Here, secure operation should be executed.
-		read(fd_ae, tmp_buf, 20);
-		do_secret(tmp_buf);
+	for (int c=0; c<3; ++c) {
+		handle_vote(fd_ae, fd_ea);
 	}
-
-	// Send the result
-	write(fd_ea, tmp_buf, 20);       
 
 	close(fd_ea);
 	close(fd_ae);

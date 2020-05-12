@@ -19,12 +19,21 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introductory example}
+    \frametitle{Introductory example - Problem}
     \begin{itemize}
         \item Hypervisor and / or guest-OS may be able to acquire sensitive data even if the application is secure!
     \end{itemize}
     \centering
     \incfig[0.65\textwidth]{CloudArchitectureExploit}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Introductory example - Solution}
+    \begin{itemize}
+        \item Moving sensitive data / operations into secure region within hardware \newline $\Rightarrow$ not accessible even by privileged entities
+    \end{itemize}
+    \centering
+    \incfig[0.65\textwidth]{CloudArchitectureEnclave}
 \end{frame}
 
 \begin{frame}

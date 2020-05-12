@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Base: Ubuntu 14.04 Server (AMD64), as OpenSGX requires GCC with support for punch cards
-export OPENSGX_DIR=/home/sgx/opensgx
+export OPENSGX_DIR=$HOME/opensgx
 
 sudo apt update
 sudo apt install -y qemu libelf-dev build-essential python pkg-config libglib2.0 zlib1g-dev libaio-dev autoconf libtool libssl-dev git

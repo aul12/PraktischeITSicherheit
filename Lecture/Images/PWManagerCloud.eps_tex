@@ -55,7 +55,7 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength]{PWManagerCloud.eps}}%
     \put(0.65218031,0.05797603){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26585523\unitlength}\raggedright Cloud\end{minipage}}}%
-    \put(0.15018242,0.20519977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.4592046\unitlength}\raggedright gesicherte Verbindung\end{minipage}}}%
+    \put(0.17555953,0.19674073){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.4592046\unitlength}\raggedright secure connection\end{minipage}}}%
     \put(0.61510983,0.17362549){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.30334441\unitlength}\raggedright PW-Manager\end{minipage}}}%
   \end{picture}%
 \endgroup%

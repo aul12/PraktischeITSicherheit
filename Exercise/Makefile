@@ -6,8 +6,6 @@ ROOT=$(PWD)
 
 %.conf: %.sgx sign.key
 	$(OPENSGX) -s $< --key sign.key
-	#cd $(OPENSGX_DIR); $(OPENSGX) -s $(ROOT)/$< --key $(ROOT)/sign.key
-	#mv $(OPENSGX_DIR)/$@ $(ROOT)/$@
 
 %.sgx: %.o
 	cc -static -nostdlib -nostartfiles -Wl,-T,$(OPENSGX_DIR)/user/sgx.lds $< -o $@ $(OPENSGX_DIR)/libsgx/sgx-entry.o $(OPENSGX_DIR)/libsgx/libsgx.a $(OPENSGX_DIR)/libsgx/libpolarssl-sgx.a $(OPENSGX_DIR)/libsgx/libc-sgx.a

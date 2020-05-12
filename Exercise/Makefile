@@ -2,7 +2,7 @@ OPENSGX=$(OPENSGX_DIR)/opensgx
 ROOT=$(PWD)
 
 %.run: %.sgx %.conf
-	$(OPENSGX) -i $+
+	cd $(OPENSGX_DIR); $(OPENSGX) -i $(addprefix $(ROOT)/, $+)
 
 %.conf: %.sgx sign.key
 	$(OPENSGX) -s $< --key sign.key

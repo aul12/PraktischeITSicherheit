@@ -1,8 +1,11 @@
 OPENSGX=$(OPENSGX_DIR)/opensgx
 ROOT=$(PWD)
 
-%.run: %.sgx %.conf
+%.enc: %.sgx %.conf
 	cd $(OPENSGX_DIR); $(OPENSGX) -i $(addprefix $(ROOT)/, $+)
+
+%.run: %
+	./$*
 
 %.conf: %.sgx sign.key
 	$(OPENSGX) -s $< --key sign.key

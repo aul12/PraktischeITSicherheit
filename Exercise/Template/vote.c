@@ -7,5 +7,6 @@
 
 int main(void) 
 {
-    // Your code here
+    	// Your code here
+	return 0;
 }

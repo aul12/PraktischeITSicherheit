@@ -13,5 +13,6 @@
 
 void enclave_main()
 {
-    // Your code here
+	// Your code here
+	return 0;
 }

@@ -32,27 +32,29 @@ void handle_vote(int in_fd, int out_fd) {
 /* main operation. communicate with tor-gencert & tor process */
 void enclave_main(int argc, char **argv)
 {
+	// Setup pipe
 	int fd_ea = -1;
 	int fd_ae = -1;
 
 	char *port_enc_to_app = "e2a";
 	char *port_app_to_enc = "a2e";
 
-	if(pipe_init(0) < 0) {
+	if(pipe_init() < 0) {
 		puts("Error in pipe_init");
 		sgx_exit(NULL);
 	}
 
-	if((fd_ea = pipe_open(port_enc_to_app, RB_MODE_WR, 0)) < 0) {
+	if((fd_ea = pipe_open(port_enc_to_app, RB_MODE_WR)) < 0) {
 		puts("Error in pipe_open");
 		sgx_exit(NULL);
 	}
 
-	if((fd_ae = pipe_open(port_app_to_enc, RB_MODE_RD, 0)) < 0) {
+	if((fd_ae = pipe_open(port_app_to_enc, RB_MODE_RD)) < 0) {
 		puts("Error in pipe_open");
 		sgx_exit(NULL);
 	}
 
+	// Wait for three votes
 	for (int c=0; c<3; ++c) {
 		handle_vote(fd_ae, fd_ea);
 	}

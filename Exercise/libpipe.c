@@ -15,15 +15,9 @@ const char TMP_DIRECTORY_RUN[] = "/tmp/ipc_run";
 const char TMP_FILE_NUMBER_FMT[] =  "/pipe_";
 const int NAME_BUF_SIZE = 256;
 
-int pipe_init(int flag_dir)
+int pipe_init(void)
 {
-	int ret;
-
-	if(flag_dir == 0) {
-		ret = mkdir(TMP_DIRECTORY_CONF, 0770);
-	} else if(flag_dir == 1) {
-		ret = mkdir(TMP_DIRECTORY_RUN, 0770);
-	}
+	int ret = mkdir(TMP_DIRECTORY_CONF, 0770);
 
 	if(ret == -1) {
 		if(errno != EEXIST) {
@@ -34,19 +28,13 @@ int pipe_init(int flag_dir)
 	return 0;
 }
 
-int pipe_open(char *unique_id, int is_write, int flag_dir)
+int pipe_open(char *unique_id, int is_write)
 {
 	char name_buf[NAME_BUF_SIZE];
 
-	if (flag_dir == 0) {
-		strcpy(name_buf, TMP_DIRECTORY_CONF);
-		strcpy(name_buf+strlen(name_buf), TMP_FILE_NUMBER_FMT);
-		strcpy(name_buf+strlen(name_buf), unique_id);
-	} else if (flag_dir == 1) {
-		strcpy(name_buf, TMP_DIRECTORY_RUN);
-		strcpy(name_buf+strlen(name_buf), TMP_FILE_NUMBER_FMT);
-		strcpy(name_buf+strlen(name_buf), unique_id);
-	}
+	strcpy(name_buf, TMP_DIRECTORY_CONF);
+	strcpy(name_buf+strlen(name_buf), TMP_FILE_NUMBER_FMT);
+	strcpy(name_buf+strlen(name_buf), unique_id);
 
 	int ret = mknod(name_buf, S_IFIFO | 0770, 0);
 	if (ret == -1) {

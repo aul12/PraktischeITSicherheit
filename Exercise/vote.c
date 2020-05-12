@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	scanf("%u", &uid);
 	printf("Select your vote:\n");
 	scanf("%u", &vote);
-	printf("%u, %u\n", uid, vote);
+	printf("You (%u) will vote for: %u\n", uid, vote);
 
 	// Initialize and open pipes
 	int fd_ea = -1;
@@ -23,21 +23,22 @@ int main(int argc, char *argv[])
 	char *port_enc_to_app = "e2a";
 	char *port_app_to_enc = "a2e";
 
-	if (pipe_init(0) < 0) {
+	if (pipe_init() < 0) {
 		perror("Error in pipe_init");
 		exit(1);
 	}
 
-	if ((fd_ea = pipe_open(port_enc_to_app, RB_MODE_RD, 0)) < 0) {
+	if ((fd_ea = pipe_open(port_enc_to_app, RB_MODE_RD)) < 0) {
 		perror("Error in pipe_open");
 		exit(1);
 	}
 
-	if ((fd_ae = pipe_open(port_app_to_enc, RB_MODE_WR, 0)) < 0) {
+	if ((fd_ae = pipe_open(port_app_to_enc, RB_MODE_WR)) < 0) {
 		perror("Error in pipe_open");
 		exit(1);
 	}
 
+	// Send vote and wait for response
 	char buf[2] = {(char)uid, (char)vote};
 	write(fd_ae, buf, sizeof(buf));
 
@@ -48,21 +49,5 @@ int main(int argc, char *argv[])
 	close(fd_ae);
 	close(fd_ea);
 	
-	// Request some operations
-	/*int len;
-	len = strlen("Do Something");
-	write(fd_ae, &len, sizeof(int));
-	write(fd_ae, "Do Something", len+1);
-
-	// Send input
-	char tmp_buf[20];
-	strcpy(tmp_buf, "11111111");
-	write(fd_ae, tmp_buf, 20);
-	printf("Input = %s\n", tmp_buf);
-
-	// Receive the result
-	read(fd_ea, tmp_buf, 20); 
-	printf("Output = %s\n", tmp_buf);*/
-
 	return 0;
 }

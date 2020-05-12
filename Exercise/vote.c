@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 	char response[128];
 	read(fd_ea, response, sizeof(response));
-	printf("Response: %s", response);
+	printf("Response: %s\n", response);
 
 	close(fd_ae);
 	close(fd_ea);

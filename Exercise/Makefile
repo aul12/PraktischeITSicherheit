@@ -1,6 +1,8 @@
 OPENSGX=$(OPENSGX_DIR)/opensgx
 ROOT=$(PWD)
 
+test: test.enc;
+
 %.enc: %.sgx %.conf
 	cd $(OPENSGX_DIR); $(OPENSGX) -i $(addprefix $(ROOT)/, $+)
 

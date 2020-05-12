@@ -15,4 +15,4 @@ cd $OPENSGX_DIR
 make -C libsgx -j $(nproc)
 make -C user -j $(nproc)
 
-echo "PATH=$OPENSGX_DIR:\$PATH" >> $HOME/.bashrc
+echo "export OPENSGX_DIR=$OPENSGX_DIR" >> $HOME/.bashrc

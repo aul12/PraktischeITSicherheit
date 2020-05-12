@@ -1,32 +1,24 @@
-RUBBER=rubber
-SCREEN=screen
-VIEWER=xdg-open
-PYTHON=python3
-ZIP=zip
+OPENSGX=$(OPENSGX_DIR)/opensgx
+ROOT=$(PWD)
 
-all: main.pdf
+%.run: %.sgx %.conf
+	$(OPENSGX) -i $+
 
-show: main.pdf
-	$(SCREEN) -dm $(VIEWER) main.pdf
+%.conf: %.sgx sign.key
+	$(OPENSGX) -s $< --key sign.key
+	#cd $(OPENSGX_DIR); $(OPENSGX) -s $(ROOT)/$< --key $(ROOT)/sign.key
+	#mv $(OPENSGX_DIR)/$@ $(ROOT)/$@
 
-release: Sheet12GroupP.zip
+%.sgx: %.o
+	cc -static -nostdlib -nostartfiles -Wl,-T,$(OPENSGX_DIR)/user/sgx.lds $< -o $@ $(OPENSGX_DIR)/libsgx/sgx-entry.o $(OPENSGX_DIR)/libsgx/libsgx.a $(OPENSGX_DIR)/libsgx/libpolarssl-sgx.a $(OPENSGX_DIR)/libsgx/libc-sgx.a
 
-Sheet12GroupP.zip: main.pdf *.py *.ipynb
-	$(ZIP) $@  main.pdf *.py *.ipynb
+%.o: %.c
+	cc -c -g -I$(OPENSGX_DIR)/user/include -I$(OPENSGX_DIR)/user/share/include -Wall -pedantic -Wno-unused-function -std=gnu11 -I$(OPENSGX_DIR)/libsgx/include -I$(OPENSGX_DIR)/libsgx/musl-libc/include -fno-stack-protector -static -fvisibility=hidden -o $@ $<
 
-main.pdf: main.tex
-	$(RUBBER) -d main.tex
+sign.key:
+	$(OPENSGX) -k
 
-%.eps: %.svg
-	inkscape $< -E $@ --export-ignore-filters --export-ps-level=3
-
-clean: clean-temp
-	rm -f *.pdf
-	rm -f *.zip
-	rm -f *.npy
-
-clean-temp:
-	$(RUBBER) --clean main.tex
-	rm -f *.eps
-	rm -f *-eps-converted-to.pdf
-	rm -f *.log
+clean:
+	rm -f sign.key
+	rm -f *.sgx
+	rm -f *.conf

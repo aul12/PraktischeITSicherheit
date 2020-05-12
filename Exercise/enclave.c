@@ -25,13 +25,13 @@ static int pipe_init(int flag_dir)
 {
 	int ret;
 
-	if(flag_dir == 0)
+	if(flag_dir == 0) {
 		ret = mkdir(TMP_DIRECTORY_CONF, 0770);
-	else if(flag_dir == 1)
+	} else if(flag_dir == 1) {
 		ret = mkdir(TMP_DIRECTORY_RUN, 0770);
+	}
 
-	if(ret == -1)
-	{
+	if(ret == -1) {
 		if(errno != EEXIST) {
 			puts("Fail to mkdir");
 			return -1;
@@ -55,8 +55,7 @@ static int pipe_open(char *unique_id, int is_write, int flag_dir)
 	}
 
 	int ret = mknod(name_buf, S_IFIFO | 0770, 0);
-	if(ret == -1)
-	{
+	if (ret == -1) {
 		if(errno != EEXIST) {
 			puts("Fail to mknod");
 			return -1;
@@ -64,15 +63,15 @@ static int pipe_open(char *unique_id, int is_write, int flag_dir)
 	}
 
 	int flag = O_ASYNC;
-	if(is_write)
+	if(is_write) {
 		flag |= O_WRONLY;
-	else
+	} else {
 		flag |= O_RDONLY;
+	}
 
 	int fd = open(name_buf, flag);
 
-	if(fd == -1)
-	{
+	if (fd == -1) {
 		puts("Fail to open");
 		return -1;
 	}
@@ -85,8 +84,9 @@ static int pipe_open(char *unique_id, int is_write, int flag_dir)
 // the possible example.
 void do_secret(char *buf) 
 {
-	for(int i=0; i<strlen(buf); i++)
+	for(int i=0; i<strlen(buf); i++) {
 		buf[i]++;
+	}
 }
 
 /* main operation. communicate with tor-gencert & tor process */

@@ -171,22 +171,22 @@
        transform="matrix(0.26458333,0,0,0.26458333,67.619191,43.836908)"><flowRegion
          id="flowRegion1606"><rect
            id="rect1608"
-           width="136.37061"
-           height="50.002552"
+           width="181.82747"
+           height="48.992401"
            x="196.47467"
            y="10.341732" /></flowRegion><flowPara
          id="flowPara1610"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">\tiny Password 1</flowPara></flowRoot>    <flowRoot
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">\scriptsize Password 1</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot1604-0"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        transform="matrix(0.26458333,0,0,0.26458333,67.619191,48.085915)"><flowRegion
          id="flowRegion1606-4"><rect
            id="rect1608-2"
-           width="136.37061"
+           width="181.82745"
            height="50.002552"
            x="196.47467"
            y="10.341732" /></flowRegion><flowPara
          id="flowPara1610-9"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">\tiny Password 2</flowPara></flowRoot>  </g>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">\scriptsize Password 2</flowPara></flowRoot>  </g>
 </svg>

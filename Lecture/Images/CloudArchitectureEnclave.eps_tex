@@ -54,8 +54,8 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength]{CloudArchitectureEnclave.eps}}%
-    \put(0.74490681,0.08465559){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.3525838\unitlength}\raggedright \tiny Password 1\end{minipage}}}%
-    \put(0.74490681,0.05864761){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.3525838\unitlength}\raggedright \tiny Password 2\end{minipage}}}%
+    \put(0.73973585,0.08465559){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.49492318\unitlength}\raggedright \scriptsize Password 1\end{minipage}}}%
+    \put(0.73973585,0.05864761){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.49492318\unitlength}\raggedright \scriptsize Password 2\end{minipage}}}%
     \put(0.62288246,0.56867785){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37086595\unitlength}\raggedright PW-Manager\end{minipage}}}%
     \put(0.33981292,0.04157582){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cloud-Hardware\end{tabular}}}}%
     \put(0.39277996,0.16582567){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hypervisor\end{tabular}}}}%

@@ -110,11 +110,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="272.42633"
-     inkscape:cy="104.82898"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="155.03736"
+     inkscape:cy="147.74505"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-global="false"
      inkscape:window-width="1920"
@@ -151,7 +151,7 @@
      transform="translate(-58.351494,-27.025)">
     <g
        id="g1047"
-       transform="translate(-1.0583334,0.52916663)">
+       transform="translate(-1.5875001,0.52916663)">
       <flowRoot
          transform="matrix(0.26458333,0,0,0.26458333,83.655363,84.600883)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -160,11 +160,11 @@
            id="flowRegion1606"><rect
              y="10.341732"
              x="196.47467"
-             height="50.002552"
-             width="136.37061"
+             height="47.982246"
+             width="191.42392"
              id="rect1608" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara1610">\tiny Password 1</flowPara></flowRoot>      <flowRoot
+           id="flowPara1610">\scriptsize Password 1</flowPara></flowRoot>      <flowRoot
          transform="matrix(0.26458333,0,0,0.26458333,83.655363,87.262389)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot1604-0"
@@ -172,11 +172,11 @@
            id="flowRegion1606-4"><rect
              y="10.341732"
              x="196.47467"
-             height="50.002552"
-             width="136.37061"
+             height="54.548237"
+             width="191.42392"
              id="rect1608-2" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara1610-9">\tiny Password 2</flowPara></flowRoot>    </g>
+           id="flowPara1610-9">\scriptsize Password 2</flowPara></flowRoot>    </g>
     <rect
        y="35.811256"
        x="116.41666"
@@ -286,37 +286,41 @@
     <rect
        style="fill:#548dc0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
        id="rect1019"
-       width="21.916101"
-       height="7.0826426"
-       x="132.97855"
-       y="87.041397" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-       id="rect1049"
-       width="3.0647464"
-       height="2.0814049"
-       x="150.35071"
-       y="90.28447" />
-    <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44157583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-       id="path1053"
-       sodipodi:type="arc"
-       sodipodi:cx="151.88307"
-       sodipodi:cy="-90.187965"
-       sodipodi:rx="1.1254088"
-       sodipodi:ry="1.4176179"
-       sodipodi:start="0.019592502"
-       sodipodi:end="3.1217769"
-       sodipodi:open="true"
-       d="m 153.00826,-90.160192 a 1.1254088,1.4176179 0 0 1 -1.12506,1.389845 1.1254088,1.4176179 0 0 1 -1.12532,-1.389529"
-       transform="scale(1,-1)" />
-    <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.17942041;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-       id="path1055"
-       cx="151.88307"
-       cy="91.32518"
-       rx="0.48319361"
-       ry="0.50014776" />
+       width="24.601089"
+       height="7.0273032"
+       x="133.00621"
+       y="87.069069" />
+    <g
+       id="g2260"
+       transform="translate(2.6458334,3.4722568e-6)">
+      <rect
+         y="90.28447"
+         x="150.35071"
+         height="2.0814049"
+         width="3.0647464"
+         id="rect1049"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+      <path
+         transform="scale(1,-1)"
+         d="m 153.00826,-90.160192 a 1.1254088,1.4176179 0 0 1 -1.12506,1.389845 1.1254088,1.4176179 0 0 1 -1.12532,-1.389529"
+         sodipodi:open="true"
+         sodipodi:end="3.1217769"
+         sodipodi:start="0.019592502"
+         sodipodi:ry="1.4176179"
+         sodipodi:rx="1.1254088"
+         sodipodi:cy="-90.187965"
+         sodipodi:cx="151.88307"
+         sodipodi:type="arc"
+         id="path1053"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44157583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+      <ellipse
+         ry="0.50014776"
+         rx="0.48319361"
+         cy="91.32518"
+         cx="151.88307"
+         id="path1055"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.17942041;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"

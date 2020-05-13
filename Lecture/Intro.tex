@@ -40,6 +40,23 @@
     \frametitle{What is Intel SGX}
     \begin{itemize}
         \item Software Guard Extension (SGX for short)
-        \item Protects secrets in ``enclaves`` i.e. protected memory regions
+        \item Protects secrets in ``enclaves`` i.e. isolated execution environments
+        \item Security policies enforced in CPU $\Rightarrow$ even OS or BIOS cannot access enclaves
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Features of Intel SGX}
+    \begin{itemize}
+        \item Secure computations within enclaves
+        \begin{itemize}
+            \item Backed by encrypted memory pages (Enclave Page Cache, EPC)
+            \item Only addressable by the corresponding enclave
+        \end{itemize}
+        \item Computations run directly in CPU $\Rightarrow$ no dedicated TPM needed \newline $\Rightarrow$ fast
+        \item Local and remote attestation
+        \item Data sealing
+    \end{itemize}
+    
+
 \end{frame}

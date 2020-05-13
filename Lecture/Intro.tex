@@ -1,5 +1,6 @@
+\section{Introductory Example}
 \begin{frame}
-    \frametitle{Introductory example}
+    \frametitle{Introductory Example}
     \begin{itemize}
         \item Self-developed password manager (100\% trusted)
         \item Access to passwords from everywhere \newline$ \Rightarrow$ Hosting by cloud service provider
@@ -9,7 +10,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introductory example}
+    \frametitle{Introductory Example}
     \begin{itemize}
         \item Application runs in container
         \item Trust in lower layer components necessary
@@ -19,7 +20,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introductory example - Problem}
+    \frametitle{Introductory Example - Problem}
     \begin{itemize}
         \item Hypervisor and / or guest-OS may be able to acquire sensitive data even if the application is secure!
     \end{itemize}
@@ -28,13 +29,15 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introductory example - Solution}
+    \frametitle{Introductory Example - Solution}
     \begin{itemize}
         \item Moving sensitive data / operations into secure region within hardware \newline $\Rightarrow$ not accessible even by privileged entities
     \end{itemize}
     \centering
     \incfig[0.65\textwidth]{CloudArchitectureEnclave}
 \end{frame}
+
+\section{What is Intel SGX}
 
 \begin{frame}
     \frametitle{What is Intel SGX}

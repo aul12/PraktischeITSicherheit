@@ -2,18 +2,18 @@
 \begin{frame}
     \frametitle{Introductory Example}
     \begin{itemize}
-        \item Self-developed password manager (100\% trusted)
-        \item Access to passwords from everywhere \newline$ \Rightarrow$ Hosting by cloud service provider
+        \visible<1->{\item Self-developed password manager (100\% trusted)}
+        \visible<2>{\item Access to passwords from everywhere \newline$ \Rightarrow$ Hosting by cloud service provider}
     \end{itemize}
     \centering
-    \incfig[0.9\textwidth]{PWManagerCloud}
+    \visible<2>{\incfig[0.9\textwidth]{PWManagerCloud}}
 \end{frame}
 
 \begin{frame}
     \frametitle{Introductory Example}
     \begin{itemize}
         \item Application runs in container
-        \item Trust in lower layer components necessary
+        \item \visible<2>{Trust in lower layer components necessary}
     \end{itemize}
     \centering
     \incfig[0.65\textwidth]{CloudArchitecture}
@@ -42,23 +42,23 @@
 \begin{frame}
     \frametitle{What is Intel SGX}
     \begin{itemize}
-        \item Software Guard Extension (SGX for short)
-        \item Protects secrets in ``enclaves`` i.e. isolated execution environments
-        \item Security policies enforced in CPU $\Rightarrow$ even OS or BIOS cannot access enclaves
+        \item \visible<1->{Software Guard Extension (SGX for short)}
+        \item \visible<2->{Protects secrets in ``enclaves`` i.e. isolated execution environments}
+        \item \visible<3>{Security policies enforced in CPU $\Rightarrow$ even OS or BIOS cannot access enclaves}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Features of Intel SGX}
     \begin{itemize}
-        \item Secure computations within enclaves
+        \item \visible<1->{Secure computations within enclaves}
         \begin{itemize}
-            \item Backed by encrypted memory pages (Enclave Page Cache, EPC)
-            \item Only addressable by the corresponding enclave
+            \item \visible<2->{Backed by encrypted memory pages (Enclave Page Cache, EPC)}
+            \item \visible<3->{Only addressable by the corresponding enclave}
         \end{itemize}
-        \item Computations run directly in CPU $\Rightarrow$ no dedicated TPM needed \newline $\Rightarrow$ fast
-        \item Local and remote attestation
-        \item Data sealing
+        \item \visible<4->{Computations run directly in CPU $\Rightarrow$ no dedicated TPM needed \newline $\Rightarrow$ fast}
+        \item \visible<5->{Local and remote attestation}
+        \item \visible<6>{Data sealing}
     \end{itemize}
     
 

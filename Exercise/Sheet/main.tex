@@ -20,10 +20,27 @@
 \usepackage[final]{pdfpages}
 \usepackage{subcaption}
 \usepackage{import}
-\usepackage{cleveref}
 \usepackage{bm}
+\usepackage{hyperref}
+\usepackage{todonotes}
 
-\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows,shadows}
+
+\newcommand*\keystroke[1]{%
+  \tikz[baseline=(key.base)]
+    \node[%
+      draw,
+      fill=white,
+      drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=black,opacity=0.75},
+      rectangle,
+      rounded corners=2pt,
+      inner sep=1pt,
+      line width=0.5pt,
+      font=\scriptsize\sffamily
+    ](key) {#1\strut}
+  ;
+}
+
 
 %Inkscape fuckery
 \newcommand{\incfig}[2][\columnwidth]{%
@@ -36,4 +53,53 @@
 
 \begin{document}
     \maketitle
+    \section{OpenSGX}
+    Intel-SGX utilises special instructions and special CPU features to guarantee the security of an enclave.
+    Thus the processor requires hardware support for Intel-SGX, which is only part of more recent Intel
+    processors (6th generation and later). To be able to test SGX applications on devices without an recent
+    Intel processor, there is OpenSGX. OpenSGX is a emulator (based on QEMU), that emulates the features
+    provided by Intel-SGX. It was developed by the Georgia Institute of Techology to be able to not only
+    test SGX enabled application, but also to be able to better debug software running in enclaves.
+
+    As OpenSGX is purely software based it can not make the same security guarantees as Intel-SGX, in the end
+    the memory of the emulator is part of the normal (not encrypted) memory, and can thus be read by the
+    underlying OS.
+    For our exercise this is sufficient, as we would only like to develop an application utilising SGX to demonstrate
+    what is possible using SGX.
+
+    \section{Setting up your development environment}
+    OpenSGX only supports a very limited number of operating systems, this is why we decided to provide you with
+    an preconfigured virtual machine image to remove the hassle of compiling OpenSGX from source. To use the image
+    you need to install virtual box\footnote{\url{https://www.virtualbox.org/}}  which is available for free
+    (free as in beer and free as in freedom) for all major operating systems. 
+
+    After installing OpenSGX download our virtual box image from \todo{Link, geht das über Moodle? Eigner FTP?}.
+    Now you need to create a new virtual machine from our disk image, for this follow the steps below:
+    \begin{enumerate}
+        \item In Virtualbox click on New (or use the shortcut \keystroke{Ctrl}+\keystroke{N})
+        \item Fill in the fields of the dialog:
+            \begin{itemize}
+                \item \textit{Name}: Select any name for your virtual machine
+                \item \textit{Machine Folder}: Select any folder on your computer which virtual box will use to save
+                    files
+                \item \textit{Type}: Select "Linux"
+                \item \textit{Version}: Select "Ubuntu (64-bit)" (the image is based on Ubuntu 14.04, this is
+                    the most recent version of Ubuntu supported by OpenSGX)
+            \end{itemize}
+        \item Click on "Next" to get to the "Memory Size" page
+        \item Select the amount of RAM you would like to give to the VM, 1GB is sufficient, but you can give more
+            if you like to
+        \item Click on "Next" to get to the "Hard disk" page
+        \item Select "Use an existing virtual hard disk file" and select the file that you have downloaded
+        \item Click on "Create" to finish the wizard, then click on "Start" to launch the VM
+        \item After booting you get a login prompt, both the user and the password is "sgx"
+    \end{enumerate}
+
+    \section{Testing your development environment}
+
+    \section{Challenges E-Voting}
+
+    \section{E-Voting using SGX}
+
+    \section{Implementing an E-Voting application}
 \end{document}

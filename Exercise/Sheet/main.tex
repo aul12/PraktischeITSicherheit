@@ -96,6 +96,14 @@
     \end{enumerate}
 
     \section{Testing your development environment}
+    After starting the VM and logging in you should get familiar with the environment, for this there is a file
+    called \texttt{test.c} in your home directory. Inspect the contents of the file with an editor of your choice
+    (\texttt{nano} and \texttt{vim} are already installed in the VM, but you can install any other editor).
+
+    Next compile and run the code for this run \texttt{make test.enc}, this generates the key for signing,
+    builds the application, signs the application and runs it an enclave using OpenSGX.
+    OpenSGX prints a lot of debug information while running, but you should also be able to see the "Hello World!"
+    message printed by the test program.
 
     \section{Challenges E-Voting}
 

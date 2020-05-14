@@ -105,7 +105,7 @@
     OpenSGX prints a lot of debug information while running, but you should also be able to see the "Hello World!"
     message printed by the test program.
 
-    \section{Challenges E-Voting}
+    \section{Challenges of E-Voting}
     The main part of the exercise is to implement an electronic voting application using OpenSGX. 
     The primary (security) challenges of E-Voting from a developers perspective are
     \footnote{\url{https://cadmus.eui.eu/bitstream/handle/1814/44926/EUDO_REPORT_2016_11.pdf?sequence=1}}:
@@ -142,4 +142,26 @@
     \end{figure}
 
     \section{Implementing an E-Voting application}
+    For both parts of the application there are already templates which help you get
+    started, for the server there is the file \texttt{server.c}, this file
+    can be compiled, signed and run by running \texttt{make server.enc}.
+    For the vote application there is the file \texttt{vote.c}, this
+    file can be compiled without OpenSGX by running: \texttt{make vote.run}.    
+
+    Additionally there is a small library for UNIX pipes, make yourself familiar
+    with the library by having a look at the header file (\texttt{libpipe.h}),
+    which is in the root directory as well. This library is automatically
+    compiled and linked to both the server and the vote application.
+
+    Now you have all the prerequisites to start writing the E-Voting application,
+    keep some things in mind:
+    \begin{itemize}
+        \item The vote application should only know the vote of the user
+        \item The server application should not leak any information about the voting process, neither direct nor indirect
+        \item Implement a simple authentication mechanism using an ID for each user
+        \item Think about how and when to retrieve the result
+        \item Think about how you can avoid side channel attacks, i.e. through timing measuremnts
+    \end{itemize}
+
+    Good luck!
 \end{document}

@@ -2,6 +2,6 @@
 #include <stdio.h>
 
 void enclave_main() {
-	printf("HelloWorld!\n");
+	printf("Hello World!\n");
 	sgx_exit(NULL);
 }

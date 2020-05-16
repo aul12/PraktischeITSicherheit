@@ -9,6 +9,10 @@
 \usepackage{minted}
 \usepackage[ngerman]{babel}
 \usepackage{fontawesome}
+\usepackage{import}
+\usepackage{moresize}
+
+\input{commands.tex}
 
 \usetheme{Hannover}
 \usecolortheme{dove}
@@ -46,5 +50,13 @@
     \tableofcontents
 }
 
+\input{Intro.tex}
+
+\frame{
+    \frametitle{Sources}
+    \nocite{*}
+    \bibliographystyle{amsalpha}
+    \bibliography{sources.bib}
+}
 
 \end{document}

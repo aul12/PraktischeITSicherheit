@@ -16,3 +16,7 @@ make -C libsgx -j $(nproc)
 make -C user -j $(nproc)
 
 echo "export OPENSGX_DIR=$OPENSGX_DIR" >> $HOME/.bashrc
+
+cp -r $(dirname $0)/Template/* ~
+
+echo "PLEASE LOGOUT AND LOGIN OR RUN 'source ~/.bashrc'"

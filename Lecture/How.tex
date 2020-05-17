@@ -83,7 +83,10 @@
 \begin{frame}
     \frametitle{Page Check}
     \centering
-    \includegraphics[scale=0.35]{Images/epc_pageCheck.png}
+    \begin{figure}
+        \includegraphics[scale=0.35]{Images/epc_pageCheck.png}
+        \caption{Quelle: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -109,19 +112,54 @@
 \begin{frame}
     \frametitle{Local Attestation}
     \begin{itemize}
-        \visible<1->{\item Enclaves can communicate to each other, but you have to check the local attestation}
-        \visible<2->{\item Is needed to proof the other needed enclave exists}
-        \visible<3->{\item The first enclave can ask the hardware to generate a credential, named report}
-        \visible<4->{\item The second can verify, this resport is generated on the same platform and can now trust this enclave}
-        \visible<5->{\item The second enclave has also to proof the report of the first enclave}
-        \visible<6>{\item A symetric encryption is used}
+        \visible<1->{\item Enclaves can communicate to each other}
+        \visible<2->{\item Local attestation is a proof, that the otzer enclave exists and is trustable}
+        A channel must have been established between the two enclaves
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Local Attestation}
+    \begin{enumerate}
+        \visible<1->{\item The first enclave can ask the hardware to generate a credential, named report, and send it to the other enclave}
+        \visible<2->{\item The second can verify, that this resport is generated on the same platform and can now trust this enclave}
+        \visible<3>{\item The second enclave has also to proof the report of the first enclave}
+    \end{enumerate}
+\end{frame}
+
+%vielleicht mit Bild als erklärung leichter????????
+
+\begin{frame}
+    \frametitle{Remote Attestation}
+    \begin{itemize}
+        \visible<1->{\item Remote attestation is an exchange of a \glqq{}quote\grqq{}}
+        \visible<2->{\item Remote attestation needs an extra architectural enclave, called \glqq{}quoting enclave\grqq{}}
+        \visible<1->{\item This extra enclave is an architectural enclave, called \glqq{}quoting enclave\grqq{}}
+        \visible<2->{\item The quoting enclave verifies and transforms the enclave report into a quote}
+        \visible<4->{\item A quote is signed by the quoting enclave by the Provisioning Key}
+        \visible<3->{\item This quote is remotely verifiable}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Remote Attestation}
-    \begin{itemize}
-        \visible<1->{\item }
-    \end{itemize}
+    \begin{enumerate}
+        \visible<1->{\item An attestation request is send from a server to the application}
+        \visible<2->{\item The application sends a report request to the application enclave}
+        \visible<3->{\item The application enclave returns the generated report}
+        \visible<4->{\item The application receives the report and forwards it to the quoting enclave to be signed}
+        \visible<5->{\item The quoting enclave generates from the report a quote and the quote is send back to the application}
+        \visible<6->{\item The application sends the quote to the server for verification}
+        \visible<7->{\item The server validates the quote signature and the server sends the data to the attestation service}
+    \end{enumerate}
+\end{frame}
+
+%vielleicht mit Bild als erklärung leichter????????
+
+\begin{frame}
+    \frametitle{Sealing}
+
+    
+
 \end{frame}
 

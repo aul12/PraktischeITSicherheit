@@ -72,8 +72,8 @@
         \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
         \visible<2->{\item This area is encrypted by using the Memory Encryption Engine (MME)}
         \visible<3->{\item MME is an extra new and dedicated chip for Intel SGX}
-        \visible<4->{\item External reads outside the dhip can only observe encrypted data}
-        \visible<5->{\item The Pages are only decrypted when read is inside the physical processor core}
+        \visible<4->{\item External reads outside the chip can only observe encrypted data}
+        \visible<5->{\item The pages are only decrypted when read is inside the physical processor core}
         \visible<6>{\item Keys for decrypting are generated at boot-time and are stored inside the CPU}
     \end{itemize}
 \end{frame}

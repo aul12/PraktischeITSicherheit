@@ -4,36 +4,45 @@
     \frametitle{Overview}
     \begin{itemize}
         \visible<1->{\item Application is split into a secure part and a non-secure part}
-        \visible<2->{\item Secure part is called \glqq enclave\grqq{}}
-        \visible<2->{\item Enclave is launched by the application}
-        \visible<3>{\item Encalve hat its own Data, which is not visible from the outside}
+        \visible<2->{\item Secure part is called \glqq{}enclave\grqq{}}
+        \visible<3->{\item Application contains own code, its own data and the enclave}
+        \visible<4>{\item Enclave is launched by the application through a call to the encalve entry point}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Overview}
+    \begin{itemize}
+        \visible<1->{\item Enclave contains also its own code and data}
+        \visible<2->{\item Enclave is safed through encrypted memory pages which are reserved inside the RAM}
+        \visible<3->{\item The OS itself can not read data from the enclave, because encryption is oon hardware layer}
+        \visible<3->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
+        \visible<4->{\item Enclave entry point is pre-defined during compilation and won't change}
+        \visible<5->{\item Enclaves can access their application memory, but not the other way arround}
+        \visible<6>{\item An enclave can be called by multiple threads up to the number of logical processors}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Overview}
     \centering
-    \includegraphics[scale=0.55]{Images/sgx_overview.png}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Overview}
-    \begin{itemize}
-        \visible<1->{\item Application contains own code, its own data and the enclave}
-        \visible<2->{\item Enclave contains also its own code and data}
-        \visible<3->{\item Enclave entry point is pre-defined during compilation}
-        \visible<4->{\item SGX protects the confidentiality and integrity of the enclave code and data}
-        \visible<5->{\item Enclaves can access their application memory, but not the other way arround}
-        \visible<6>{\item Multi-threading is supported}
-    \end{itemize}
+    \begin{figure}
+        \includegraphics[scale=0.5]{Images/sgx_overview.png}
+        \caption{Quelle: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Instructions}
     \begin{itemize}
         \visible<1->{\item Intel SGX defines 18 new Instructions to handle the enclaves}
-        \visible<2->{\item All instructions are implemented in mircro-code, so that the behaviour can be modified}
-        \visible<3> {\item 13 instructions can be used by the supervisor and 5 by normal users}
+        \visible<2->{\item These Instructions are systemcalls to handle the enclave}
+        \visible<3->{\item Processor need these new instructions, because the enclave is on the hardware layer}
+        \visible<4->{\item All instructions are implemented in mircro-code, so that the behaviour can be modified}
+        \visible<5-> {\item 13 instructions can be used by the supervisor which is the kernel mode}
+        \visible<6->{\item 5 instructions can e used by normal users}
+        \visible<7->{\item Example for Instructions are EENTRY or EEXIT}
+        \visible<8>{\item The processor can enter or exit the enclave with this two instructions}
     \end{itemize}
 \end{frame}
 
@@ -41,9 +50,11 @@
     \frametitle{Structures}
     \begin{itemize}
         \visible<1->{\item Intel SGX defines 13 new structures which are used to manage the enclave and the associated data}
+        \visible<2->{\item These structures are like a library for the processor and the enclaves}
         \visible<2->{\item 8 structures are used for enclave managment}
         \visible<3->{\item 3 structures are used for memory page managment}
-        \visible<4>{\item 2 structures are used for resources managment}
+        \visible<4->{\item 2 structures are used for resources managment}
+        \visible<5>{\item SGX enclave control structure (SECS) contains meta-data like hash value or the enclave size}
     \end{itemize}
 \end{frame}
 
@@ -73,8 +84,8 @@
         \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
         \visible<2->{\item This area is encrypted by using the Memory Encryption Engine (MME)}
         \visible<3->{\item MME is an extra new and dedicated chip for Intel SGX}
-        \visible<4->{\item External reads outside the chip can only observe encrypted data}
-        \visible<5->{\item The pages are only decrypted when read is inside the physical processor core}
+        \visible<4->{\item External reads outside the dhip can only observe encrypted data}
+        \visible<5->{\item The Pages are only decrypted when read is inside the physical processor core}
         \visible<6>{\item Keys for decrypting are generated at boot-time and are stored inside the CPU}
     \end{itemize}
 \end{frame}

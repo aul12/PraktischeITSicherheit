@@ -1,0 +1,69 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'AppOverview8.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{649.15371151bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.58011142)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength]{AppOverview8.eps}}%
+    \put(0.16132151,0.59787762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33845324\unitlength}\raggedright \end{minipage}}}%
+    \put(0.1717364,-0.03204752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66185066\unitlength}\raggedright \end{minipage}}}%
+    \put(0.06577693,0.56404752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.35245725\unitlength}\centering Untrusted Part of App\end{minipage}}}%
+    \put(0.59350729,0.56404752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32897975\unitlength}\centering Trusted Part of App\end{minipage}}}%
+    \put(0.1145578,0.49328348){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27192967\unitlength}\raggedright Create Enclave\end{minipage}}}%
+    \put(0.30137794,0.43170673){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.37261797\unitlength}\raggedright \Huge ...\end{minipage}}}}%
+    \put(0.11542052,0.33959558){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29760547\unitlength}\raggedright Trusted Function\end{minipage}}}%
+    \put(0.69553579,0.48233667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14588506\unitlength}\raggedright Execute\end{minipage}}}%
+    \put(0.70532167,0.32745158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14004964\unitlength}\raggedright Return\end{minipage}}}%
+    \put(0.30137795,0.28391891){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.37261796\unitlength}\raggedright \Huge ...\end{minipage}}}}%
+    \put(0.12214371,0.07418943){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.75649324\unitlength}\centering Privileged system code, BIOS, hypervisor, ...\end{minipage}}}%
+  \end{picture}%
+\endgroup%

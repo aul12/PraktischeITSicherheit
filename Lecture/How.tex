@@ -59,26 +59,6 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{procedure application with enclave}
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-           \begin{enumerate}
-               \visible<1->{\item EENTRY instruction is executed to enter enclave}
-               \visible<2->{\item The application context is saved}
-               \visible<3->{\item The processor is put in enclave mode}
-               \visible<4->{\item EEXIT instruction is executed to exit enclave}
-               \visible<5>{\item The processor is put in normal mode}
-           \end{enumerate}
-        \end{column}
-        \begin{column}{0.7\textwidth}
-            \begin{center}
-                \includegraphics[scale=0.35]{Images/procedure.png}
-            \end{center}
-        \end{column}
-        \end{columns}
-\end{frame}
-
-\begin{frame}
     \frametitle{Enclave Page Cache (EPC)}
     \begin{itemize}
         \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
@@ -104,6 +84,26 @@
     \frametitle{Page Check}
     \centering
     \includegraphics[scale=0.35]{Images/epc_pageCheck.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{procedure application with enclave}
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+           \begin{enumerate}
+               \visible<1->{\item EENTRY instruction is executed to enter enclave}
+               \visible<2->{\item The application context is saved}
+               \visible<3->{\item The processor is put in enclave mode}
+               \visible<4->{\item EEXIT instruction is executed to exit enclave}
+               \visible<5>{\item The processor is put in normal mode}
+           \end{enumerate}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            \begin{center}
+                \includegraphics[scale=0.35]{Images/procedure.png}
+            \end{center}
+        \end{column}
+        \end{columns}
 \end{frame}
 
 \begin{frame}

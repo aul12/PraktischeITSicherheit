@@ -70,7 +70,13 @@ void enclave_main(int argc, char **argv)
 
 	// Wait for three votes
 	for (int c=0; c<3; ++c) {
-		char *response = handle_vote(fd_ae, fd_ea);
+		int ret = sgx_intra_attest_target(8024);
+		char *response;
+		if(ret == 1) {
+			response = handle_vote(fd_ae, fd_ea);
+		} else {
+			response = "Intra Attestation Fail!";
+		}
 		write(fd_ea, response, strlen(response)+1);
 	}
 

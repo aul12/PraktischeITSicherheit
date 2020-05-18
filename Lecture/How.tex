@@ -134,10 +134,10 @@
     \begin{itemize}
         \visible<1->{\item Remote attestation is an exchange of a \glqq{}quote\grqq{}}
         \visible<2->{\item Remote attestation needs an extra architectural enclave, called \glqq{}quoting enclave\grqq{}}
-        \visible<1->{\item This extra enclave is an architectural enclave, called \glqq{}quoting enclave\grqq{}}
-        \visible<2->{\item The quoting enclave verifies and transforms the enclave report into a quote}
-        \visible<4->{\item A quote is signed by the quoting enclave by the Provisioning Key}
-        \visible<3->{\item This quote is remotely verifiable}
+        \visible<3->{\item This extra enclave is an architectural enclave, called \glqq{}quoting enclave\grqq{}}
+        \visible<4->{\item The quoting enclave verifies and transforms the enclave report into a quote}
+        \visible<5->{\item A quote is signed by the quoting enclave by the Provisioning Key}
+        \visible<6>{\item This quote is remotely verifiable}
     \end{itemize}
 \end{frame}
 
@@ -158,6 +158,36 @@
 
 \begin{frame}
     \frametitle{Sealing}
+    \begin{itemize}
+        \visible<1->{\item Process of encrypting enclave secrets for persistent sorage is calles sealing}
+        \visible<2->{\item Different ways of sealing}
+        \visible<3->{\item Enclave retrieves the seal Key using the EGETKEY instruction, which returns a cryptographical key}
+        \visible<4>{\item Key is used to encrypt and ensure data integrity}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Sealing - Different ways}
+    \begin{itemize}
+        \visible<1->{\item Enclave Identity}
+        \visible<2->{\begin{itemize}
+            \item Two distinct enclaves have different keys
+            \item Sealed data will not be available to different versions of the same enclave
+            \item Sealed data will only be available to identical enclave instantiations
+        \end{itemize}}
+        \visible<3->{\item Signer Identity}
+        \visible<4->{\begin{itemize}
+            \item Two distinct enclaves have different keys
+            \item Two versions of an enclave share the same key
+            \item multiple enclaves which are using the same key can all read each others data
+        \end{itemize}}
+        \visible<5->{\item Security Version Number (SVN)}
+        \visible<6>{\begin{itemize}
+            \item SVN is a counter which is incremented after each update
+            \item Older versions of an enclave are not available to read data from a newer version
+            \item keys are derived that an enclave can retrieve the keys corresponding to current or older security level
+        \end{itemize}}
+    \end{itemize}
 
     
 

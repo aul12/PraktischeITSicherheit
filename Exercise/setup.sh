@@ -8,6 +8,8 @@ sudo apt install -y qemu libelf-dev build-essential python pkg-config libglib2.0
 
 rm -rf $OPENSGX_DIR
 git clone https://github.com/sslab-gatech/opensgx.git $OPENSGX_DIR
+cd $OPENSGX_DIR
+git checkout 6cc1fe6 # See #40
 cd $OPENSGX_DIR/qemu
 ./configure-arch 
 make -j $(nproc)

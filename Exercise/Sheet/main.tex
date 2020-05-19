@@ -110,19 +110,20 @@
     The primary (security) challenges of E-Voting from a developers perspective are
     \footnote{\url{https://cadmus.eui.eu/bitstream/handle/1814/44926/EUDO_REPORT_2016_11.pdf?sequence=1}}:
     \begin{itemize}
-        \item \textbf{Authentication}: the system must guarantee that only users that are eligble to vote can vote and that they only vote once
+        \item \textbf{Authorization}: the system must guarantee that only users that are eligble to vote can vote and that they only vote once
         \item \textbf{Anonymity}: no one should see who voted for which party, only the distribution of votes should be visible
+        \item \textbf{Attestation}: a user should be able to check and verify that the correct code is used for counting votes
     \end{itemize}
 
-    In the exercise we will focus on the anonymity aspect of E-Voting and we will demonstrate a solution using SGX.
-    The program you will develop consists of two components:
+    In the exercise we will focus on the anonymity and attestation aspect of E-Voting and we will demonstrate a 
+    solution using SGX. The program you will develop consists of two components:
     \begin{itemize}
         \item The \textbf{server} application running inside the enclave which counts the votes and guarantees 
             that a user can only vote once, this security criticial code should be as small as possible.
         \item The \textbf{vote} application which runs outside of the enclave (in normal user mode) and asks the user 
             for the vote and identification and submits this information to the server.
     \end{itemize}
-    The communication between the processes is done via UNIX pipes. The structure
+    The communication between the processes is done via named UNIX pipes (FIFOs). The structure
     of this system can be seen in Figure \ref{fig:struct}, for this demo you can
     assume that only one voter is active at a time.
     
@@ -163,5 +164,23 @@
         \item Think about how you can avoid side channel attacks, i.e. through timing measuremnts
     \end{itemize}
 
-    Good luck!
+    \section{Attestation}
+    Until now we assumed that the code that is being run in the enclave is the code that we wrote. To be sure that
+    this is the case we now want to add attesation to our application. Both OpenSGX and Intel SGX support two
+    forms of attestation: local and remote attestation, for this demonstration we will only implement local
+    attestation.    
+
+    For the attestation you will write a third program called \texttt{attest}, this program is required to run in
+    an enclave as well. A template for this program is given in the file \texttt{attest.c}, the file can be run
+    by typing \texttt{make attest.enc}. Think about how the voting procedure needs to be adapted to include local
+    attestation, at which point should the user be able to verify the enclave?
+
+    Have a look at the two examples provided by OpenSGX, they are located in the files 
+    \texttt{opensgx/user/test/simple-remote-attest-challenger.c} and \\
+    \texttt{opensgx/user/demo/simple-remote-attest-target.c}. Try to understand the
+    examples and implement this mechanism as part of your application, the server will
+    be the target and the attest application the challenger.
+
+
+    \textbf{Good luck!}
 \end{document}

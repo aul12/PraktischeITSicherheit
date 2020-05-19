@@ -58,12 +58,12 @@ void enclave_main(int argc, char **argv)
 		sgx_exit(NULL);
 	}
 
-	if((fd_ea = pipe_open(port_enc_to_app, RB_MODE_WR)) < 0) {
+	if((fd_ea = pipe_open(port_enc_to_app)) < 0) {
 		puts("Error in pipe_open");
 		sgx_exit(NULL);
 	}
 
-	if((fd_ae = pipe_open(port_app_to_enc, RB_MODE_RD)) < 0) {
+	if((fd_ae = pipe_open(port_app_to_enc)) < 0) {
 		puts("Error in pipe_open");
 		sgx_exit(NULL);
 	}

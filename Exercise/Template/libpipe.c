@@ -28,7 +28,7 @@ int pipe_init(void)
 	return 0;
 }
 
-int pipe_open(char *unique_id, int is_write)
+int pipe_open(char *unique_id)
 {
 	char name_buf[NAME_BUF_SIZE];
 
@@ -44,14 +44,7 @@ int pipe_open(char *unique_id, int is_write)
 		}
 	}
 
-	int flag = O_ASYNC;
-	if(is_write) {
-		flag |= O_WRONLY;
-	} else {
-		flag |= O_RDONLY;
-	}
-
-	int fd = open(name_buf, flag);
+	int fd = open(name_buf, O_ASYNC | O_RDWR);
 
 	if (fd == -1) {
 		puts("Fail to open");

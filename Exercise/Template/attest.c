@@ -17,16 +17,6 @@
 
 void enclave_main()
 {
-	int target_port, ret;
-	char *conf = "/home/sgx/PraktischeITSicherheit/Exercise/Solution/server.conf";
-	target_port = 8024;
-
-	ret = sgx_intra_attest_challenger(target_port, conf);
-	if(ret == 1) {
-		puts("Intra Attestaion Success!");
-	} else {
-		puts("Intra Attestation Fail!");
-	}
-
+	// Your code here
 	sgx_exit(NULL);
 }

@@ -2,7 +2,7 @@ OPENSGX=$(OPENSGX_DIR)/opensgx
 ROOT=$(PWD)
 
 %.enc: %.sgx %.conf
-	cd $(OPENSGX_DIR); $(OPENSGX) -i $(addprefix $(ROOT)/, $+)
+	cd $(OPENSGX_DIR); $(OPENSGX) $(addprefix $(ROOT)/, $+)
 
 %.run: %.out
 	./$<

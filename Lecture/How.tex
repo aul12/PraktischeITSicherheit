@@ -4,25 +4,13 @@
     \frametitle{Overview}
     \begin{itemize}
         \visible<1->{\item Application is split into a secure part and a non-secure part}
-        \visible<2->{\item Secure part is called \glqq{}enclave\grqq{}}
+        \visible<2->{\item Secure part is called ``enclave``}
         \visible<3->{\item Application contains own code, its own data and the enclave}
         \visible<4>{\item Enclave is launched by the application through a call to the encalve entry point}
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Overview}
-    \begin{itemize}
-        \visible<1->{\item Enclave contains also its own code and data}
-        \visible<2->{\item Enclave is backed through encrypted memory pages which are reserved inside the RAM}
-        \visible<3->{\item The OS itself can not read data from the enclave, because encryption is on hardware layer}
-        \visible<3->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
-        \visible<4->{\item Enclave entry point is pre-defined during compilation and won't change}
-        \visible<5->{\item Enclaves can access their application memory, but not the other way arround}
-        \visible<6>{\item An enclave can be called by multiple threads up to the number of logical processors}
-    \end{itemize}
-\end{frame}
-
+%Quellen unten anpassen
 \incfuck[0.8\textwidth]{AppOverview}{1}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{2}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{3}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
@@ -33,14 +21,30 @@
 \incfuck[0.8\textwidth]{AppOverview}{8}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
 
 \begin{frame}
+    \frametitle{Overview}
+    \begin{itemize}
+        \visible<1->{\item Enclave contains also its own code and data}
+        \visible<2->{\item Enclave is backed by encrypted memory pages which are reserved inside the RAM}
+        \visible<3->{\item The OS itself can not read data from the enclave, because encryption is on hardware layer}
+        \visible<3->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
+        \visible<4->{\item Enclave entry point (address pointer) is pre-defined during compilation and won't change}
+        \visible<5>{\item Enclaves can access their application memory, but not the other way arround}
+    \end{itemize}
+\end{frame}
+
+%Was sind trusted functions?
+%enclave mode
+%Eigener prozess
+
+\begin{frame}
     \frametitle{Instructions}
     \begin{itemize}
         \visible<1->{\item Intel SGX defines 18 new Instructions to handle the enclaves}
         \visible<2->{\item These Instructions are systemcalls to handle the enclave}
         \visible<3->{\item Processor need these new instructions, because the enclave is on the hardware layer}
         \visible<4->{\item All instructions are implemented in mircro-code, so that the behaviour can be modified}
-        \visible<5-> {\item 13 instructions can be used by the supervisor which is the kernel mode}
-        \visible<6->{\item 5 instructions can e used by normal users}
+        %\visible<5->{\item 13 instructions can be used by the supervisor which is the kernel mode}
+        %\visible<6->{\item 5 instructions can e used by normal users}
         \visible<7->{\item Example for Instructions are EENTRY or EEXIT}
         \visible<8>{\item The processor can enter or exit the enclave with this two instructions}
     \end{itemize}
@@ -56,6 +60,26 @@
         \visible<4->{\item 2 structures are used for resources managment}
         \visible<5>{\item SGX enclave control structure (SECS) contains meta-data like hash value or the enclave size}
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{procedure application with enclave}
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+           \begin{enumerate}
+               \visible<1->{\item EENTRY instruction is executed to enter enclave}
+               \visible<2->{\item The application context is saved}
+               \visible<3->{\item The processor is put in enclave mode}
+               \visible<4->{\item EEXIT instruction is executed to exit enclave}
+               \visible<5>{\item The processor is put in normal mode}
+           \end{enumerate}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            \begin{center}
+                \includegraphics[scale=0.35]{Images/procedure.png}
+            \end{center}
+        \end{column}
+        \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -90,30 +114,10 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{procedure application with enclave}
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-           \begin{enumerate}
-               \visible<1->{\item EENTRY instruction is executed to enter enclave}
-               \visible<2->{\item The application context is saved}
-               \visible<3->{\item The processor is put in enclave mode}
-               \visible<4->{\item EEXIT instruction is executed to exit enclave}
-               \visible<5>{\item The processor is put in normal mode}
-           \end{enumerate}
-        \end{column}
-        \begin{column}{0.7\textwidth}
-            \begin{center}
-                \includegraphics[scale=0.35]{Images/procedure.png}
-            \end{center}
-        \end{column}
-        \end{columns}
-\end{frame}
-
-\begin{frame}
     \frametitle{Local Attestation}
     \begin{itemize}
         \visible<1->{\item Enclaves can communicate to each other}
-        \visible<2->{\item Local attestation is a proof, that the otzer enclave exists and is trustable}
+        \visible<2->{\item Local attestation is a proof, that the other enclave exists and is trustable}
         A channel must have been established between the two enclaves
     \end{itemize}
 \end{frame}
@@ -132,9 +136,9 @@
 \begin{frame}
     \frametitle{Remote Attestation}
     \begin{itemize}
-        \visible<1->{\item Remote attestation is an exchange of a \glqq{}quote\grqq{}}
-        \visible<2->{\item Remote attestation needs an extra architectural enclave, called \glqq{}quoting enclave\grqq{}}
-        \visible<3->{\item This extra enclave is an architectural enclave, called \glqq{}quoting enclave\grqq{}}
+        \visible<1->{\item Remote attestation is an exchange of a ``quote``}
+        \visible<2->{\item Remote attestation needs an extra architectural enclave, called ``quoting enclave``}
+        \visible<3->{\item This extra enclave is an architectural enclave, called ``quoting enclave``}
         \visible<4->{\item The quoting enclave verifies and transforms the enclave report into a quote}
         \visible<5->{\item A quote is signed by the quoting enclave by the Provisioning Key}
         \visible<6>{\item This quote is remotely verifiable}

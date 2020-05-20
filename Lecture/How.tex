@@ -5,64 +5,82 @@
     \begin{itemize}
         \visible<1->{\item Application is split into a secure part and a non-secure part}
         \visible<2->{\item Secure part is called ``enclave``}
-        \visible<3->{\item Application contains own code, its own data and the enclave}
-        \visible<4>{\item Enclave is launched by the application through a call to the encalve entry point}
+        \visible<3->{\item Code can be written in trusted or untrusted functions}
+        \visible<4->{\item trusted functions run inside the enclave}
+        \visible<5->{\item Application consists of its own code, own data and the enclave}
+        \visible<6->{\item Enclave is launched by the application}
+        \visible<7->{\item Enclave Code can be run from the application by call to the enclave entry point}
+        \visible<8>{\item Entry Point is a execution of the enclave and is pre-defined during compilation}
     \end{itemize}
 \end{frame}
 
 %Quellen unten anpassen
-\incfuck[0.8\textwidth]{AppOverview}{1}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{2}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{3}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{4}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{5}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{6}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{7}{Source: \url{}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{8}{Source: \url{}}{Overview}
-
-\begin{frame}
-    \frametitle{Overview}
-    \begin{itemize}
-        \visible<1->{\item Enclave contains also its own code and data}
-        \visible<2->{\item Enclave is backed by encrypted memory pages which are reserved inside the RAM}
-        \visible<3->{\item The OS itself can not read data from the enclave, because encryption is on hardware layer}
-        \visible<4->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
-        \visible<5->{\item Enclave entry point (address pointer) is pre-defined during compilation and won't change}
-        \visible<6->{\item Enclaves can access their application memory, but not the other way arround}
-        \visible<7>{\item Code can be written in trusted or untrusted functions}
-    \end{itemize}
-\end{frame}
+\incfuck[0.8\textwidth]{AppOverview}{1}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{2}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{3}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{4}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{5}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{6}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{7}{{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{8}{{}}{Overview}
 
 \begin{frame}
     \frametitle{Trusted Functions}
     \begin{itemize}
-        \visible<1->{\item Trusted functions are linked to application}
-        \visible<2->{\item Trusted are implemented inside the enclave}
-        \visible<3>{\item Trusted functions will not directly pass a pointer to memory}
+        \visible<1->{\item Trusted functions are implemented inside the enclave}
+        \visible<2->{\item Only security critical functions should be implement in the enclave, e.g Password Reads}
+        \visible<3->{\item Enclave Memory could only be read from trusted functions}
+        \visible<3->{\item Trusted functions should not directly pass a pointer to enclave memory}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Instructions}
+    \frametitle{Implementation}
     \begin{itemize}
-        \visible<1->{\item Intel SGX defines 18 new Instructions to handle the enclaves}
-        \visible<2->{\item These Instructions are systemcalls to handle the enclave}
-        \visible<3->{\item Processor need these new instructions, because the enclave is on the hardware layer}
-        \visible<4->{\item All instructions are implemented in mircro-code, so that the behaviour can be modified}
-        \visible<5->{\item CPU has an extra enclave Mode to call some of these instructions}
-        \visible<6->{\item Enclave mode needs a context switch and is only for enclave handling}
-        \visible<7->{\item Example for Instructions are EENTRY or EEXIT}
-        \visible<8>{\item The processor can enter or exit the enclave with this two instructions in enclave mode}
+        \visible<1->{\item Intel SGX defines 18 new instructions to handle enclaves in hardware}
+        \visible<2->{\item Intructions to load enclaves are called through systemcalls, e.g ECREATE}
+        \visible<3->{\item Instructions to communicate with the enclave can be called by user, e.g. EENTRY, EEXIT}
+        \visible<4->{\item CPU has an extra enclave Mode to call some of these instructions}
+        \visible<5>{\item Enclave mode needs a context switch and is for the whole enclave handling and enclave code execution}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Structures}
+    \frametitle{Enclave Page Cache (EPC)}
     \begin{itemize}
-        \visible<1->{\item Intel SGX defines 13 new structures which are used to manage the enclave and the associated data}
-        \visible<2->{\item These structures are like a library for the processor and the enclaves}
-        \visible<3>{\item SGX enclave control structure (SECS) contains meta-data like hash value or the enclave size}
+        \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
+        \visible<2->{\item This area is encrypted by using the Memory Encryption Engine (MEE)}
+        \visible<3->{\item MEE is an extra new and dedicated circuit for Intel SGX}
+        \visible<4->{\item Only enclave can read from its own EPC}
+        \visible<5->{\item EPC page content is only decrypted inside the CPU}
+        \visible<6->{\item Keys for de-/encrypting are generated at boot-time and are stored inside the CPU}
+        \visible<7>{\item Enclaves can access their application memory, but not the other way arround}
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Page Check}
+    \begin{itemize}
+        \visible<1->{\item Page check is extended to prevent external access to EPC}
+        \visible<2->{\item The Enclave Page Cache Metadata (EPCM) is stored inside the EPC}
+        \visible<3->{\begin{itemize}
+            \item EPCM is a map from enclave to pages in the EPC
+        \end{itemize}}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Page Check}
+    \begin{figure}
+        \centering
+        \incfig[0.75\textwidth]{PageCheck}
+        \caption*{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Create an enclave}
+
 \end{frame}
 
 \begin{frame}
@@ -83,37 +101,6 @@
             \end{center}
         \end{column}
         \end{columns}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Enclave Page Cache (EPC)}
-    \begin{itemize}
-        \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
-        \visible<2->{\item This area is encrypted by using the Memory Encryption Engine (MME)}
-        \visible<3->{\item MME is an extra new and dedicated chip for Intel SGX}
-        \visible<4->{\item External reads can only observe encrypted data outside the chip}
-        \visible<5->{\item The pages are only decrypted when read is inside the physical processor core}
-        \visible<6>{\item Keys for decrypting are generated at boot-time and are stored inside the CPU}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Page Check}
-    \begin{itemize}
-        \visible<1->{\item Page check is extended to prevent external access to EPC}
-        \visible<2->{\item The Enclave Page Cache Map (EPCM) is one of the 13 structures}
-        \visible<3->{\item EPCM is used to store the pages state and contains the configuration, permissions and type of each page}
-        \visible<4>{\item EPCM is also stored inside the protected memory area and grants access to the page}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Page Check}
-    \begin{figure}
-        \centering
-        \incfig[0.75\textwidth]{PageCheck}
-        \caption*{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
-    \end{figure}
 \end{frame}
 
 \begin{frame}

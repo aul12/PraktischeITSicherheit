@@ -53,4 +53,70 @@
 
 \begin{document}
     \maketitle
+    \section{Structure / Objectives}
+    The exercise is structured in four parts: in the first part the motiviation for OpenSGX is given and OpenSGX
+    itself is introduced. This part requires the students to read the text and get the required understanding of
+    OpenSGX for the other exercises.
+
+    The second part consists of a guide on how to setup and test the development environment for OpenSGX. This is the
+    first part in which the students have to get active by themself by following the guide. This part is the base
+    for the following exercises in which the students use the VM for solvin the exercises.
+
+    In the third part the students need to implement a simple the main part of the voting software, the server
+    application running in an OpenSGX-Enclave and the voting application running in normal user space.
+    For this exercise the students needs to understand the concept of enclaves and which parts of the application
+    need to be protected by the enclave. To help the students some pointers about the structure of the application
+    are given in the beginning, but students are encouraged to think about the structure and the security of the
+    voting procedure through the provided questions. After the third exercise the students should be familiar with
+    the concept of enclaves and how to structure an application using (Open) SGX.
+
+    The last part of the exercise builds upon the third part by adding a local/intra attestation to their application.
+    This part is designed more freely to allow the students to actively think about a secure way to run the attestation.
+    Additionally it encourages the students to study OpenSGX by requiring them to read the OpenSGX examples.
+    After the last exercise the students should understand the idea of attestation in the context of SGX.
+    
+    \section{Decisions}
+    \subsection{Simplification}
+    Due to the limited time available for the exercise some parts of the challenge of
+    E-Voting have been simplified to concentrate on the parts which are solved by SGX.
+    The simplifications are mentioned in the exercise sheet as well.
+
+    The first simplification is that the aspect of authorization is not (securely)
+    handled by the proposed application. As authorization is not a feature provided
+    by SGX, but needs to be implemented through different mechanisms, we decided
+    to replace it by a simple number based scheme which can be quickly implemented
+    by the students.
+
+    The next simplification for the application is the communication infrastructure:
+    the proposed structure relies on named UNIX pipes (FIFOs). They have two obvious
+    limitations: all voters need to use the same computer and the communication
+    between the enclave and the vote application is not secure, i.e. the OS can
+    still manipulate the data. But the FIFOs are sufficient to demonstrate the distributed
+    implementation of the voting application, and neither network connectivity nor
+    encryption are features which are directly support by OpenSGX, thus they would have
+    to be implemented by the user (or by using a library of course).
+
+    The last limitation is the usage of local attestation instead of remote attestation,
+    this is only possible as the all parts of the application run on the same machine.
+    Remote attestation requires a good understanding of the sigma protocol and two 
+    additional applications. For local attestation only one additional application
+    is required. Additional the cryptographic concepts are limited to signing and
+    the challenge-response scheme. Thus we decided to use the simpler of both methods
+    to fit the aspect of attestation into the exercise as well.
+
+    \subsection{Technical}
+    The exercise relies on some different programs, to enable all students to be able
+    to do the exercise as easy as possible we decided to use widely available,
+    free software (free as in beer and FOSS).
+
+    As not all students have access to a computer with a recent Intel processor
+    we decided to use OpenSGX instead of Intel-SGX. Additionally OpenSGX can be
+    used without limitations, in contrast to Intel SGX which requires a license
+    from Intel.
+    
+    For virtual machine we decided to use Virtualbox, as the application is
+    available on all major operating systems. The OS running in the virtual
+    machine is Ubuntu 14.04 as this is the latest (LTS) version supported by
+    OpenSGX. We tried to run it on later versions as well but they do not support
+    OpenSGX out of the box.
 \end{document}

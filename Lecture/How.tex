@@ -11,14 +11,14 @@
 \end{frame}
 
 %Quellen unten anpassen
-\incfuck[0.8\textwidth]{AppOverview}{1}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{2}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{3}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{4}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{5}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{6}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{7}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
-\incfuck[0.8\textwidth]{AppOverview}{8}{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{1}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{2}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{3}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{4}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{5}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{6}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{7}{Source: \url{}}{Overview}
+\incfuck[0.8\textwidth]{AppOverview}{8}{Source: \url{}}{Overview}
 
 \begin{frame}
     \frametitle{Overview}
@@ -26,15 +26,21 @@
         \visible<1->{\item Enclave contains also its own code and data}
         \visible<2->{\item Enclave is backed by encrypted memory pages which are reserved inside the RAM}
         \visible<3->{\item The OS itself can not read data from the enclave, because encryption is on hardware layer}
-        \visible<3->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
-        \visible<4->{\item Enclave entry point (address pointer) is pre-defined during compilation and won't change}
-        \visible<5>{\item Enclaves can access their application memory, but not the other way arround}
+        \visible<4->{\item The encrypted memory pages can only be accessed from the enclave, not from the application}
+        \visible<5->{\item Enclave entry point (address pointer) is pre-defined during compilation and won't change}
+        \visible<6->{\item Enclaves can access their application memory, but not the other way arround}
+        \visible<7>{\item Code can be written in trusted or untrusted functions}
     \end{itemize}
 \end{frame}
 
-%Was sind trusted functions?
-%enclave mode
-%Eigener prozess
+\begin{frame}
+    \frametitle{Trusted Functions}
+    \begin{itemize}
+        \visible<1->{\item Trusted functions are linked to application}
+        \visible<2->{\item Trusted are implemented inside the enclave}
+        \visible<3>{\item Trusted functions will not directly pass a pointer to memory}
+    \end{itemize}
+\end{frame}
 
 \begin{frame}
     \frametitle{Instructions}
@@ -43,10 +49,10 @@
         \visible<2->{\item These Instructions are systemcalls to handle the enclave}
         \visible<3->{\item Processor need these new instructions, because the enclave is on the hardware layer}
         \visible<4->{\item All instructions are implemented in mircro-code, so that the behaviour can be modified}
-        %\visible<5->{\item 13 instructions can be used by the supervisor which is the kernel mode}
-        %\visible<6->{\item 5 instructions can e used by normal users}
+        \visible<5->{\item CPU has an extra enclave Mode to call some of these instructions}
+        \visible<6->{\item Enclave mode needs a context switch and is only for enclave handling}
         \visible<7->{\item Example for Instructions are EENTRY or EEXIT}
-        \visible<8>{\item The processor can enter or exit the enclave with this two instructions}
+        \visible<8>{\item The processor can enter or exit the enclave with this two instructions in enclave mode}
     \end{itemize}
 \end{frame}
 
@@ -55,10 +61,7 @@
     \begin{itemize}
         \visible<1->{\item Intel SGX defines 13 new structures which are used to manage the enclave and the associated data}
         \visible<2->{\item These structures are like a library for the processor and the enclaves}
-        \visible<2->{\item 8 structures are used for enclave managment}
-        \visible<3->{\item 3 structures are used for memory page managment}
-        \visible<4->{\item 2 structures are used for resources managment}
-        \visible<5>{\item SGX enclave control structure (SECS) contains meta-data like hash value or the enclave size}
+        \visible<3>{\item SGX enclave control structure (SECS) contains meta-data like hash value or the enclave size}
     \end{itemize}
 \end{frame}
 
@@ -118,7 +121,7 @@
     \begin{itemize}
         \visible<1->{\item Enclaves can communicate to each other}
         \visible<2->{\item Local attestation is a proof, that the other enclave exists and is trustable}
-        A channel must have been established between the two enclaves
+        \visible<3>{\item A channel must have been established between the two enclaves}
     \end{itemize}
 \end{frame}
 

@@ -256,9 +256,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="1077.174"
-     inkscape:cy="675.35451"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="596.98737"
+     inkscape:cy="400.28734"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -347,28 +347,25 @@
            x="-69.700523"
            y="61.859512"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara1636">\tiny Traditional IA Page Table Checks</flowPara></flowRoot>    <g
-       id="g2809">
-      <path
-         inkscape:connector-curvature="0"
-         id="path1570"
-         d="m 178.09294,33.686712 -35.28901,20.881871 35.28901,20.88184 35.28906,-20.88184 z"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,175.11477,30.341444)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-         id="flowRoot1630-9"
-         xml:space="preserve"><flowRegion
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-           id="flowRegion1632-0"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-             y="61.859512"
-             x="-69.700523"
-             height="110.89343"
-             width="159.30966"
-             id="rect1634-6" /></flowRegion><flowPara
-           id="flowPara1636-0">\tiny Enclave Acces?</flowPara></flowRoot>    </g>
-    <path
+         id="flowPara1636">\tiny Traditional IA Page Table Checks</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05598783;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 178.09294,31.273401 142.80393,54.55899 178.09294,77.844544 213.382,54.55899 Z"
+       id="path1570"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot1630-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,175.11477,23.462273)"><flowRegion
+         id="flowRegion1632-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect1634-6"
+           width="159.30966"
+           height="110.89343"
+           x="-69.700523"
+           y="61.859512"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara1636-0">\tiny CPU in Enclave-Mode?</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Mstart)"
        d="M 140.81852,54.568581 H 93.642547"
        id="path1782"
@@ -387,30 +384,22 @@
            x="486.89352"
            y="305.30627"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara2110">\tiny Physical Address</flowPara></flowRoot>    <g
-       id="g2816">
-      <path
-         inkscape:connector-curvature="0"
-         id="path1570-4-6"
-         d="M 299.37541,33.686726 264.0864,54.568598 299.37541,75.450442 334.66447,54.568598 Z"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,295.29498,30.341444)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-         id="flowRoot1630-9-8-6"
-         xml:space="preserve"><flowRegion
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-           id="flowRegion1632-0-6-5"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-             y="61.859512"
-             x="-69.700523"
-             height="111.52085"
-             width="169.90764"
-             id="rect1634-6-7-2" /></flowRegion><flowPara
-           id="flowPara1636-0-9-96">\tiny Address in EPC?</flowPara></flowRoot>    </g>
-    <path
+         id="flowPara2110">\tiny Physical Address</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot1630-9-8-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,295.29498,30.341444)"><flowRegion
+         id="flowRegion1632-0-6-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect1634-6-7-2"
+           width="169.90764"
+           height="111.52085"
+           x="-69.700523"
+           y="61.859512"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara1636-0-9-96">\tiny Address in EPC?</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
-       d="M 178.09296,75.450421 V 109.38761"
+       d="M 178.09296,77.567088 V 101.45011"
        id="path2202"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -499,14 +488,10 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker3715)"
-       d="m 299.3754,75.45044 v 37.45431"
+       d="M 299.3754,77.567107 V 112.90475"
        id="path3705"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 178.09296,210.90438 -35.28901,20.88187 35.28901,20.88184 35.28906,-20.88184 z"
-       id="path1570-4-9"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot1630-9-8-8"
@@ -540,41 +525,45 @@
            x="486.89352"
            y="305.30627"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara2110-1">\tiny Signal Fault</flowPara></flowRoot>    <rect
-       style="fill:none;fill-opacity:1;stroke:#050505;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-       id="rect1566-2-5"
-       width="40.333847"
-       height="26.286865"
-       x="157.92606"
-       y="168.94275" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot2102-9-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,28.675831,93.094189)"><flowRegion
-         id="flowRegion2104-1-5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
-           id="rect2106-0-9"
-           width="154.75536"
-           height="79.600029"
-           x="486.89352"
-           y="305.30627"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara2110-1-3">\tiny Check EPCM</flowPara></flowRoot>    <path
+         id="flowPara2110-1">\tiny Signal Fault</flowPara></flowRoot>    <g
+       id="g979"
+       transform="translate(0,-2.9104167)">
+      <rect
+         y="168.94276"
+         x="157.92606"
+         height="26.286865"
+         width="40.333847"
+         id="rect1566-2-5"
+         style="fill:none;fill-opacity:1;stroke:#050505;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,28.675831,93.094189)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot2102-9-8"
+         xml:space="preserve"><flowRegion
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           id="flowRegion2104-1-5"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+             y="305.30627"
+             x="486.89352"
+             height="79.600029"
+             width="154.75536"
+             id="rect2106-0-9" /></flowRegion><flowPara
+           id="flowPara2110-1-3">\tiny Check EPCM</flowPara></flowRoot>    </g>
+    <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2514)"
-       d="m 178.09296,153.26799 v 13.8605"
+       d="m 178.09296,149.56383 v 14.38966"
        id="path2504"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2676)"
-       d="m 178.09296,209.31688 v -13.8793"
+       d="M 178.09296,206.67105 V 192.26258"
        id="path2666"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker3039)"
-       d="M 63.490391,166.89926 V 132.41531"
+       d="M 63.490391,166.89926 V 126.59448"
        id="path3027"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -586,7 +575,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 142.80395,132.38614 H 63.610148"
+       d="M 142.80395,126.56532 H 63.610148"
        id="path3107"
        inkscape:connector-curvature="0" />
     <path
@@ -700,7 +689,7 @@
        xml:space="preserve"
        id="flowRoot2102-5-7-5-75-3"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.298069,41.892051)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.26458333,-14.298069,36.071214)"><flowRegion
          id="flowRegion2104-7-8-2-5-9"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
            id="rect2106-2-0-5-5-9"
@@ -709,27 +698,63 @@
            x="486.89352"
            y="305.30627"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara2110-0-3-6-3-3">\tiny No</flowPara></flowRoot>    <g
-       transform="translate(2e-5,77.817572)"
-       id="g2484-2">
-      <path
-         inkscape:connector-curvature="0"
-         id="path1570-7"
-         d="m 178.09294,33.686712 -35.28901,20.881871 35.28901,20.88184 35.28906,-20.88184 z"
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         id="flowPara2110-0-3-6-3-3">\tiny No</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2102-5-2-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,11.647991,69.670842)"><flowRegion
+         id="flowRegion2104-7-2-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect2106-2-1-3"
+           width="209.05222"
+           height="37.852814"
+           x="486.89352"
+           y="305.30627"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara2110-0-8-2">\tiny Yes</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2102-5-2-1-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,133.01707,-2.0312375)"><flowRegion
+         id="flowRegion2104-7-2-4-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><rect
+           id="rect2106-2-1-3-5"
+           width="209.05222"
+           height="37.852814"
+           x="486.89352"
+           y="305.30627"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara2110-0-8-2-4">\tiny Yes</flowPara></flowRoot>    <g
+       id="g972"
+       transform="translate(0,-5.8208336)">
       <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,175.11477,30.341444)"
+         transform="matrix(0.26458333,0,0,0.26458333,174.01253,108.159)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-         id="flowRoot1630-9-4"
+         id="flowRoot1630-9-8-6-5"
          xml:space="preserve"><flowRegion
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-           id="flowRegion1632-0-9"><rect
+           id="flowRegion1632-0-6-5-9"><rect
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
              y="61.859512"
              x="-69.700523"
-             height="110.89343"
-             width="159.30966"
-             id="rect1634-6-9" /></flowRegion><flowPara
-           id="flowPara1636-0-5">\tiny Enclave Acces?</flowPara></flowRoot>    </g>
+             height="111.52085"
+             width="169.90764"
+             id="rect1634-6-7-2-8" /></flowRegion><flowPara
+           id="flowPara1636-0-9-96-7">\tiny Address in EPC?</flowPara></flowRoot>      <path
+         inkscape:connector-curvature="0"
+         id="path1570-2"
+         d="m 178.10254,109.10058 -35.28901,23.28559 35.28901,23.28555 35.28906,-23.28555 z"
+         style="fill:none;stroke:#000000;stroke-width:1.05598783;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05598783;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 178.10254,208.50067 -35.28901,23.28559 35.28901,23.28556 35.28906,-23.28556 z"
+       id="path1570-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05598783;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 299.38498,31.273401 -35.28901,23.28559 35.28901,23.285554 35.28906,-23.285554 z"
+       id="path1570-0"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

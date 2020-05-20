@@ -60,17 +60,17 @@
 
     The second part consists of a guide on how to setup and test the development environment for OpenSGX. This is the
     first part in which the students have to get active by themself by following the guide. This part is the base
-    for the following exercises in which the students use the VM for solvin the exercises.
+    for the following exercises in which the students use the VM for solving the exercises.
 
-    In the third part the students need to implement a simple the main part of the voting software, the server
+    In the third part the students need to implement the main part of the voting software, the server
     application running in an OpenSGX-Enclave and the voting application running in normal user space.
     For this exercise the students need to understand the concept of enclaves and which parts of the application
-    need to be protected by the enclave. To help the students some pointers about the structure of the application
+    needs to be protected by the enclave. To help the students some pointers about the structure of the application
     are given in the beginning, but students are encouraged to think about the structure and the security of the
     voting procedure through the provided questions. After the third exercise the students should be familiar with
     the concept of enclaves and how to structure an application using (Open) SGX.
 
-    The last part of the exercise builds upon the third part by adding a local/intra attestation to their application.
+    The last part of the exercise builds upon the third part by adding local/intra attestation to their application.
     This part is designed more freely to allow the students to actively think about a secure way to run the attestation.
     Additionally it encourages the students to study OpenSGX by requiring them to read the OpenSGX examples.
     After the last exercise the students should understand the idea of attestation in the context of SGX.
@@ -97,7 +97,7 @@
     to be implemented by the user (or by using a library of course).
 
     The last limitation is the usage of local attestation instead of remote attestation,
-    this is only possible as the all parts of the application run on the same machine.
+    this is only possible as all parts of the application run on the same machine.
     Remote attestation requires a good understanding of the sigma protocol and two 
     additional applications. For local attestation only one additional application
     is required. Additional the cryptographic concepts are limited to signing and
@@ -109,12 +109,12 @@
     to do the exercise as easy as possible we decided to use widely available,
     free software (free as in beer and FOSS).
 
-    As not all students have access to a computer with a recent Intel processor
+    As not all students have access to a computer with a recent Intel processor so
     we decided to use OpenSGX instead of Intel-SGX. Additionally OpenSGX can be
     used without limitations, in contrast to Intel SGX which requires a license
     from Intel.
     
-    For virtual machine we decided to use Virtualbox, as the application is
+    For the virtual machine we decided to use Virtualbox, as the application is
     available on all major operating systems. The OS running in the virtual
     machine is Ubuntu 14.04 as this is the latest (LTS) version supported by
     OpenSGX. We tried to run it on later versions as well but they do not support

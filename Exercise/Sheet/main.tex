@@ -162,13 +162,14 @@
         \item Implement a simple authentication mechanism using an ID for each user
         \item Think about how and when to retrieve the result
         \item Think about how you can avoid side channel attacks, i.e. through timing measuremnts
+        \item What is the problem of using named pipes?
     \end{itemize}
 
     \section{Attestation}
     Until now we assumed that the code that is being run in the enclave is the code that we wrote. To be sure that
     this is the case we now want to add attesation to our application. Both OpenSGX and Intel SGX support two
     forms of attestation: local and remote attestation, for this demonstration we will only implement local
-    attestation.    
+    attestation, as all parts of the application run on the same machine. 
 
     For the attestation you will write a third program called \texttt{attest}, this program is required to run in
     an enclave as well. A template for this program is given in the file \texttt{attest.c}, the file can be run

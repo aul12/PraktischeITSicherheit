@@ -2,15 +2,15 @@
 
 \begin{frame}
     \frametitle{Overview}
-    \begin{itemize}
-        \visible<1->{\item Application is split into a secure part and a non-secure part}
-        \visible<2->{\item Secure part is called ``enclave``}
-        \visible<3->{\item Code can be written in trusted or untrusted functions}
-        \visible<4->{\item trusted functions run inside the enclave}
-        \visible<5->{\item Application consists of its own code, own data and the enclave}
-        \visible<6->{\item Enclave is launched by the application}
-        \visible<7->{\item Enclave Code can be run from the application by call to the enclave entry point}
-        \visible<8>{\item Entry Point is a execution of the enclave and is pre-defined during compilation}
+    \begin{itemize}[<+->]
+        \item Application is split into a secure part and a non-secure part
+        \begin{itemize}
+            \item Trusted functions processing secrets (e.g. passwords, encryption keys)
+            \item Untrusted functions for non-critical computations / procedures
+        \end{itemize}
+        \item Trusted functions are handled by an ``enclave``
+        \item Enclave is launched by the application
+        \item Enclave code is called by the application through enclave entry point
     \end{itemize}
 \end{frame}
 

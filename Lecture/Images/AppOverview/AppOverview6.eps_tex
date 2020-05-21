@@ -60,8 +60,8 @@
     \put(0.59350729,0.56404752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32897975\unitlength}\centering Trusted Part of App\end{minipage}}}%
     \put(0.1145578,0.49328348){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27192967\unitlength}\raggedright Create Enclave\end{minipage}}}%
     \put(0.30137794,0.43170673){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.37261797\unitlength}\raggedright \Huge ...\end{minipage}}}}%
-    \put(0.11542052,0.33959558){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29760547\unitlength}\raggedright Trusted Function\end{minipage}}}%
-    \put(0.69553579,0.48233667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14588506\unitlength}\raggedright Execute\end{minipage}}}%
+    \put(0.09704781,0.33959558){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33075015\unitlength}\raggedright Trusted Function $f$\end{minipage}}}%
+    \put(0.69553579,0.48233667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19373521\unitlength}\raggedright Execute $f$\end{minipage}}}%
     \put(0.70532167,0.32745158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14004964\unitlength}\raggedright Return\end{minipage}}}%
   \end{picture}%
 \endgroup%

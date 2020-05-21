@@ -190,10 +190,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.8365873"
-     inkscape:cx="275.53875"
-     inkscape:cy="407.13407"
+     inkscape:cx="332.69871"
+     inkscape:cy="305.081"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer9"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -243,7 +243,7 @@
              height="56.568542"
              width="292.94424"
              id="rect4614" /></flowRegion><flowPara
-           id="flowPara4616"></flowPara></flowRoot>      <flowRoot
+           id="flowPara4616" /></flowRoot>      <flowRoot
          transform="scale(0.26458333)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot4666"
@@ -254,7 +254,7 @@
              height="77.85714"
              width="572.85712"
              id="rect4670" /></flowRegion><flowPara
-           id="flowPara4672"></flowPara></flowRoot>      <rect
+           id="flowPara4672" /></flowRoot>      <rect
          y="36.169941"
          x="-14.260252"
          height="103.2"
@@ -365,19 +365,19 @@
      style="display:inline"
      transform="translate(14.760387,-35.66994)">
     <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,-110.47045,32.688711)"
+       transform="matrix(0.26458333,0,0,0.26458333,-114.67793,32.688711)"
        xml:space="preserve"
        id="flowRoot4528-8-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
          id="flowRegion4530-8-7"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
            id="rect4532-4-9"
-           width="257.5889"
-           height="34.3452"
+           width="286.27692"
+           height="33.149868"
            x="461.63971"
            y="219.44331"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-         id="flowPara4608">Trusted Function</flowPara></flowRoot>    <path
+         id="flowPara4608">Trusted Function $f$</flowPara></flowRoot>    <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7457)"
        d="m 76.152445,94.574908 c 17.739896,-0.481689 19.613264,-26.693589 32.685275,-32.332143 1.74723,-0.753658 3.78037,-0.426967 5.93028,-0.500955"
        id="path7447"
@@ -398,12 +398,12 @@
          id="flowRegion4530"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
            id="rect4532"
-           width="126.26908"
-           height="33.335022"
+           width="167.68526"
+           height="31.644562"
            x="461.63971"
            y="219.44331"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-         id="flowPara4534">Execute</flowPara></flowRoot>    <path
+         id="flowPara4534">Execute $f$</flowPara></flowRoot>    <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker12977)"
        d="m 124.19916,61.996185 h 17.51556"
        id="path12967"
@@ -528,7 +528,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer9"
-     inkscape:label="Ebene 9">
+     inkscape:label="Ebene 9"
+     style="display:inline">
     <rect
        style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.00392157;paint-order:stroke markers fill"
        id="rect21434"

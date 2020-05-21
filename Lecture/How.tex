@@ -14,6 +14,17 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Overview}
+    \begin{itemize}[<+->]
+        \item Enclaves can be seen as shared objects (.so on Unix, .dll on Windows) which provide trusted functions
+        \item Trusted functions should only handle security critical procedures (e.g. password reads)
+        \item Enclave memory can only be read by trusted functions
+    \end{itemize}
+    \centering
+    \visible<4>{\incfig[0.4\textwidth]{Enclave}}
+\end{frame}
+
 %Quellen unten anpassen
 \incfuck[0.8\textwidth]{AppOverview}{1}{{}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{2}{{}}{Overview}
@@ -24,14 +35,14 @@
 \incfuck[0.8\textwidth]{AppOverview}{7}{{}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{8}{{}}{Overview}
 
+
 \begin{frame}
-    \frametitle{Trusted Functions}
-    \begin{itemize}
-        \visible<1->{\item Trusted functions are implemented inside the enclave}
-        \visible<2->{\item Only security critical functions should be implement in the enclave, e.g Password Reads}
-        \visible<3->{\item Enclave Memory could only be read from trusted functions}
-        \visible<3->{\item Trusted functions should not directly pass a pointer to enclave memory}
+    \frametitle{Implementation: Enclave Page Cache (EPC)}
+    \begin{itemize}[<+->]
+        \item Code and data of the enclave is stored in a special memory area, called EPC
     \end{itemize}
+    
+
 \end{frame}
 
 \begin{frame}

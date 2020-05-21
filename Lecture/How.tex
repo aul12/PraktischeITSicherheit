@@ -41,8 +41,10 @@
     \begin{itemize}[<+->]
         \item Code and data of the enclave is stored in a special memory area, called EPC
         \item Each EPC-page is owned by exactly one enclave
+        \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
         \item EPC resides in reserved part of system memory (Processor Reserved Memory (PRM))
         \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
+        \item PRM is encrypted on hardware level
     \end{itemize}
 \end{frame}
 

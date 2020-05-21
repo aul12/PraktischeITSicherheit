@@ -8,7 +8,7 @@
             \item Trusted functions processing secrets (e.g. passwords, encryption keys)
             \item Untrusted functions for non-critical computations / procedures
         \end{itemize}
-        \item Trusted functions are handled by an ``enclave``
+        \item Trusted functions are handled by so called ``enclaves``
         \item Enclave is launched by the application
         \item Enclave code is called by the application through enclave entry point
     \end{itemize}
@@ -39,7 +39,7 @@
 \begin{frame}
     \frametitle{Implementation: Enclave Page Cache (EPC)}
     \begin{itemize}[<+->]
-        \item Code and data of the enclave is stored in a special memory area, called EPC
+        \item Code and data of enclaves is stored in a special memory area, called EPC
         \item Each EPC-page is owned by exactly one enclave
         \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
         \item EPC resides in reserved part of system memory (Processor Reserved Memory (PRM))

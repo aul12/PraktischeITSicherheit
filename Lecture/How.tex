@@ -40,9 +40,16 @@
     \frametitle{Implementation: Enclave Page Cache (EPC)}
     \begin{itemize}[<+->]
         \item Code and data of the enclave is stored in a special memory area, called EPC
+        \item Each EPC-page is owned by exactly one enclave
+        \item EPC resides in reserved part of system memory (Processor Reserved Memory (PRM))
+        \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
     \end{itemize}
-    
+\end{frame}
 
+\begin{frame}
+    \frametitle{Implementation: Enclave Page Cache (EPC)}
+    \centering
+    \incfig[0.6\textwidth]{MemoryLayout}
 \end{frame}
 
 \begin{frame}

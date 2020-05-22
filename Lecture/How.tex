@@ -56,6 +56,28 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Implementation: Enclave Mode}
+    \begin{itemize}[<+->]
+        \item SGX adds a new CPU mode i.e. the ``Enclave Mode``
+        \begin{itemize}
+            \item Standard application code runs in ``untrusted mode``
+            \item Enclave code (i.e. trusted functions) run in enclave mode
+        \end{itemize}
+        \item Code running in untrusted mode cannot access EPC-pages
+        \item Code running in enclave mode can access untrusted memory / code
+    \end{itemize}
+    $ $ \newline
+    \centering
+    \visible<6>{
+        \begin{tabular}{l | l}
+        Standard CPU-modes & SGX-modes \\
+        \hline
+        User mode & Untrusted mode \\
+        Kernel mode & Enclave mode \\
+    \end{tabular}}
+\end{frame}
+
+\begin{frame}
     \frametitle{Implementation: Page Mapping and Page Checks}
     \begin{itemize}[<+->]
         \item Address translation and page mapping is delegated to the system software \newline

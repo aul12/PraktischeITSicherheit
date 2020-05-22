@@ -2,16 +2,28 @@
 
 \begin{frame}
     \frametitle{Overview}
-    \begin{itemize}
-        \visible<1->{\item Application is split into a secure part and a non-secure part}
-        \visible<2->{\item Secure part is called ``enclave``}
-        \visible<3->{\item Code can be written in trusted or untrusted functions}
-        \visible<4->{\item trusted functions run inside the enclave}
-        \visible<5->{\item Application consists of its own code, own data and the enclave}
-        \visible<6->{\item Enclave is launched by the application}
-        \visible<7->{\item Enclave Code can be run from the application by call to the enclave entry point}
-        \visible<8>{\item Entry Point is a execution of the enclave and is pre-defined during compilation}
+    \begin{itemize}[<+->]
+        \item Application is split into a secure part and a non-secure part
+        \begin{itemize}
+            \item Trusted functions processing secrets (e.g. passwords, encryption keys)
+            \item Untrusted functions for non-critical computations / procedures
+        \end{itemize}
+        \item Trusted functions are handled by so called ``enclaves``
+        \item Enclave is launched by the application
+        \item Enclave code is called by the application through enclave entry point
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Overview}
+    \begin{itemize}[<+->]
+        \item Enclaves can be seen as shared objects (.so on Unix, .dll on Windows) which provide trusted functions
+        \item Trusted functions should only handle security critical procedures (e.g. password reads)
+        \item Enclave memory can only be read by trusted functions
+    \end{itemize}
+    $ $ \newline
+    \centering
+    \visible<4>{\incfig[0.4\textwidth]{Enclave}}
 \end{frame}
 
 %Quellen unten anpassen
@@ -24,14 +36,82 @@
 \incfuck[0.8\textwidth]{AppOverview}{7}{{}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{8}{{}}{Overview}
 
+
 \begin{frame}
-    \frametitle{Trusted Functions}
-    \begin{itemize}
-        \visible<1->{\item Trusted functions are implemented inside the enclave}
-        \visible<2->{\item Only security critical functions should be implement in the enclave, e.g Password Reads}
-        \visible<3->{\item Enclave Memory could only be read from trusted functions}
-        \visible<3->{\item Trusted functions should not directly pass a pointer to enclave memory}
+    \frametitle{Implementation: SGX Memory Layout}
+    \begin{itemize}[<+->]
+        \item Code and data of enclaves is stored in a special memory area, called Enclave Page Cache (EPC)
+        \item Each EPC-page is owned by exactly one enclave
+        \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
+        \item EPCM also records for each EPC-page the corresponding virtual address
+        \item EPC and EPCM reside in reserved part of system memory (Processor Reserved Memory (PRM))
+        \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
+        \item PRM is encrypted on hardware level
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: SGX Memory Layout}
+    \centering
+    \incfig[0.6\textwidth]{MemoryLayout}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: Enclave Mode}
+    \begin{itemize}[<+->]
+        \item SGX adds a new CPU mode i.e. the ``Enclave Mode``
+        \begin{itemize}
+            \item Standard application code runs in ``untrusted mode``
+            \item Enclave code (i.e. trusted functions) run in enclave mode
+        \end{itemize}
+        \item Code running in untrusted mode cannot access EPC-pages
+        \item Code running in enclave mode can access untrusted memory / code
+        \item Modes can be switched by special CPU-instructions
+    \end{itemize}
+    $ $ \newline
+    \centering
+    \visible<6>{
+        \begin{tabular}{l | l}
+        Standard CPU-modes & SGX-modes \\
+        \hline
+        User mode & Untrusted mode \\
+        Kernel mode & Enclave mode \\
+    \end{tabular}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: Page Mapping and Page Checks}
+    \begin{itemize}[<+->]
+        \item Address translation and page mapping is delegated to the system software \newline
+              $\Rightarrow$ small overhead, standard address translation is used
+        \item Since the OS is not trusted, additional checks have to be performed by the CPU
+        \item Intel SGX ensures that: 
+            \begin{itemize}
+                \item virtual addresses pointing to enclave code or data are mapped to EPC-pages
+                \item EPC-pages can only be mapped to one specific virtual address
+                \item EPC-pages are allocated to exactly one enclave (by checking the EPCM)
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Extended Page Check}
+    \begin{figure}
+        \centering
+        \incfig[0.75\textwidth]{PageCheck}
+        \caption*{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: Special Instructions}
+    \begin{itemize}[<+->]
+        \item SGX introduces new CPU instructions which are used to:
+        \begin{itemize}
+            \item Switch between untrusted mode and enclave mode (EENTER, EEXIT)
+        \end{itemize}
+    \end{itemize}
+
 \end{frame}
 
 \begin{frame}

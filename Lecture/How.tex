@@ -42,7 +42,8 @@
         \item Code and data of enclaves is stored in a special memory area, called Enclave Page Cache (EPC)
         \item Each EPC-page is owned by exactly one enclave
         \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
-        \item EPC resides in reserved part of system memory (Processor Reserved Memory (PRM))
+        \item EPCM also records for each EPC-page the corresponding virtual address
+        \item EPC and EPCM reside in reserved part of system memory (Processor Reserved Memory (PRM))
         \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
         \item PRM is encrypted on hardware level
     \end{itemize}
@@ -63,7 +64,8 @@
         \item Intel SGX ensures that: 
             \begin{itemize}
                 \item virtual addresses pointing to enclave code or data are mapped to EPC-pages
-                \item EPC-pages are mapped to exactly one enclave (by checking the EPCM)
+                \item EPC-pages can only be mapped to one specific virtual address
+                \item EPC-pages are allocated to exactly one enclave (by checking the EPCM)
             \end{itemize}
     \end{itemize}
 \end{frame}

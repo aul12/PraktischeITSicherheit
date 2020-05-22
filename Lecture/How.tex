@@ -109,9 +109,11 @@
         \item SGX introduces new CPU instructions which are used to:
         \begin{itemize}
             \item Switch between untrusted mode and enclave mode (EENTER, EEXIT)
+            \item Create and tear down enclaves (ECREATE, EREMOVE, EINIT, EADD)
+            \item Compute cryptographic signatures for attestation process (EGETKEY, EREPORT, EEXTEND)
         \end{itemize}
+        \item Instructions are implemented in micro code
     \end{itemize}
-
 \end{frame}
 
 \begin{frame}

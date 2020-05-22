@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'AppOverview7.eps' (pdf, eps, ps)
+%% Accompanies image file 'Enclave.eps' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{649.15371151bp}%
+    \setlength{\unitlength}{324.13649431bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,19 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.58011142)%
+  \begin{picture}(1,0.61197213)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength]{AppOverview7.eps}}%
-    \put(0.16132151,0.59787762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33845324\unitlength}\raggedright \end{minipage}}}%
-    \put(0.1717364,-0.03204752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66185066\unitlength}\raggedright \end{minipage}}}%
-    \put(0.06577693,0.56404752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.35245725\unitlength}\centering Untrusted Part of App\end{minipage}}}%
-    \put(0.59350729,0.56404752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32897975\unitlength}\centering Trusted Part of App\end{minipage}}}%
-    \put(0.1145578,0.49328348){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27192967\unitlength}\raggedright Create Enclave\end{minipage}}}%
-    \put(0.30137794,0.43170673){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.37261797\unitlength}\raggedright \Huge ...\end{minipage}}}}%
-    \put(0.09704781,0.33959558){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33075015\unitlength}\raggedright Trusted Function $f$\end{minipage}}}%
-    \put(0.69553579,0.48233667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19373521\unitlength}\raggedright Execute $f$\end{minipage}}}%
-    \put(0.70532167,0.32745158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14004964\unitlength}\raggedright Return\end{minipage}}}%
-    \put(0.30137795,0.28391891){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.37261796\unitlength}\raggedright \Huge ...\end{minipage}}}}%
+    \put(0,0){\includegraphics[width=\unitlength]{Enclave.eps}}%
+    \put(0.13518108,-1.02071981){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.70340736\unitlength}\raggedright \end{minipage}}}%
+    \put(0.39149823,0.48429124){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.47508713\unitlength}\raggedright encrypt(\dots)\end{minipage}}}%
+    \put(0.3894508,0.2457099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.79416274\unitlength}\raggedright read\_password(\dots)\end{minipage}}}%
+    \put(0.38801914,0.05569755){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.780921\unitlength}\raggedright \Large ...\end{minipage}}}}%
+    \put(0.29969437,0.59932205){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50801823\unitlength}\raggedright \large Enclave\end{minipage}}}%
+    \put(0.39176939,0.36500116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.511082\unitlength}\raggedright decrypt(\dots)\\ \end{minipage}}}%
   \end{picture}%
 \endgroup%

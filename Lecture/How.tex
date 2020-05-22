@@ -104,6 +104,17 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Implementation: Special Instructions}
+    \begin{itemize}[<+->]
+        \item SGX introduces new CPU instructions which are used to:
+        \begin{itemize}
+            \item Switch between untrusted mode and enclave mode (EENTER, EEXIT)
+        \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
     \frametitle{Implementation}
     \begin{itemize}
         \visible<1->{\item Intel SGX defines 18 new instructions to handle enclaves in hardware}

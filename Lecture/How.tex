@@ -37,9 +37,9 @@
 
 
 \begin{frame}
-    \frametitle{Implementation: Enclave Page Cache (EPC)}
+    \frametitle{Implementation: SGX Memory Layout}
     \begin{itemize}[<+->]
-        \item Code and data of enclaves is stored in a special memory area, called EPC
+        \item Code and data of enclaves is stored in a special memory area, called Enclave Page Cache (EPC)
         \item Each EPC-page is owned by exactly one enclave
         \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
         \item EPC resides in reserved part of system memory (Processor Reserved Memory (PRM))
@@ -49,9 +49,32 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Enclave Page Cache (EPC)}
+    \frametitle{Implementation: SGX Memory Layout}
     \centering
     \incfig[0.6\textwidth]{MemoryLayout}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: Page Mapping and Page Checks}
+    \begin{itemize}[<+->]
+        \item Address translation and page mapping is delegated to the system software \newline
+              $\Rightarrow$ small overhead, standard address translation is used
+        \item Since the OS is not trusted, additional checks have to be performed by the CPU
+        \item Intel SGX ensures that: 
+            \begin{itemize}
+                \item virtual addresses pointing to enclave code or data are mapped to EPC-pages
+                \item EPC-pages are mapped to exactly one enclave (by checking the EPCM)
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Extended Page Check}
+    \begin{figure}
+        \centering
+        \incfig[0.75\textwidth]{PageCheck}
+        \caption*{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -87,15 +110,6 @@
             \item EPCM is a map from enclave to pages in the EPC
         \end{itemize}}
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Page Check}
-    \begin{figure}
-        \centering
-        \incfig[0.75\textwidth]{PageCheck}
-        \caption*{Source: \url{https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html}}
-    \end{figure}
 \end{frame}
 
 \begin{frame}

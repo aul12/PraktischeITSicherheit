@@ -117,6 +117,16 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Implementation: Execution Privileges}
+    \begin{itemize}[<+->]
+        \item Enclave creation is only possible in kernel mode (page allocation)
+        \item Switching between enclave an untrusted CPU mode can only be done in user mode
+        \item All enclave code runs with standard user privileges \newline
+              $\Rightarrow$ standard security mechanisms of OS are applied    
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
     \frametitle{Implementation: Enclave Live Cycle}
     \centering
     \incfig[0.85\textwidth]{EnclaveLiveCycle}

@@ -71,7 +71,7 @@
     \put(0.66800198,0.4745665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 4. EADD\end{minipage}}}%
     \put(0.64404533,0.20461424){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 5. Init EPC-pages\end{minipage}}}%
     \put(0.66800198,0.43691825){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 6. EEXTEND\end{minipage}}}%
-    \put(0.52864675,0.29996325){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 7. Update Measure\end{minipage}}}%
+    \put(0.52864675,0.29996325){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 7. Update Measurement\end{minipage}}}%
     \put(0.493371,0.05753408){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright SECS\end{minipage}}}}%
     \put(0.66800198,0.39927007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 8. EINIT\end{minipage}}}%
     \put(0.52874532,0.26241699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.38491724\unitlength}\raggedright 9. Mark SECS as initialized\end{minipage}}}%

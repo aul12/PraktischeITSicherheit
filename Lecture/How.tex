@@ -185,17 +185,6 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation}
-    \begin{itemize}
-        \visible<1->{\item Intel SGX defines 18 new instructions to handle enclaves in hardware}
-        \visible<2->{\item Intructions to load enclaves are called through systemcalls, e.g ECREATE}
-        \visible<3->{\item Instructions to communicate with the enclave can be called by user, e.g. EENTRY, EEXIT}
-        \visible<4->{\item CPU has an extra enclave Mode to call some of these instructions}
-        \visible<5>{\item Enclave mode needs a context switch and is for the whole enclave handling and enclave code execution}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
     \frametitle{Enclave Page Cache (EPC)}
     \begin{itemize}
         \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
@@ -208,41 +197,6 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Page Check}
-    \begin{itemize}
-        \visible<1->{\item Page check is extended to prevent external access to EPC}
-        \visible<2->{\item The Enclave Page Cache Metadata (EPCM) is stored inside the EPC}
-        \visible<3->{\begin{itemize}
-            \item EPCM is a map from enclave to pages in the EPC
-        \end{itemize}}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Application procedure}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Application procedure}
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-           \begin{enumerate}
-               \visible<1->{\item EENTRY instruction is executed to enter enclave}
-               \visible<2->{\item The application context is saved}
-               \visible<3->{\item The processor is put in enclave mode}
-               \visible<4->{\item EEXIT instruction is executed to exit enclave}
-               \visible<5>{\item The processor is put in normal mode}
-           \end{enumerate}
-        \end{column}
-        \begin{column}{0.7\textwidth}
-            \begin{center}
-                \includegraphics[scale=0.35]{Images/procedure.png}
-            \end{center}
-        \end{column}
-        \end{columns}
-\end{frame}
 
 \begin{frame}
     \frametitle{Local Attestation}

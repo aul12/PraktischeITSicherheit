@@ -40,13 +40,25 @@
 \begin{frame}
     \frametitle{Implementation: SGX Memory Layout}
     \begin{itemize}[<+->]
-        \item Code and data of enclaves is stored in a special memory area, called Enclave Page Cache (EPC)
-        \item Each EPC-page is owned by exactly one enclave
-        \item Enclave Page Cache Map (EPCM) determines mapping from enclave to EPC-pages
-        \item EPCM also records for each EPC-page the corresponding virtual address
-        \item EPC and EPCM reside in reserved part of system memory (Processor Reserved Memory (PRM))
+        \item Sensitive data is stored in special region of RAM i.e. Processor Reserved Memory (PRM)
         \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
         \item PRM is encrypted on hardware level
+        \item Encryption keys are generated at boot time and stored inside CPU
+        \item PRM consists of:
+        \begin{itemize}
+            \item Enclave Page Cache (EPC)
+            \item Metadata e.g. Enclave Page Cache Map (EPCM)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: EPC and EPCM}
+    \begin{itemize}[<+->]
+        \item Code and data of enclaves is stored in EPC-pages
+        \item Each EPC-page is owned by exactly one enclave
+        \item EPCM determines mapping from enclave to EPC-pages
+        \item EPCM also records for each EPC-page the corresponding virtual address
     \end{itemize}
 \end{frame}
 

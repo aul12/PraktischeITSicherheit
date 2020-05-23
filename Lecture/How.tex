@@ -71,8 +71,6 @@
             \item \dots
         \end{itemize}
     \end{itemize}
-    
-
 \end{frame}
 
 \begin{frame}
@@ -149,6 +147,23 @@
     \frametitle{Implementation: Enclave Live Cycle}
     \centering
     \incfig[0.85\textwidth]{EnclaveLiveCycle}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Implementation: Enclave Signature}
+    \begin{itemize}[<+->]
+        \item Enclaves signature is used to verify the loaded enclave
+        \item It contains (among other information):
+        \begin{itemize}
+            \item The ``Enclave Measurement`` (hash value of enclave code and data)
+            \item The authors public key
+            \item The authors signature
+            \item Different version numbers (product ID, module version, \dots)
+        \end{itemize}
+        \item During EINIT the enclave to be created is measured and the result is compared against the expected measurement in the enclave signature
+        \item A mismatch will prevent the enclave from execution
+    \end{itemize}
+
 \end{frame}
 
 \begin{frame}

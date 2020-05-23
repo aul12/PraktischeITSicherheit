@@ -66,7 +66,7 @@
         \begin{itemize}
             \item Enclave ID
             \item Enclave state (un-/initialized)
-            \item Enclave hash
+            \item Enclave Measurement (see also slide \ref{fr:EncSig})
             \item Enclave size
             \item \dots
         \end{itemize}
@@ -151,6 +151,7 @@
 
 \begin{frame}
     \frametitle{Implementation: Enclave Signature}
+    \label{fr:EncSig}
     \begin{itemize}[<+->]
         \item Enclaves signature is used to verify the loaded enclave
         \item It contains (among other information):
@@ -163,8 +164,17 @@
         \item During EINIT the enclave to be created is measured and the result is compared against the expected measurement in the enclave signature
         \item A mismatch will prevent the enclave from execution
     \end{itemize}
-
 \end{frame}
+
+\incfuck[\textwidth]{EnclaveCreation}{1}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{2}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{3}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{4}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{5}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{6}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{7}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{8}{}{Enclave Creation Step by Step}    
+\incfuck[\textwidth]{EnclaveCreation}{9}{}{Enclave Creation Step by Step}    
 
 \begin{frame}
     \frametitle{UNTIL HERE THE PRESENTATION IS MORE OR LESS FINISHED}

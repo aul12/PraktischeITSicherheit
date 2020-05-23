@@ -1,4 +1,5 @@
-\documentclass[DIN, pagenumber=false, fontsize=11pt, parskip=half]{scrartcl}
+%\documentclass[DIN, pagenumber=false, fontsize=11pt, parskip=half]{scrartcl}
+\documentclass{uulm-assignment}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -48,8 +49,16 @@
     \import{./}{#2.eps_tex}
 }
 
-\title{Intel SGX}
+\title{Intel SGX Applicability \& Security}
 \author{Tim Luchterhand, Björn Petersen, Paul Nykiel}
+
+\faculty{Institut für Verteilte Systeme}
+\course{Praktische IT-Sicherheit}
+\semester{Summer 2020} 
+\supervisor{Tim Luchterhand, Björn Petersen, Paul Nykiel; Supervision: Ala'a Al-Momani}
+ 
+\assignmenttype{Exercise}
+\assignmentno{}
 
 \begin{document}
     \maketitle
@@ -176,7 +185,7 @@
     by typing \texttt{make attest.enc}. Think about how the voting procedure needs to be adapted to include local
     attestation, at which point should the user be able to verify the enclave?
 
-    Have a look at the two examples provided by OpenSGX, they are located in the files 
+    Have a look at the two examples provided by OpenSGX, they are located in the files \\
     \texttt{opensgx/user/test/simple-remote-attest-challenger.c} and \\
     \texttt{opensgx/user/demo/simple-remote-attest-target.c}. Try to understand the
     examples and implement this mechanism as part of your application, the server will

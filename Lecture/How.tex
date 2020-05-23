@@ -57,6 +57,25 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Implementation: SGX Enclave Control Structure (SECS)}
+    \begin{itemize}[<+->]
+        \item SGX stores per-enclave metadata in an SECS associated with each enclave
+        \item SECS is stored in an EPC-page of the corresponding enclave
+        \item SECS cannot be accessed by the enclave
+        \item SECS contains:
+        \begin{itemize}
+            \item Enclave ID
+            \item Enclave state (un-/initialized)
+            \item Enclave hash
+            \item Enclave size
+            \item \dots
+        \end{itemize}
+    \end{itemize}
+    
+
+\end{frame}
+
+\begin{frame}
     \frametitle{Implementation: Enclave Mode}
     \begin{itemize}[<+->]
         \item SGX adds a new CPU mode i.e. the ``Enclave Mode``

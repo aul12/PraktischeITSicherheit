@@ -57,5 +57,6 @@
     \put(0.84354349,0.27378421){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10644547\unitlength}\raggedright CPU\end{minipage}}}%
     \put(0.25904777,0.49764756){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.44935161\unitlength}\raggedright 1. EENTER\end{minipage}}}%
     \put(-0.02606208,0.05699){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.08950868\unitlength}\raggedright EPC\end{minipage}}}}%
+    \put(-0.02945727,0.39678222){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.08950868\unitlength}\raggedright App\end{minipage}}}}%
   \end{picture}%
 \endgroup%

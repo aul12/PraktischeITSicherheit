@@ -163,9 +163,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="335.71395"
-     inkscape:cy="241.56942"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="324.06786"
+     inkscape:cy="307.19299"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -296,7 +296,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4982)"
-       d="M 158.14004,143.37021 59.703415,69.912565"
+       d="M 158.14004,143.37021 61.139725,71.159885"
        id="path4972"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -489,7 +489,7 @@
            height="70"
            x="107.14286"
            y="197.88741" /></flowRegion><flowPara
-         id="flowPara8284"></flowPara></flowRoot>    <g
+         id="flowPara8284" /></flowRoot>    <g
        id="g8344"
        transform="translate(-15.213542,8.3587187)">
       <rect

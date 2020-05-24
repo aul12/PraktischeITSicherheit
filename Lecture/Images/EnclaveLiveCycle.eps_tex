@@ -54,8 +54,8 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength]{EnclaveLiveCycle.eps}}%
-    \put(0.13492707,0.50978243){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright Non-existing\end{minipage}}}%
-    \put(0.68963142,0.50668432){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18547202\unitlength}\raggedright Uninitialized\end{minipage}}}%
+    \put(0.13492708,0.50978243){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright Non-existing\end{minipage}}}%
+    \put(0.68963143,0.50668432){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18547202\unitlength}\raggedright Uninitialized\end{minipage}}}%
     \put(0.68282109,0.09805683){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright Ready to use\end{minipage}}}%
     \put(0.17995649,0.09589023){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright In use\end{minipage}}}%
     \put(0.43569064,0.53499312){\color[rgb]{0.66666667,0.36078431,0.36078431}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright ECREATE\end{minipage}}}%
@@ -65,7 +65,7 @@
     \put(0.44272335,0.17902852){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EENTER\end{minipage}}}%
     \put(0.45648197,0.01021075){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EEXIT\end{minipage}}}%
     \put(-0.04284926,0.20125982){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.14534951\unitlength}\centering EGETKEY\\ EREPORT\end{minipage}}}%
-    \put(0.11355433,0.36185977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16654633\unitlength}\raggedright \end{minipage}}}%
+    \put(0.49323847,-0.07970938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.62946644\unitlength}\raggedright \end{minipage}}}%
     \put(0.04539442,0.32509206){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright User mode\end{minipage}}}%
     \put(0.04502182,0.27702074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright Kernel mode\end{minipage}}}%
   \end{picture}%

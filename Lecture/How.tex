@@ -145,7 +145,7 @@
     \begin{itemize}[<+->]
         \item Page check is extended to prevent external access to EPC
         \item The Enclave Page Cache Metadata (EPCM) is stored inside the EPC
-        \begin{itemize}[<+->]
+        \begin{itemize}
             \item EPCM is a map from enclave to pages in the EPC
         \end{itemize}
     \end{itemize}
@@ -186,51 +186,53 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Local Attestation}
+    \frametitle{Attestation}
     \begin{itemize}[<+->]
-        \item Enclaves can communicate to each other
-        \item Local attestation is a proof, that the other enclave exists and is trustable
-        \item A channel must have been established between the two enclaves
+        \item Attestation is to verify the integrity of an enclave
+        \item Through attestation you can verify, that you can trust the code inside the enclave
+        \item For attestation a report will be generated, which contains multiple information
+        \item Report is signed with an key from the second enclave, which is public because of an asynchronous key exchange
+        \item Attestation is for a secure communication between 2 enclaves on same CPU or via remote 
+        \item For remote attestation an quoting enclave is needed as third-party
+        \item Quoting enclaves signs local reports for remote attestation
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Local Attestation}
-    \begin{enumerate}[<+->]
-        \item The first enclave can ask the hardware to generate a credential, named report, and send it to the other enclave
-        \item The second can verify, that this resport is generated on the same platform and can now trust this enclave
-        \item The second enclave has also to proof the report of the first enclave
-    \end{enumerate}
-\end{frame}
-
-%vielleicht mit Bild als erklärung leichter????????
-
-\begin{frame}
-    \frametitle{Remote Attestation}
-    \begin{itemize}[<+->]
-        \item Remote attestation is an exchange of a ``quote``
-        \item Remote attestation needs an extra architectural enclave, called ``quoting enclave``
-        \item This extra enclave is an architectural enclave, called ``quoting enclave``
-        \item The quoting enclave verifies and transforms the enclave report into a quote
-        \item A quote is signed by the quoting enclave by the Provisioning Key
-        \item This quote is remotely verifiable
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{enumerate}[<+->]
+                \item Enclave A receives the enclave Measure (MRENCLAVE) from enclave B via an established channel
+                \item Enclave A generates the report and signed it up with the MRENCLAVE from B and send the report back
+                \item Enclave B decrypts the report and can verify, enclave A is on the same platform and trustable
+            \end{enumerate}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \includegraphics[scale=0.45]{Images/local_attestation.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
     \frametitle{Remote Attestation}
-    \begin{enumerate}[<+->]
-        \item An attestation request is send from a server to the application
-        \item The application sends a report request to the application enclave
-        \item The application enclave returns the generated report
-        \item The application receives the report and forwards it to the quoting enclave to be signed
-        \item The quoting enclave generates from the report a quote and the quote is send back to the application
-        \item The application sends the quote to the server for verification
-        \item The server validates the quote signature and the server sends the data to the attestation service
-    \end{enumerate}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{enumerate}[<+->]
+                \item Application receives an attestion request from challenger
+                \item Local attestation is requested from application
+                \item Application receives local attestation
+                \item Local attestation is send to quoting enclave
+                \item quoting enclave converts local report to remote report (Quote) and sends back
+                \item challenger receives quote
+                \item Attestation verification service verifies quote
+            \end{enumerate}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \includegraphics[scale=0.4]{Images/remote_attestation.png}
+        \end{column}
+    \end{columns}
 \end{frame}
-
-%vielleicht mit Bild als erklärung leichter????????
 
 \begin{frame}
     \frametitle{Sealing}

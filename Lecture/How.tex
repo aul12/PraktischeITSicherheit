@@ -43,6 +43,7 @@
         \item Sensitive data is stored in special region of RAM i.e. Processor Reserved Memory (PRM)
         \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
         \item PRM is encrypted on hardware level
+        \item PRM content is only decrypted when inside the physical CPU core
         \item Encryption keys are generated at boot time and stored inside CPU
         \item PRM consists of:
         \begin{itemize}

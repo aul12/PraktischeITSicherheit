@@ -36,9 +36,10 @@
 \incfuck[0.8\textwidth]{AppOverview}{7}{{}}{Overview}
 \incfuck[0.8\textwidth]{AppOverview}{8}{{}}{Overview}
 
+\subsection{Implementation}
 
 \begin{frame}
-    \frametitle{Implementation: SGX Memory Layout}
+    \frametitle{SGX Memory Layout}
     \begin{itemize}[<+->]
         \item Sensitive data is stored in special region of RAM i.e. Processor Reserved Memory (PRM)
         \item CPU denies direct access to PRM even by OS, BIOS, etc \dots
@@ -54,7 +55,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: EPC and EPCM}
+    \frametitle{EPC and EPCM}
     \begin{itemize}[<+->]
         \item Code and data of enclaves is stored in EPC-pages
         \item Each EPC-page is owned by exactly one enclave
@@ -64,13 +65,13 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: SGX Memory Layout}
+    \frametitle{SGX Memory Layout}
     \centering
     \incfig[0.6\textwidth]{MemoryLayout}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: SGX Enclave Control Structure (SECS)}
+    \frametitle{SGX Enclave Control Structure (SECS)}
     \begin{itemize}[<+->]
         \item SGX stores per-enclave metadata in an SECS associated with each enclave
         \item SECS is stored in an EPC-page of the corresponding enclave
@@ -87,7 +88,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Enclave Mode}
+    \frametitle{Enclave Mode}
     \begin{itemize}[<+->]
         \item SGX adds a new CPU mode i.e. the ``Enclave Mode``
         \begin{itemize}
@@ -110,7 +111,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Page Mapping and Page Checks}
+    \frametitle{Page Mapping and Page Checks}
     \begin{itemize}[<+->]
         \item Address translation and page mapping is delegated to the system software \newline
               $\Rightarrow$ small overhead, standard address translation is used
@@ -133,7 +134,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Special Instructions}
+    \frametitle{Special Instructions}
     \begin{itemize}[<+->]
         \item SGX introduces new CPU instructions which are used to:
         \begin{itemize}
@@ -146,7 +147,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Execution Privileges}
+    \frametitle{Execution Privileges}
     \begin{itemize}[<+->]
         \item Enclave creation is only possible in kernel mode (page allocation)
         \item Switching between enclave an untrusted CPU mode can only be done in user mode
@@ -156,13 +157,13 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Enclave Live Cycle}
+    \frametitle{Enclave Live Cycle}
     \centering
     \incfig[0.85\textwidth]{EnclaveLiveCycle}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implementation: Enclave Signature}
+    \frametitle{Enclave Signature}
     \label{fr:EncSig}
     \begin{itemize}[<+->]
         \item Enclaves signature is used to verify the loaded enclave

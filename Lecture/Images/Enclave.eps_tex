@@ -58,7 +58,7 @@
     \put(0.39149823,0.48429124){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.47508713\unitlength}\raggedright encrypt(\dots)\end{minipage}}}%
     \put(0.3894508,0.2457099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.79416274\unitlength}\raggedright read\_password(\dots)\end{minipage}}}%
     \put(0.38801914,0.05569755){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.780921\unitlength}\raggedright \Large ...\end{minipage}}}}%
-    \put(0.29969437,0.59932205){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50801823\unitlength}\raggedright \large Enclave\end{minipage}}}%
+    \put(0.29969437,0.58543892){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50801823\unitlength}\raggedright \large Enclave\end{minipage}}}%
     \put(0.39176939,0.36500116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.511082\unitlength}\raggedright decrypt(\dots)\\ \end{minipage}}}%
   \end{picture}%
 \endgroup%

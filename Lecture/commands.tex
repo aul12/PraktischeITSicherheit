@@ -2,3 +2,15 @@
     \def\svgwidth{#1}
     \import{Images/}{#2.eps_tex}
 }
+
+\newcommand{\incfuck}[5][\columnwidth]{%
+    \begin{frame}
+        \frametitle{#5}
+        \begin{figure}
+            \centering
+            \def\svgwidth{#1}
+            \import{Images/#2/}{#2#3.eps_tex}
+            \caption*{#4}
+        \end{figure}
+    \end{frame}
+}

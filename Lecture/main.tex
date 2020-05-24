@@ -11,6 +11,7 @@
 \usepackage{fontawesome}
 \usepackage{import}
 \usepackage{moresize}
+\usepackage[font=scriptsize]{caption}
 
 \input{commands.tex}
 
@@ -51,12 +52,13 @@
 }
 
 \input{Intro.tex}
+\input{How.tex}
 
-\frame{
+\begin{frame}[allowframebreaks]
     \frametitle{Sources}
     \nocite{*}
     \bibliographystyle{amsalpha}
     \bibliography{sources.bib}
-}
+\end{frame}
 
 \end{document}

@@ -1,0 +1,75 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'EnclaveCreation6.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{891.79546206bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.51960094)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength]{EnclaveCreation6.eps}}%
+    \put(0.54354896,0.79273793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09506607\unitlength}\raggedright \end{minipage}}}%
+    \put(0.54647433,0.58520839){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18590321\unitlength}\raggedright \end{minipage}}}%
+    \put(0.17443338,0.03009854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright System memory\end{minipage}}}%
+    \put(0.40570782,0.01958052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright PRM\end{minipage}}}%
+    \put(0.54835613,0.01117046){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright EPC\end{minipage}}}%
+    \put(-0.01496651,0.50814259){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25655987\unitlength}\centering App\end{minipage}}}%
+    \put(0.03199667,0.41961997){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19794242\unitlength}\raggedright Enclave Code\end{minipage}}}%
+    \put(0.91075197,0.37053033){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright CPU\end{minipage}}}%
+    \put(0.59668622,0.45218608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright OS\end{minipage}}}%
+    \put(0.24274961,0.51412552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.42465195\unitlength}\raggedright 1. Request enclave creation\end{minipage}}}%
+    \put(0.66631997,0.51221465){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 2. ECREATE\end{minipage}}}%
+    \put(0.493371,0.05753411){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright SECS\end{minipage}}}}%
+    \put(0.52815398,0.33673213){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 3. Init SECS\end{minipage}}}%
+    \put(0.24495066,0.40777646){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 4. Copy enclave code\end{minipage}}}%
+    \put(0.66800198,0.4745665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 4. EADD\end{minipage}}}%
+    \put(0.64404533,0.20461424){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 5. Init EPC-pages\end{minipage}}}%
+    \put(0.66800198,0.43691825){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 6. EEXTEND\end{minipage}}}%
+  \end{picture}%
+\endgroup%

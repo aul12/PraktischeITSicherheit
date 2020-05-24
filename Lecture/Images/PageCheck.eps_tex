@@ -55,7 +55,7 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength]{PageCheck.eps}}%
     \put(-1.01058315,-0.98554486){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.85129341\unitlength}\raggedright \end{minipage}}}%
-    \put(0.10836688,0.4969229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18523484\unitlength}\centering \tiny Traditional IA Page Table Checks\end{minipage}}}%
+    \put(0.10836688,0.4969229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18523484\unitlength}\centering \tiny Traditional Adress Translation\end{minipage}}}%
     \put(0.45297801,0.51044242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09750706\unitlength}\centering \tiny CPU in Enclave-Mode?\end{minipage}}}%
     \put(0.29479928,0.5238867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11429937\unitlength}\centering \tiny Physical Address\end{minipage}}}%
     \put(0.73099057,0.49452885){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10399365\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%

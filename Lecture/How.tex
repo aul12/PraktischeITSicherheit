@@ -198,28 +198,6 @@
 \incfuck[0.9\textwidth]{EnclaveCall}{8}{}{Enclave Call Step by Step}
 
 \begin{frame}
-    \frametitle{UNTIL HERE THE PRESENTATION IS MORE OR LESS FINISHED}
-    Following slides is mainly the stuff that has already been mentioned but in an unrefined version.
-    After that slides for attestation and sealing follow but are not finished yet since we are not sure
-    how much additional content will actually fit in the presentation.
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Enclave Page Cache (EPC)}
-    \begin{itemize}
-        \visible<1->{\item Code and data of the enclave is stored in a special memory area, called EPC}
-        \visible<2->{\item This area is encrypted by using the Memory Encryption Engine (MEE)}
-        \visible<3->{\item MEE is an extra new and dedicated circuit for Intel SGX}
-        \visible<4->{\item Only enclave can read from its own EPC}
-        \visible<5->{\item EPC page content is only decrypted inside the CPU}
-        \visible<6->{\item Keys for de-/encrypting are generated at boot-time and are stored inside the CPU}
-        \visible<7>{\item Enclaves can access their application memory, but not the other way arround}
-    \end{itemize}
-\end{frame}
-
-
-\begin{frame}
     \frametitle{Local Attestation}
     \begin{itemize}
         \visible<1->{\item Enclaves can communicate to each other}

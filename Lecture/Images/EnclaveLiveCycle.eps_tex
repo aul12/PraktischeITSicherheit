@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'EnclaveLiveCycle.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{707.65374612bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.57158882)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength]{EnclaveLiveCycle.eps}}%
+    \put(0.13492708,0.50978243){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright Non-existing\end{minipage}}}%
+    \put(0.68963143,0.50668432){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18547202\unitlength}\raggedright Uninitialized\end{minipage}}}%
+    \put(0.68282109,0.09805683){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright Ready to use\end{minipage}}}%
+    \put(0.17995649,0.09589023){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27404441\unitlength}\raggedright In use\end{minipage}}}%
+    \put(0.43569064,0.53499312){\color[rgb]{0.66666667,0.36078431,0.36078431}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright ECREATE\end{minipage}}}%
+    \put(0.43218323,0.29820447){\color[rgb]{0.66666667,0.36078431,0.36078431}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EREMOVE\end{minipage}}}%
+    \put(0.73442989,0.30251618){\color[rgb]{0.66666667,0.36078431,0.36078431}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EINIT\end{minipage}}}%
+    \put(0.92196992,0.45793857){\color[rgb]{0.66666667,0.36078431,0.36078431}\makebox(0,0)[lt]{\begin{minipage}{0.14534951\unitlength}\centering EADD\\ EEXTEND\end{minipage}}}%
+    \put(0.44272335,0.17902852){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EENTER\end{minipage}}}%
+    \put(0.45648197,0.01021075){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright EEXIT\end{minipage}}}%
+    \put(-0.04284926,0.20125982){\color[rgb]{0.4627451,0.75294118,0.32941176}\makebox(0,0)[lt]{\begin{minipage}{0.14534951\unitlength}\centering EGETKEY\\ EREPORT\end{minipage}}}%
+    \put(0.49323847,-0.07970938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.62946644\unitlength}\raggedright \end{minipage}}}%
+    \put(0.04539442,0.32509206){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright User mode\end{minipage}}}%
+    \put(0.04502182,0.27702074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.34259213\unitlength}\raggedright Kernel mode\end{minipage}}}%
+  \end{picture}%
+\endgroup%

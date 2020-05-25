@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="432.28339mm"
-   height="249.73505mm"
-   viewBox="0 0 432.28338 249.73505"
+   width="433.34171mm"
+   height="249.74844mm"
+   viewBox="0 0 433.3417 249.74845"
    version="1.1"
    id="svg1021"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -256,9 +256,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="596.98737"
-     inkscape:cy="400.28734"
+     inkscape:zoom="0.5"
+     inkscape:cx="1541.3001"
+     inkscape:cy="335.07766"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -276,8 +276,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid1568"
-       originx="27.537237"
-       originy="-73.02992" />
+       originx="28.595577"
+       originy="-73.01653" />
   </sodipodi:namedview>
   <metadata
      id="metadata1018">
@@ -295,12 +295,12 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(39.141694,-10.75)" />
+     transform="translate(40.200034,-10.75)" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Ebene 2"
-     transform="translate(39.141694,-10.75)">
+     transform="translate(40.200034,-10.75)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot8598"
@@ -312,7 +312,7 @@
            x="-476"
            y="686.51971" /></flowRegion><flowPara
          id="flowPara8604" /></flowRoot>    <rect
-       style="fill:#548dc0;fill-opacity:1;stroke:#050505;stroke-width:0.97321212;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       style="fill:#548dc0;fill-opacity:1;stroke:#050505;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
        id="rect4559"
        width="228.94054"
        height="164.45352"
@@ -321,7 +321,7 @@
        inkscape:transform-center-x="-249.20823"
        inkscape:transform-center-y="-82.1937" />
     <rect
-       style="fill:#7188ca;fill-opacity:1;stroke:#050505;stroke-width:0.98106891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       style="fill:#7188ca;fill-opacity:1;stroke:#050505;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
        id="rect8552"
        width="146.68443"
        height="248.70833"
@@ -347,7 +347,7 @@
            x="-69.700523"
            y="61.859512"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara1636">\tiny Traditional IA Page Table Checks</flowPara></flowRoot>    <path
+         id="flowPara1636">\tiny Traditional Adress Translation</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:1.05598783;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 178.09294,31.273401 142.80393,54.55899 178.09294,77.844544 213.382,54.55899 Z"
        id="path1570"
@@ -620,7 +620,7 @@
            x="486.89352"
            y="305.30627"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara2110-3">\tiny Linaer Address</flowPara></flowRoot>    <flowRoot
+         id="flowPara2110-3">\tiny Linear Address</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot2102-6-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"

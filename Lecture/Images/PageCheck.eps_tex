@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1225.37022868bp}%
+    \setlength{\unitlength}{1228.37018832bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,31 +50,31 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.57771141)%
+  \begin{picture}(1,0.57633143)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength]{PageCheck.eps}}%
-    \put(-1.01058315,-0.98554486){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.85129341\unitlength}\raggedright \end{minipage}}}%
-    \put(0.10836688,0.4969229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18523484\unitlength}\centering \tiny Traditional IA Page Table Checks\end{minipage}}}%
-    \put(0.45297801,0.51044242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09750706\unitlength}\centering \tiny CPU in Enclave-Mode?\end{minipage}}}%
-    \put(0.29479928,0.5238867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11429937\unitlength}\centering \tiny Physical Address\end{minipage}}}%
-    \put(0.73099057,0.49452885){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10399365\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
-    \put(0.41549965,0.42123815){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12795248\unitlength}\centering \tiny Yes\end{minipage}}}%
-    \put(0.69677379,0.08538807){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17207675\unitlength}\centering \tiny Allow Memory Access\end{minipage}}}%
-    \put(0.56022224,0.49872338){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08755653\unitlength}\centering \tiny No\end{minipage}}}%
-    \put(0.69729441,0.29480053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17138551\unitlength}\centering \tiny Replace Address With Abort Page\end{minipage}}}%
-    \put(0.45441415,0.0854037){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09567088\unitlength}\centering \tiny Check Pass? \end{minipage}}}%
-    \put(0.19733746,0.20078307){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07913902\unitlength}\centering \tiny Signal Fault\end{minipage}}}%
-    \put(0.45489011,0.20709175){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09471954\unitlength}\centering \tiny Check EPCM\end{minipage}}}%
-    \put(-0.00961607,0.5238867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10757963\unitlength}\centering \tiny Linaer Address\end{minipage}}}%
-    \put(0.08728049,0.3656203){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25122364\unitlength}\centering \footnotesize Enclave Access\end{minipage}}}%
-    \put(0.68741854,0.56211071){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28364485\unitlength}\centering \footnotesize Non-Enclave Access\end{minipage}}}%
-    \put(0.84109646,0.49872338){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08755653\unitlength}\centering \tiny No\end{minipage}}}%
-    \put(0.3554787,0.08935195){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08755653\unitlength}\centering \tiny No\end{minipage}}}%
-    \put(0.53769397,0.08935195){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12795248\unitlength}\centering \tiny Yes\end{minipage}}}%
-    \put(0.3554787,0.33227019){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08755653\unitlength}\centering \tiny No\end{minipage}}}%
-    \put(0.41549965,0.25454426){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12795248\unitlength}\centering \tiny Yes\end{minipage}}}%
-    \put(0.69626241,0.42041249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12795248\unitlength}\centering \tiny Yes\end{minipage}}}%
-    \put(0.4504282,0.32797903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10399365\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
+    \put(-1.0056728,-0.98310702){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.84921436\unitlength}\raggedright \end{minipage}}}%
+    \put(0.1105445,0.49574022){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18478246\unitlength}\centering \tiny Traditional Adress Translation\end{minipage}}}%
+    \put(0.45431401,0.50922672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09726892\unitlength}\centering \tiny CPU in Enclave-Mode?\end{minipage}}}%
+    \put(0.29652159,0.52263817){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11402022\unitlength}\centering \tiny Physical Address\end{minipage}}}%
+    \put(0.7316476,0.49335202){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10373968\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
+    \put(0.41692718,0.4202403){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12763999\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.69751439,0.08521045){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1716565\unitlength}\centering \tiny Allow Memory Access\end{minipage}}}%
+    \put(0.56129632,0.4975363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08734269\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.69803373,0.29411147){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17096695\unitlength}\centering \tiny Replace Address With Abort Page\end{minipage}}}%
+    \put(0.45574664,0.08522604){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09543723\unitlength}\centering \tiny Check Pass? \end{minipage}}}%
+    \put(0.1992978,0.20032363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07894575\unitlength}\centering \tiny Signal Fault\end{minipage}}}%
+    \put(0.45622144,0.2066169){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09448821\unitlength}\centering \tiny Check EPCM\end{minipage}}}%
+    \put(-0.00715031,0.52263817){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1073169\unitlength}\centering \tiny Linear Address\end{minipage}}}%
+    \put(0.0895096,0.36475829){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25061009\unitlength}\centering \footnotesize Enclave Access\end{minipage}}}%
+    \put(0.68818198,0.56076882){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28295212\unitlength}\centering \footnotesize Non-Enclave Access\end{minipage}}}%
+    \put(0.84148458,0.4975363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08734269\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.35705281,0.08916465){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08734269\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.53882307,0.08916465){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12763999\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.35705281,0.33148962){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08734269\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.41692718,0.25395352){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12763999\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.69700426,0.41941666){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12763999\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.45177043,0.32720894){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10373968\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
   \end{picture}%
 \endgroup%

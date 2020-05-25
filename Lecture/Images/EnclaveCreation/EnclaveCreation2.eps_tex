@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'Enclave.eps' (pdf, eps, ps)
+%% Accompanies image file 'EnclaveCreation2.eps' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{324.13649431bp}%
+    \setlength{\unitlength}{891.79546206bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.61197213)%
+  \begin{picture}(1,0.51960094)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength]{Enclave.eps}}%
-    \put(0.13518108,-1.02071981){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.70340736\unitlength}\raggedright \end{minipage}}}%
-    \put(0.39149823,0.48429124){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.47508713\unitlength}\raggedright encrypt(\dots)\end{minipage}}}%
-    \put(0.3894508,0.2457099){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.79416274\unitlength}\raggedright read\_password(\dots)\end{minipage}}}%
-    \put(0.38801914,0.05569755){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\begin{minipage}{0.780921\unitlength}\raggedright \Large ...\end{minipage}}}}%
-    \put(0.29969437,0.58543892){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.50801823\unitlength}\raggedright \large Enclave\end{minipage}}}%
-    \put(0.39176939,0.36500116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.511082\unitlength}\raggedright decrypt(\dots)\\ \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength]{EnclaveCreation2.eps}}%
+    \put(0.54354896,0.79273793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09506607\unitlength}\raggedright \end{minipage}}}%
+    \put(0.54647433,0.58520839){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18590321\unitlength}\raggedright \end{minipage}}}%
+    \put(0.17443338,0.03009854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright System memory\end{minipage}}}%
+    \put(0.40570782,0.01958052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright PRM\end{minipage}}}%
+    \put(0.54835613,0.01117046){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright EPC\end{minipage}}}%
+    \put(-0.01496651,0.50814259){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25655987\unitlength}\centering App\end{minipage}}}%
+    \put(0.03199667,0.41961997){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19794242\unitlength}\raggedright Enclave Code\end{minipage}}}%
+    \put(0.91075197,0.37053033){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright CPU\end{minipage}}}%
+    \put(0.59668622,0.45218608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28654072\unitlength}\raggedright OS\end{minipage}}}%
+    \put(0.24274961,0.51412552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.42465195\unitlength}\raggedright 1. Request enclave creation\end{minipage}}}%
+    \put(0.66631997,0.51221465){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31712408\unitlength}\raggedright 2. ECREATE\end{minipage}}}%
   \end{picture}%
 \endgroup%

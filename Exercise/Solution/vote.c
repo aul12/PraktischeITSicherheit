@@ -28,12 +28,12 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	if ((fd_ea = pipe_open(port_enc_to_app, RB_MODE_RD)) < 0) {
+	if ((fd_ea = pipe_open(port_enc_to_app)) < 0) {
 		perror("Error in pipe_open");
 		exit(1);
 	}
 
-	if ((fd_ae = pipe_open(port_app_to_enc, RB_MODE_WR)) < 0) {
+	if ((fd_ae = pipe_open(port_app_to_enc)) < 0) {
 		perror("Error in pipe_open");
 		exit(1);
 	}

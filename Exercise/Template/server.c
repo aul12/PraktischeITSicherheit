@@ -14,5 +14,5 @@
 void enclave_main()
 {
 	// Your code here
-	return 0;
+	sgx_exit(NULL);
 }

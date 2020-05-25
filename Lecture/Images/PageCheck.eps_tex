@@ -66,7 +66,7 @@
     \put(0.45441415,0.0854037){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09567088\unitlength}\centering \tiny Check Pass? \end{minipage}}}%
     \put(0.19733746,0.20078307){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07913902\unitlength}\centering \tiny Signal Fault\end{minipage}}}%
     \put(0.45489011,0.20709175){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09471954\unitlength}\centering \tiny Check EPCM\end{minipage}}}%
-    \put(-0.00961607,0.5238867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10757963\unitlength}\centering \tiny Linaer Address\end{minipage}}}%
+    \put(-0.00961607,0.5238867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10757963\unitlength}\centering \tiny Linear Address\end{minipage}}}%
     \put(0.08728049,0.3656203){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25122364\unitlength}\centering \footnotesize Enclave Access\end{minipage}}}%
     \put(0.68741854,0.56211071){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28364485\unitlength}\centering \footnotesize Non-Enclave Access\end{minipage}}}%
     \put(0.84109646,0.49872338){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08755653\unitlength}\centering \tiny No\end{minipage}}}%

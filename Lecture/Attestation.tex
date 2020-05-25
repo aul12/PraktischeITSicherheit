@@ -19,7 +19,7 @@
         \begin{column}{0.4\textwidth}
             \begin{enumerate}[<+->]
                 \item Enclave A receives the enclave Measure (MRENCLAVE) from enclave B via an established channel
-                \item Enclave A generates the report for B with MRENCLAVE and sends the report back so B can verify with EGETKEY the report
+                
                 \item Enclave B generates the report for A with the MRENCLAVE from A and sends it back to get verified from A
             \end{enumerate}
         \end{column}
@@ -34,12 +34,12 @@
     \begin{columns}
         \begin{column}{0.4\textwidth}
             \begin{enumerate}[<+->]
-                \item Application receives an attestation request from Challenger
+                \item 
                 \item Report is requested from application
                 \item Application receives report
                 \item Report is send to quoting enclave (QE)
                 \item QE converts local report to remote report (Quote) and sends back
-                \item Challenger receives quote
+                \item Challegner receives quote
                 \item Attestation verification service verifies quote
             \end{enumerate}
         \end{column}
@@ -56,7 +56,7 @@
         \item Process of encrypting enclave secrets for persistent storage is called sealing
         \item The data can be signed with different keys
         \item Enclave retrieves the seal Key using the EGETKEY instruction, which returns a cryptographical key
-        \item Enclaves can seal data with MRSIGNER as key, so no other enclave is able to read data
+        \item Enclaves can seal data with MRSIGNER as key, so no toher enclave is able to read data
         \item Other key is MRSIGNER, so every enclave with same author can read each others data
     \end{itemize}
 \end{frame}

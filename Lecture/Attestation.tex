@@ -68,11 +68,12 @@
 \begin{frame}
     \frametitle{Sealing}
     \begin{itemize}[<+->]
-        \item Secrets of an enclave gets lost when enclave is closed
-        \item Process of encrypting enclave secrets for persistent storage is called sealing
-        \item The data can be signed with different keys
-        \item Enclave retrieves the sealing key using the EGETKEY instruction, which returns a cryptographic key
-        \item Enclaves can seal data with MRENCLAVE as key, so no other enclave is able to read data
-        \item Other key is MRSIGNER, so every enclave with same author can read each others data
+        \item Mechanism for persistently storing (enclave) secrets
+        \item Cryptographic is derived from enclave signature
+        \item Key derivation can use
+        \begin{itemize}
+            \item MRENCLAVE $\Rightarrow$ only identical enclaves can use the sealed data
+            \item Enclave IDs and / or author's ID $\Rightarrow$ less strict access (e.g. enclaves by same author)
+        \end{itemize}
     \end{itemize}
 \end{frame}

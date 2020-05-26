@@ -23,7 +23,7 @@
     \end{itemize}
     $ $ \newline
     \centering
-    \visible<4>{\incfig[0.4\textwidth]{Enclave}}
+    \incfig[0.4\textwidth]{Enclave}
 \end{frame}
 
 %Quellen unten anpassen
@@ -197,88 +197,3 @@
 \incfuck[0.9\textwidth]{EnclaveCall}{6}{}{Enclave Call Step by Step}
 \incfuck[0.9\textwidth]{EnclaveCall}{7}{}{Enclave Call Step by Step}
 \incfuck[0.9\textwidth]{EnclaveCall}{8}{}{Enclave Call Step by Step}
-
-\begin{frame}
-    \frametitle{Local Attestation}
-    \begin{itemize}
-        \visible<1->{\item Enclaves can communicate to each other}
-        \visible<2->{\item Local attestation is a proof, that the other enclave exists and is trustable}
-        \visible<3>{\item A channel must have been established between the two enclaves}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Local Attestation}
-    \begin{enumerate}
-        \visible<1->{\item The first enclave can ask the hardware to generate a credential, named report, and send it to the other enclave}
-        \visible<2->{\item The second can verify, that this resport is generated on the same platform and can now trust this enclave}
-        \visible<3>{\item The second enclave has also to proof the report of the first enclave}
-    \end{enumerate}
-\end{frame}
-
-%vielleicht mit Bild als erklärung leichter????????
-
-\begin{frame}
-    \frametitle{Remote Attestation}
-    \begin{itemize}
-        \visible<1->{\item Remote attestation is an exchange of a ``quote``}
-        \visible<2->{\item Remote attestation needs an extra architectural enclave, called ``quoting enclave``}
-        \visible<3->{\item This extra enclave is an architectural enclave, called ``quoting enclave``}
-        \visible<4->{\item The quoting enclave verifies and transforms the enclave report into a quote}
-        \visible<5->{\item A quote is signed by the quoting enclave by the Provisioning Key}
-        \visible<6>{\item This quote is remotely verifiable}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Remote Attestation}
-    \begin{enumerate}
-        \visible<1->{\item An attestation request is send from a server to the application}
-        \visible<2->{\item The application sends a report request to the application enclave}
-        \visible<3->{\item The application enclave returns the generated report}
-        \visible<4->{\item The application receives the report and forwards it to the quoting enclave to be signed}
-        \visible<5->{\item The quoting enclave generates from the report a quote and the quote is send back to the application}
-        \visible<6->{\item The application sends the quote to the server for verification}
-        \visible<7->{\item The server validates the quote signature and the server sends the data to the attestation service}
-    \end{enumerate}
-\end{frame}
-
-%vielleicht mit Bild als erklärung leichter????????
-
-\begin{frame}
-    \frametitle{Sealing}
-    \begin{itemize}
-        \visible<1->{\item Process of encrypting enclave secrets for persistent sorage is calles sealing}
-        \visible<2->{\item Different ways of sealing}
-        \visible<3->{\item Enclave retrieves the seal Key using the EGETKEY instruction, which returns a cryptographical key}
-        \visible<4>{\item Key is used to encrypt and ensure data integrity}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Sealing - Different ways}
-    \begin{itemize}
-        \visible<1->{\item Enclave Identity}
-        \visible<2->{\begin{itemize}
-            \item Two distinct enclaves have different keys
-            \item Sealed data will not be available to different versions of the same enclave
-            \item Sealed data will only be available to identical enclave instantiations
-        \end{itemize}}
-        \visible<3->{\item Signer Identity}
-        \visible<4->{\begin{itemize}
-            \item Two distinct enclaves have different keys
-            \item Two versions of an enclave share the same key
-            \item multiple enclaves which are using the same key can all read each others data
-        \end{itemize}}
-        \visible<5->{\item Security Version Number (SVN)}
-        \visible<6>{\begin{itemize}
-            \item SVN is a counter which is incremented after each update
-            \item Older versions of an enclave are not available to read data from a newer version
-            \item keys are derived that an enclave can retrieve the keys corresponding to current or older security level
-        \end{itemize}}
-    \end{itemize}
-
-    
-
-\end{frame}
-

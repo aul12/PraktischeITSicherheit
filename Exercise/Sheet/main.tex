@@ -163,15 +163,19 @@
     which is in the root directory as well. This library is automatically
     compiled and linked to both the server and the vote application.
 
-    Now you have all the prerequisites to start writing the E-Voting application,
-    keep some things in mind:
+    Now you have all the prerequisites to start writing the E-Voting application.
+    Implement the server application so that 5 different people (identified by the numbers 0 to 4) can vote for one
+    of two parties.
+    After implementing the server implement the vote application which prompts the user for his identifier and vote
+    and sends the values to the server.
+
+    After implementing both parts test the voting procedure, some things to consider are: 
     \begin{itemize}
         \item The vote application should only know the vote of the user
         \item The server application should not leak any information about the voting process, neither direct nor indirect
-        \item Implement a simple authentication mechanism using an ID for each user
         \item Think about how and when to retrieve the result
         \item Think about how you can avoid side channel attacks, i.e. through timing measuremnts
-        \item What is the problem of using named pipes?
+        \item What is the problem of using named pipes (you do not have to solve the problem)?
     \end{itemize}
 
     \section{Attestation}

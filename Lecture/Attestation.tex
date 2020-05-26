@@ -45,23 +45,19 @@
 
 \begin{frame}
     \frametitle{Remote Attestation}
-    \begin{columns}
-        \begin{column}{0.4\textwidth}
-            \begin{enumerate}[<+->]
-                \item Application receives an attestation request from challenger
-                \item Application requests report
-                \item Application receives report
-                \item Report is send to quoting enclave (QE)
-                \item QE converts local report to remote report (Quote) and sends back
-                \item Challenger receives quote
-                \item Attestation verification service verifies quote
-            \end{enumerate}
-        \end{column}
-        \begin{column}{0.6\textwidth}
-            \includegraphics[scale=0.4]{Images/remote_attestation.png}
-        \end{column}
-    \end{columns}
+    \begin{enumerate}[<+->]
+        \item A shared secret has to be known by the CPU and Intel
+        \item A Quoting Enclave (QE) performs local attestation of enclave
+        \item The Report is signed by the QE using the shared secret
+        \item Challenger can verify authenticity of quote through Intel
+    \end{enumerate}
 \end{frame}
+
+\incfuck[0.85\textwidth]{RemoteAttestation}{1}{}{Remote Attestation}
+\incfuck[0.85\textwidth]{RemoteAttestation}{2}{}{Remote Attestation}
+\incfuck[0.85\textwidth]{RemoteAttestation}{3}{}{Remote Attestation}
+\incfuck[0.85\textwidth]{RemoteAttestation}{4}{}{Remote Attestation}
+\incfuck[0.85\textwidth]{RemoteAttestation}{5}{}{Remote Attestation}
 
 \section{Sealing}
 

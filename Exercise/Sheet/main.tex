@@ -120,11 +120,11 @@
     \footnote{\url{https://cadmus.eui.eu/bitstream/handle/1814/44926/EUDO_REPORT_2016_11.pdf?sequence=1}}:
     \begin{itemize}
         \item \textbf{Authorization}: the system must guarantee that only users that are eligble to vote can vote and that they only vote once
-        \item \textbf{Anonymity}: no one should see who voted for which party, only the distribution of votes should be visible
+        \item \textbf{Confidentiality}: no one should see who voted for which party, only the distribution of votes should be visible
         \item \textbf{Attestation}: a user should be able to check and verify that the correct code is used for counting votes
     \end{itemize}
 
-    In the exercise we will focus on the anonymity and attestation aspect of E-Voting and we will demonstrate a 
+    In the exercise we will focus on the confidentiality and attestation aspect of E-Voting and we will demonstrate a 
     solution using SGX. The program you will develop consists of two components:
     \begin{itemize}
         \item The \textbf{server} application running inside the enclave which counts the votes and guarantees 

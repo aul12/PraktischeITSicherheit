@@ -1,0 +1,73 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'LocalAttestation4.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{680.47439215bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.47758532)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength]{LocalAttestation4.eps}}%
+    \put(0.02231754,0.40492066){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25428689\unitlength}\raggedright Enclave A\end{minipage}}}%
+    \put(0.85454487,0.0954741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25428689\unitlength}\raggedright Enclave B\end{minipage}}}%
+    \put(0.05467948,0.09576112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25428689\unitlength}\raggedright CPU\end{minipage}}}%
+    \put(0.73658914,0.13782582){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25428689\unitlength}\raggedright SECS\end{minipage}}}%
+    \put(0.27475639,0.39096164){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15141727\unitlength}\raggedright \end{minipage}}}%
+    \put(0.46889433,0.1150669){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MAC\end{tabular}}}}%
+    \put(0.46071582,0.41934409){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Report\end{tabular}}}}%
+    \put(0.19815888,0.36367568){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.25428689\unitlength}\raggedright SECS\end{minipage}}}%
+    \put(0.06262669,0.29517365){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\begin{minipage}{0.35003602\unitlength}\raggedright \footnotesize EREPORT\end{minipage}}}}%
+    \put(0.41390583,0.36400107){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize MRENCLAVE A\end{tabular}}}}%
+    \put(0.41640305,0.34074275){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize A's Author ID\end{tabular}}}}%
+    \put(0.41577158,0.32409747){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\dots\end{tabular}}}}%
+    \put(0.41390583,0.2787958){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize MAC\end{tabular}}}}%
+    \put(0.55724287,0.10834475){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize MRENCLAVE B\end{tabular}}}}%
+    \put(0.23914742,0.12634143){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.44244345\unitlength}\raggedright \footnotesize CPU's secret\end{minipage}}}%
+  \end{picture}%
+\endgroup%

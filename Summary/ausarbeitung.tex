@@ -1,0 +1,82 @@
+%pdflatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vorlage für Seminararbeiten im Institut für Verteilte Systeme
+% 
+% HINWEISE
+% 
+%  1. Bei Nutzung für Seminarausarbeitungen darf insbesondere die Schriftart
+%     und -größe nicht angepasst werden.
+%  2. Die Vorlage unterstützt deutsche und englische Ausarbeitungen durch
+%     Anpassung der Klassenoptionen.
+%  3. Folgende Angaben sollen angepasst werden:
+%     - Titel der Arbeit
+%     - Name und E-Mail-Adresse der Autorin/des Autors
+%     - Titel des Seminars
+%     - Semester
+%  4. Die Vorlage sieht eine Lizensierung unter CC-BY-SA vor, die jedoch
+%     nicht verpflichtend ist. Falls nicht gewünscht, bitte Copyright auf
+%     "retain" setzen.
+%     Die gewählte Lizenz (CC-BY-SA) ist kompatibel mit einer möglichen
+%     Veröffentlichung auf dem Volltextserver der Uni Ulm
+%     (http://vts.uni-ulm.de).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Template for seminar papers in the Institute of Distributed Systems
+% 
+% NOTES
+% 
+%  1. When used for seminar papers, the font type and size must not be changed.
+%  2. The template supports German and English versions by modifying the class
+%     options.
+%  3. The following information should be adjusted:
+%     - Title of the paper
+%     - Name and mail address of the author
+%     - Seminar title
+%     - Semester
+%  4. The template forsees licensing under CC-BY-SA, which however is not
+%     mandatory. If not desired, please set the copyright to "retain".
+%     The selected license (CC-BY-SA) is compatible with a possible
+%     publication on the full text server of the Ulm University
+%     (http://vts.uni-ulm.de).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Based on the 2017 ACM Master Article Template
+% \documentclass[vspaper,language=german]{acmart} % Deutsche Ausarbeitung
+\documentclass[vspaper,language=english]{acmart} % Englische Ausarbeitung
+\settopmatter{printfolios=true} % Adding Page numbers
+
+% \setcopyright{retain}
+% \setcopyright{cc-by}
+\setcopyright{cc-by-sa}
+
+%Seminar Akronym = KTT, PRIV, PASF, ATVS oder RTDS
+% \acmConference[Seminar Akr.]{Titel des Seminars}{WS/SS XXXX}{Institut für Verteilte Systeme, Universität Ulm}
+\acmConference[Seminar Acr.]{Seminar title}{WS/SS XXXX}{Institute of Distributed Systems, Ulm University}
+
+\begin{document}
+
+\title{Intel SGX Applicability and Security}
+
+\author{Tim Luchterhand, Björn Petersen, Paul Nykiel} 
+\email{tim.luchterhand@uni-ulm.de, bjoern.petersen@uni-ulm.de, paul.nykiel@uni-ulm.de}
+
+\begin{abstract}
+    \input{sections/0-abstract}
+\end{abstract}
+\hbadness=10000
+\maketitle
+\hbadness=1000
+
+\input{sections/1-introduction}
+\input{sections/2-exciting-topic}
+heyy
+
+\appendix
+\hbadness=10000
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\hbadness=1000
+\end{document}

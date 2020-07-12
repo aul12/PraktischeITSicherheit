@@ -9,3 +9,9 @@ At runtime, the host process can instantiate an enclave using special processor 
 Once instantiated, the host process can enter enclaves -- again using special instructions -- and access the contained secrets and code. When done, the enclave is exited,
 the host processes context is restored and the program execution is continued. Only when inside an enclave, the corresponding application secretes can be accessed and the
 Intel SGX implementation prevents even high level privilege entities from illegally accessing an enclave's content.
+\begin{figure}[h!]
+    \centering
+    \incfig[9.5cm]{AppOverview8}
+    \caption{@TODO fix scale}
+    \label{fig:enclaveCall}
+\end{figure}

@@ -56,6 +56,12 @@
 % \acmConference[Seminar Akr.]{Titel des Seminars}{WS/SS XXXX}{Institut für Verteilte Systeme, Universität Ulm}
 \acmConference[PSEC]{Praktische IT-Sicherheit}{SS 2020}{Institute of Distributed Systems, Ulm University}
 
+\usepackage{import}
+\newcommand{\incfig}[2][\columnwidth]{%
+    \def\svgwidth{#1}
+    \import{Images/}{#2.eps_tex}
+}
+
 \begin{document}
 
 \title{Intel SGX Applicability and Security}

@@ -5,14 +5,14 @@ encryption key etc. (the applications secrets) and in turn should be protected a
 user interface and therefore do not directly interact with the applications secrets. To ensure the integrity and confidentiality of said secrets, trusted functions are 
 placed in isolated execution environments which are referred to as \textit{enclaves} \cite{UseOfIntelSGX}. An application using Intel SGX consists of untrusted code and
 one or more enclaves. Enclave code is compiled separately and is dynamically loaded at runtime by the host process, similarly to dynamic libraries \cite{Costan2016IntelSE}.
-At runtime, the host process can instantiate an enclave using special processor instructions which ensure that enclaves are loaded correctly be the untrusted operating system.
-Once instantiated, the host process can enter enclaves -- again using special instructions -- and access the contained secrets and code. When done, the enclave is exited,
+At runtime, the host process can instantiate an enclave using special processor instructions which ensure that enclaves are loaded correctly be the untrusted operating system
+(OS). Once instantiated, the host process can enter enclaves -- again using special instructions -- and access the contained secrets and code. When done, the enclave is exited,
 the host processes context is restored and the program execution is continued. Only when inside an enclave, the corresponding application secretes can be accessed and the
 Intel SGX implementation prevents even high level privilege entities from illegally accessing an enclave's content.
 \begin{figure}[h!]
     \centering
     \incfig[9.5cm]{AppOverview8}
-    \caption{@TODO fix scale}
+    \caption{@TODO fix scale. Graphic inspired by \cite{IntelSGXExplanation}.}
     \label{fig:enclaveCall}
 \end{figure}
 
@@ -21,3 +21,20 @@ The SGX implementation stores sensitive data (enclave content, metadata) in an e
 Reserved Memory -- PRM). Direct access to the PRM is denied by the CPU, en- and decryption is preformed in hardware. The encryption keys are generated at boot time and
 never leave the CPU \cite{IntelSGXExplanation}. The PRM itself holds enclave data (Enclave Page Cache -- EPC) and metadata (e.g. Enclave Page Cache Map -- EPCM) used 
 to manage enclave creation, destruction and access.
+
+\subsubsection{Enclave Page Cache}
+The content of Intel SGX enclaves is stored in one or more Enclave Pages (EP) which reside inside the Enclave Page Cache (EPC) which itself is part of the EPC. An EP
+can only be owned by exactly one enclave. It follows that different enclaves cannot communicate over shared EPs, however they can used standard untrusted memory to
+do so \cite{Costan2016IntelSE}. Access between running enclaves and their corresponding EPs is managed by the Enclave Page Cache Map (EPCM). The EPCM also records
+the corresponding virtual addresses for each EP. This information is used to ensure that page and address mapping, which is still performed by the untrusted OS, 
+is according to the SGX specification. In particular the SGX implementation ensures that:
+\begin{enumerate}
+    \item Virtual addresses pointing to enclave code or data can only be mapped to EPs. This ensures that enclave content is always protected inside the PRM and not stored in
+          standard unencrypted memory.
+    \item EPs can only be mapped to one specific virtual address. This implies a one-to-one mapping between EPs and virtual addresses and guarantees that only virtual addresses
+          located within the address space of an enclave can access the enclave content.
+    \item EPs can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific EP.
+\end{enumerate}
+
+\subsubsection{Enclave Control Structure}
+Additional metadata of an enclave is stored in a special EP containing the SGX Enclave Control Structure (SECS).

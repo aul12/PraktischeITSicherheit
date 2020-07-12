@@ -9,18 +9,35 @@ The content of Intel SGX enclaves is stored in one or more Enclave Pages (EP) wh
 can only be owned by exactly one enclave. It follows that different enclaves cannot communicate over shared EPs, however they can used standard untrusted memory to
 do so \cite{Costan2016IntelSE}. Access between running enclaves and their corresponding EPs is managed by the Enclave Page Cache Map (EPCM). The EPCM also records
 the corresponding virtual addresses for each EP. This information is used to ensure that page and address mapping, which is still performed by the untrusted OS, 
-is according to the SGX specification. In particular the SGX implementation ensures that:
-\begin{enumerate}
-    \item Virtual addresses pointing to enclave code or data can only be mapped to EPs. This ensures that enclave content is always protected inside the PRM and not stored in
-          standard unencrypted memory.
-    \item EPs can only be mapped to one specific virtual address. This implies a one-to-one mapping between EPs and virtual addresses and guarantees that only virtual addresses
-          located within the address space of an enclave can access the enclave content.
-    \item EPs can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific EP.
-\end{enumerate}
+is according to the SGX specification (see \cref{sec:AddressTranslation}). 
 
 \subsubsection{Enclave Control Structure}
 Additional metadata of an enclave is stored in a special EP containing the SGX Enclave Control Structure (SECS). It contains among other a unique identifier, the
 state of the corresponding enclave (un- / initialized), the enclave's size and a cryptographic hash over the enclave content called the enclave measurement. The latter
 plays an important role during the creation of an enclave and is also used to derive cryptographic keys used for attestation and / or sealing. It is noteworthy that even
 though the SECS is part of an enclave, it can only be accessed by the Intel SGX implementation and not from trusted functions. Allowing access even by trusted code would
-pose the risk of corrupting the SGX memory layout or corruption of cryptographic secrets.
+pose the risk of corrupting the SGX memory layout or corruption of cryptographic secrets \cite{Costan2016IntelSE}.
+
+\subsubsection{Extended Address Translation and Page Mapping}
+\label{sec:AddressTranslation}
+Intel SGX adds on top of the standard address mapping between virtual and physical addresses performed by the OS \cite{Costan2016IntelSE}. Since the PRM is still part of the
+system memory address translation and page mapping can be delegated to the OS, minimizing the the amount of changes required to add SGX support to existing system software
+\cite{IntelSGXSSLab}. However, given that the OS itself is not trusted, additional checks have to be performed by the CPU to ensure the integrity and confidentiality of PRM
+data. In particular the SGX implementation uses metadata stored within the PRM (such as the EPCM) to ensure that:
+\begin{enumerate}
+    \item Virtual addresses pointing to enclave code or data can only be mapped to EPs. This ensures that enclave content is always protected inside the PRM and not mapped to
+          standard unencrypted memory.
+    \item EPs can only be mapped to one specific virtual address. This implies a one-to-one mapping between EPs and virtual addresses and guarantees that only virtual addresses
+          located within the address space of an enclave can access the enclave content.
+    \item EPs can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific EP.
+\end{enumerate}
+Further more, standard address translation is extended by subsequent checks: If code running within an untrusted context requests access to a memory page inside the EPC,
+the CPU loads a so called abort page signaling the application that the requested page does not exist \cite{Costan2016IntelSE}. If however an EP is requested from within a
+running enclave, the CPU checks whether the enclave owns the requested page using the EPCM. Only if the check succeeds the access is allowed.
+
+\begin{figure}[h!]
+    \centering
+    \incfig[8cm]{PageCheck}
+    \caption{Extended Checks on Address Translation (see \cite{IntelSGXExplanation})}
+    \label{fig:pageCheck}
+\end{figure}

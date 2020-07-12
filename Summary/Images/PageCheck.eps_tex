@@ -1,0 +1,79 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'PageCheck.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{966.2357072bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.73280514)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength]{PageCheck.eps}}%
+    \put(-1.48316489,-1.24981837){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.07960159\unitlength}\raggedright \end{minipage}}}%
+    \put(0.01696667,0.64118792){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15368136\unitlength}\centering \tiny Standard Adress Translation\end{minipage}}}%
+    \put(0.37290838,0.64582496){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12365745\unitlength}\centering \tiny CPU in Enclave-Mode?\end{minipage}}}%
+    \put(0.17230773,0.66442728){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14495329\unitlength}\centering \tiny Physical Address\end{minipage}}}%
+    \put(0.72548106,0.62719595){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13188369\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
+    \put(0.32537871,0.53424943){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16226802\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.68208769,0.10832781){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21822598\unitlength}\centering \tiny Allow Memory Access\end{minipage}}}%
+    \put(0.50891441,0.63251541){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11103829\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.68274793,0.37390254){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21734935\unitlength}\centering \tiny Replace Address With Abort Page\end{minipage}}}%
+    \put(0.37472968,0.10834762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12132883\unitlength}\centering \tiny Check Pass? \end{minipage}}}%
+    \put(0.04870766,0.25467056){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1003633\unitlength}\centering \tiny Signal Fault\end{minipage}}}%
+    \put(0.37533328,0.26267116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12012235\unitlength}\centering \tiny Check EPCM\end{minipage}}}%
+    \put(-0.00237719,0.46371544){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31859925\unitlength}\centering \footnotesize Enclave Access\end{minipage}}}%
+    \put(0.63684652,0.71290257){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.35971549\unitlength}\centering \footnotesize Non-Enclave Access\end{minipage}}}%
+    \put(0.86511622,0.63251541){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11103829\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.24926075,0.11335476){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11103829\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.48034429,0.11335476){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16226802\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.24926075,0.42142117){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11103829\unitlength}\centering \tiny No\end{minipage}}}%
+    \put(0.32537871,0.32284995){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16226802\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.68143917,0.53320234){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16226802\unitlength}\centering \tiny Yes\end{minipage}}}%
+    \put(0.36967474,0.41597917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.13188369\unitlength}\centering \tiny Address in EPC?\end{minipage}}}%
+  \end{picture}%
+\endgroup%

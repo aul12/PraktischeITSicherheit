@@ -15,3 +15,9 @@ Intel SGX implementation prevents even high level privilege entities from illega
     \caption{@TODO fix scale}
     \label{fig:enclaveCall}
 \end{figure}
+
+\subsection{Memory Layout of Intel SGX}
+The SGX implementation stores sensitive data (enclave content, metadata) in an encrypted part of the system memory which is reserved for the processor only (Processor
+Reserved Memory -- PRM). Direct access to the PRM is denied by the CPU, en- and decryption is preformed in hardware. The encryption keys are generated at boot time and
+never leave the CPU \cite{IntelSGXExplanation}. The PRM itself holds enclave data (Enclave Page Cache -- EPC) and metadata (e.g. Enclave Page Cache Map -- EPCM) used 
+to manage enclave creation, destruction and access.

@@ -13,7 +13,15 @@ enclave is visualized in \cref{fig:enclaveLifeCycle}.
 \subsubsection{Enclave Creation}
 To instantiate an Intel SGX enclave several steps have to be taken. The creation process of an enclave using instructions introduced in \cref{sec:Instructions} involves allocation
 of EP pages and thus cannot be initiated from user mode directly. Instead it is delegated to the (untrusted) OS. To ensure that the OS loads creates enclaves correctly and
-especially does not temper with an enclave's content, the SGX implementation observes this process using an enclave's signature.
+especially does not temper with an enclave's content, the SGX implementation observes this process using an enclave's signature. The creation process works as follows
+\cite{Costan2016IntelSE}:
+\begin{enumerate}
+    \item Using the ECREATE instruction a free EP is used to store the SECS of the to be created enclave. The SECS is marked as \textit{uninitialized}.
+    \item EADD is used to load the initial code and data into EPs.
+    \item Each page added with EADD is added to the enclave measurement using EEXTEND.
+    \item EINIT is used to finalize the enclave creation process. This includes comparing the enclave measurement against the expected measurement to make sure that the enclave's
+          content has been loaded correctly. The SECS is marked as \textit{initialized} and the enclave is now ready to use.
+\end{enumerate}
 
 \subsubsection{Calling an Enclave}
 

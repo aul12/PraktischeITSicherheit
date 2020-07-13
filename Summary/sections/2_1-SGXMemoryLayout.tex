@@ -13,10 +13,10 @@ is according to the SGX specification (see \cref{sec:AddressTranslation}).
 
 \subsubsection{Enclave Control Structure}
 Additional metadata of an enclave is stored in a special EP containing the SGX Enclave Control Structure (SECS). It contains among other a unique identifier, the
-state of the corresponding enclave (un- / initialized), the enclave's size and a cryptographic hash over the enclave content called the enclave measurement. The latter
-plays an important role during the creation of an enclave and is also used to derive cryptographic keys used for attestation and / or sealing. It is noteworthy that even
-though the SECS is part of an enclave, it can only be accessed by the Intel SGX implementation and not from trusted functions. Allowing access even by trusted code would
-pose the risk of corrupting the SGX memory layout or corruption of cryptographic secrets \cite{Costan2016IntelSE}.
+state of the corresponding enclave (un- / initialized), the enclave's size and a cryptographic hash over the enclave content called the \textit{enclave measurement} (see
+also \cref{sec:EnclaveSignature}). The latter plays an important role during the creation of an enclave and is also used to derive cryptographic keys used for attestation 
+and / or sealing. It is noteworthy that even though the SECS is part of an enclave, it can only be accessed by the Intel SGX implementation and not from trusted functions. 
+Allowing access even by trusted code would pose the risk of corrupting the SGX memory layout or corruption of cryptographic secrets \cite{Costan2016IntelSE}.
 
 \subsubsection{Extended Address Translation and Page Mapping}
 \label{sec:AddressTranslation}

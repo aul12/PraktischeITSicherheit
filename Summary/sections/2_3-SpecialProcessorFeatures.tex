@@ -10,7 +10,8 @@ to execute code that requires kernel level privileges. However, code running in 
 mechanisms of the OS can be applied \cite{Costan2016IntelSE}.
 
 \subsubsection{Special Instructions}
-Intel SGX introduces a set of new instructions which have to be supported by the processor. The following is an excerpt of the most important ones:
+\label{sec:Instructions}
+Intel SGX introduces a set of new instructions which have to be supported by the processor. The following is an excerpt of the most important ones \cite{OverviewOfIntelSGX}:
 \begin{enumerate}
     \item EENTER, EEXIT are used to enter or exit enclave mode respectively. Both can only be called from user mode and do not perform a privilege level switch as explained
           in \cref{sec:EnclaveMode}.

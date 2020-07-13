@@ -1,1 +1,18 @@
 \subsection{Enclave Creation}
+To instantiate an Intel SGX enclave several steps have to be taken. The creation process of an enclave using instructions introduced in \cref{sec:Instructions} involves allocation
+of EP pages and thus cannot be initiated from user mode directly. Instead it is delegated to the (untrusted) OS. To ensure that the OS loads creates enclaves correctly and
+especially does not temper with an enclave's content, the SGX implementation observes this process using an enclave's signature.
+
+\subsubsection{Enclave Signature}
+\label{sec:EnclaveSignature}
+Enclaves include a self-signed certificate from the enclave author, also known as the \textit{enclave signature}. It contains information that allows the Intel SGX architecture 
+to detect whether any portion of the enclave file has been tampered with. This allows an enclave to prove that it has been loaded in EPC correctly and it can be trusted (Quoted
+from \cite{IntelEnclaveSignature}). The signature contains among other information:
+\begin{itemize}
+    \item The \textit{enclave measurement} which is an SHA-2 hash \cite{Costan2016IntelSE} which identifies data and code of an enclave. During enclave creation the enclave
+          measurement is updated using the EEXTEND instruction. When the enclave is ready to be initialized, the hash is compared against the expected measurement specified
+          in the enclave's signature. A mismatch will prevent the enclave from executing \cite{IntelEnclaveSignature}.
+    \item The author's public key and signature
+    \item Different version numbers i.e. a product ID which can be used during attestation and a security version number which reflects the security property of the enclave.
+\end{itemize}
+The enclave signature is not only used to verify that the enclave has been loaded correctly (by comparing the enclave measurement) but also during attestation.

@@ -5,9 +5,9 @@ Intel processors supporting Intel SGX have an additional processor mode as well 
 \label{sec:EnclaveMode}
 When executing enclave code the processor is said to be in \textit{enclave mode} \cite{Costan2016IntelSE}. In order to access memory pages within the EPC, the processor has to
 be in enclave mode. While in enclave mode, untrusted memory can still be accessed. Untrusted application code on the other hand runs in \textit{untrusted mode} and can only
-access untrusted memory. Using special instructions the processor modes can be switched. This behaves similarly to syscall when switching from user mode to kernel mode in order
-to execute code that requires kernel level privileges. However, code running in enclave mode still (and always) runs at user level privileges to ensure that the standard security
-mechanisms of the OS can be applied \cite{Costan2016IntelSE}.
+access untrusted memory. Using special instructions the processor modes can be switched. This behaves similarly to a system call used to switch from user mode to kernel mode in 
+order to execute code that requires kernel level privileges. However, code running in enclave mode still (and always) runs at user level privileges to ensure that the standard 
+security mechanisms of the OS can be applied \cite{Costan2016IntelSE}.
 
 \subsubsection{Special Instructions}
 \label{sec:Instructions}

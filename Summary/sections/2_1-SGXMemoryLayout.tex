@@ -1,8 +1,8 @@
 \subsection{Memory Layout of Intel SGX}
-The SGX implementation stores sensitive data (enclave content, metadata) in an encrypted part of the system memory which is reserved for the processor only (Processor
-Reserved Memory -- PRM). Direct access to the PRM is denied by the CPU, en- and decryption is preformed in hardware. The encryption keys are generated at boot time and
-never leave the CPU \cite{IntelSGXExplanation}. The PRM itself holds enclave data (Enclave Page Cache -- EPC) and metadata (e.g. Enclave Page Cache Map -- EPCM) used 
-to manage enclave creation, destruction and access.
+Intel SGX stores sensitive data (enclave content, metadata) in an encrypted part of the system memory which is reserved for and can only be accessed by the SGX 
+implementation. This part of the system memory is referred to as Processor Reserved Memory -- PRM. Direct access to the PRM is denied by the CPU, en- and decryption 
+is preformed in hardware. The encryption keys are generated at boot time and never leave the CPU \cite{IntelSGXExplanation}. The PRM itself holds enclave data (Enclave 
+Page Cache -- EPC) and metadata (e.g. Enclave Page Cache Map -- EPCM) used to manage enclave creation, destruction and access.
 
 \subsubsection{Enclave Page Cache}
 The content of Intel SGX enclaves is stored in one or more Enclave Pages (EP) which reside inside the Enclave Page Cache (EPC) which itself is part of the EPC. An EP
@@ -20,9 +20,9 @@ Allowing access even by trusted code would pose the risk of corrupting the SGX m
 
 \subsubsection{Extended Address Translation and Page Mapping}
 \label{sec:AddressTranslation}
-Intel SGX adds on top of the standard address mapping between virtual and physical addresses performed by the OS \cite{Costan2016IntelSE}. Since the PRM is still part of the
-system memory address translation and page mapping can be delegated to the OS, minimizing the the amount of changes required to add SGX support to existing system software
-\cite{IntelSGXSSLab}. However, given that the OS itself is not trusted, additional checks have to be performed by the CPU to ensure the integrity and confidentiality of PRM
+Intel SGX adds  on top of the standard address mapping between virtual and physical addresses performed by the OS \cite{Costan2016IntelSE}. Since the PRM is still part of the 
+system memory, address translation and page mapping can be delegated to the OS, minimizing the the amount of changes required to add SGX support to existing system software 
+\cite{IntelSGXSSLab}. However, given that the OS itself is not trusted, additional checks have to be performed by the CPU to ensure the integrity and confidentiality of PRM 
 data. In particular the SGX implementation uses metadata stored within the PRM (such as the EPCM) to ensure that:
 \begin{enumerate}
     \item Virtual addresses pointing to enclave code or data can only be mapped to EPs. This ensures that enclave content is always protected inside the PRM and not mapped to
@@ -31,7 +31,7 @@ data. In particular the SGX implementation uses metadata stored within the PRM (
           located within the address space of an enclave can access the enclave content.
     \item EPs can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific EP.
 \end{enumerate}
-Further more, standard address translation is extended by subsequent checks: If code running within an untrusted context requests access to a memory page inside the EPC,
+Furthermore, standard address translation is extended by subsequent checks: If code running within an untrusted context requests access to a memory page inside the EPC,
 the CPU loads a so called abort page signaling the application that the requested page does not exist \cite{Costan2016IntelSE}. If however an EP is requested from within a
 running enclave, the CPU checks whether the enclave owns the requested page using the EPCM. Only if the check succeeds the access is allowed.
 

@@ -1,7 +1,7 @@
 \subsection{Enclave Life Cycle}
 The following section gives a brief overview about the different states of an enclave. Before an enclave can be used, it needs to be explicitly created (loaded) and initialized.
-Once completely initialized, using EENTER and EEXIT, the enclave can be called from untrusted code. Unused enclaves can also be destructed be using EREMOVE. The live cycle of an
-enclave is visualized in \cref{fig:enclaveLifeCycle}.
+Once completely initialized, using EENTER and EEXIT, the enclave code can be called from untrusted code. Unused enclaves can also be destructed be using EREMOVE. The live cycle 
+of an enclave is visualized in \cref{fig:enclaveLifeCycle}.
 
 \begin{figure}[h]
     \centering
@@ -24,7 +24,7 @@ especially does not temper with an enclave's content, the SGX implementation obs
 \end{enumerate}
 
 \subsubsection{Calling an Enclave}
-An initialized enclave can be entered using the EENTER instruction. As stated previously this can only be done from user mode. Similarly to a syscall the context of the current
+An initialized enclave can be entered using the EENTER instruction. As stated previously this can only be done from user mode. Similarly to a system call the context of the current
 process is saved (registers, instruction pointer, \dots). The processor then switches to enclave mode and executes the desired code inside the enclave. When done the host processes
 execution can be resumed by using EEXIT. This causes the processor to switch to normal mode and restore the hosts processes context. Apart from a synchronous entry and exit there
 exists also the possibility to exit an enclave asynchronously. This will happen when a hardware fault or interrupt occurs during execution of an enclave's code. The SGX

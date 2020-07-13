@@ -1,7 +1,7 @@
 \subsection{Enclave Signature}
 \label{sec:EnclaveSignature}
-Enclaves include a self-signed certificate from the enclave author, also known as the \textit{enclave signature}. It contains information that allows the Intel SGX architecture 
-to detect whether any portion of the enclave file has been tampered with. This allows an enclave to prove that it has been loaded in EPC correctly and it can be trusted (Quoted
+"Enclaves include a self-signed certificate from the enclave author, also known as the \textit{enclave signature}. It contains information that allows the Intel SGX architecture 
+to detect whether any portion of the enclave file has been tampered with. This allows an enclave to prove that it has been loaded in EPC correctly and it can be trusted" (Quoted
 from \cite{IntelEnclaveSignature}). The signature contains among other information:
 \begin{itemize}
     \item The \textit{enclave measurement} which is an SHA-2 hash \cite{Costan2016IntelSE} which identifies data and code of an enclave. During enclave creation the enclave

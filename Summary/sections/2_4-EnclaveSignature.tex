@@ -1,9 +1,4 @@
-\subsection{Enclave Creation}
-To instantiate an Intel SGX enclave several steps have to be taken. The creation process of an enclave using instructions introduced in \cref{sec:Instructions} involves allocation
-of EP pages and thus cannot be initiated from user mode directly. Instead it is delegated to the (untrusted) OS. To ensure that the OS loads creates enclaves correctly and
-especially does not temper with an enclave's content, the SGX implementation observes this process using an enclave's signature.
-
-\subsubsection{Enclave Signature}
+\subsection{Enclave Signature}
 \label{sec:EnclaveSignature}
 Enclaves include a self-signed certificate from the enclave author, also known as the \textit{enclave signature}. It contains information that allows the Intel SGX architecture 
 to detect whether any portion of the enclave file has been tampered with. This allows an enclave to prove that it has been loaded in EPC correctly and it can be trusted (Quoted

@@ -33,3 +33,5 @@ exception handler will return to an asynchronous exit handler in the enclave’s
 instruction from the exit handler. Further details of asynchronous enclave exits and recovering from said exits is described in \cite{Costan2016IntelSE}.
 
 \subsubsection{Enclave Destruction}
+The EREMOVE instruction is used by the OS to destroy unused enclaves by deallocating their respective EPs. An enclave is completely destroyed when the EP holding its SECS is freed
+\cite{Costan2016IntelSE}. The last step can only be performed after all other EPs have already been deallocated.

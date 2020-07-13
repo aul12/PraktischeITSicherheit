@@ -24,5 +24,12 @@ especially does not temper with an enclave's content, the SGX implementation obs
 \end{enumerate}
 
 \subsubsection{Calling an Enclave}
+An initialized enclave can be entered using the EENTER instruction. As stated previously this can only be done from user mode. Similarly to a syscall the context of the current
+process is saved (registers, instruction pointer, \dots). The processor then switches to enclave mode and executes the desired code inside the enclave. When done the host processes
+execution can be resumed by using EEXIT. This causes the processor to switch to normal mode and restore the hosts processes context. Apart from a synchronous entry and exit there
+exists also the possibility to exit an enclave asynchronously. This will happen when a hardware fault or interrupt occurs during execution of an enclave's code. The SGX
+implementation will then save the enclave code's execution context, restore the the state saved by EENTER and set up the processors registers so that the system software’s hardware 
+exception handler will return to an asynchronous exit handler in the enclave’s host process \cite{Costan2016IntelSE}. The enclave computation is resumed by using the ERESUME
+instruction from the exit handler. Further details of asynchronous enclave exits and recovering from said exits is described in \cite{Costan2016IntelSE}.
 
 \subsubsection{Enclave Destruction}

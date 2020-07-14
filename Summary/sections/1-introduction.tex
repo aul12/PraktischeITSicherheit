@@ -1,5 +1,17 @@
-\section{Introduction}
-\label{sec:introduction}
-Nowadays, outsourcing computation to remote entities is common practice, whether it be as part of an online service or in general as part of multi-party applications
-\cite{UseOfIntelSGX}. Along side the benefits of increased flexibility and scalability this also introduces the challenge of performing secure computations in untrusted
-and potentially malicious environments.
+\section{Introduction} \label{sec:introduction}
+Nowadays, outsourcing computation to remote entities is common practice, whether it be as part of an online service or 
+in general as part of multi-party applications \cite{UseOfIntelSGX}. 
+Alongside the benefits of increased flexibility and scalability this also introduces the challenge of performing secure 
+computations in an untrusted and potentially malicious environment. 
+This environment includes other software running on the same host but also the operating system and hypervisor running
+on the machine.
+It is difficult to guarantee the security of all data purely using software, especially when considering a potential 
+malicious, but more privileged, operating system or hypervisor.
+
+Intel SGX provides a hardware based solution to this problem: new features and instructions are added to the processor
+to be able to store data in special memory which can not be accessed by unauthorized parties, even if they are more
+privileged. Additionally Intel SGX provides the necessary instructions for attestation, so that it is possible to
+verify the integrity of the program handling the confidential data.
+
+This report will first explain how Intel SGX works by explaining the mechanisms implemented by Intel. In the next
+part there will be stuff.

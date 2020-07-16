@@ -2,12 +2,13 @@
 Once created, third parties cannot directly access an enclave. To still be able to identify and verify the software running in an enclave, Intel SGX provides an attestation process.
 Enclaves basically are identified by their signature which among other contains the enclave's measurement which is computed over its data and code. A third party requesting
 authentication can then verify the measurement reported by the trusted hardware (which is the processor) and compare it against some expected measurement \cite{Costan2016IntelSE}.
-Intel SGX supports two forms of attestation: local and remote attestation.
+Intel SGX supports two forms of attestation: local and remote attestation. The following sections give a brief overview of both attestation schemes. The reader is encouraged to
+further study the details presented in \cite{Costan2016IntelSE}.
 
 \subsection{Local Attestation}
 The local attestation process takes place between two enclaves on the same platform, where the attestation of the \textit{target} is requested by the \textit{challenger}. The 
 challenger asks the target to generate a report which can be used to uniquely identify the enclave and its contents. To do so, the target calls the EREPORT instruction. The report 
-generated this way contains data from the target enclave's SECS, specifically (excerpt):
+generated this way contains data from the target enclave's SECS, specifically (excerpt of \cite{EnclaveWritersGuide}):
 \begin{itemize}
     \item the target enclave's measurement
     \item the author's ID
@@ -21,3 +22,11 @@ called from the target, the instruction has access said measurement. Secondly, i
 has access to the processor's secret. And thirdly, only the challenger can verify the report because it is the only entity that can supply the required measurement to recompute the 
 MAC of the report. This process works due to the fact that the target has to specify the enclave to which the report is destined (in this case the challenger) when calling EREPORT.
 Only through EREPORT the target implicitly has access to the challenger's measurement which is used to compute the MAC the first time.
+
+\subsection{Remote Attestation}
+Intel SGX also supports attestation between different systems. For this process, both the SGX enabled processor on the target system and Intel have to share a secret. This means
+that Intel basically takes the role of a certificate authority. The remote attestation itself mostly relies on the local attestation process described above using an additional 
+\textit{quoting enclave} which takes the role of the challenger on the target system. The quoting enclave verifies the report received from the target enclave and signs it using 
+a cryptographic key derived from the shared secret embedded in the processor. This signed report (referred to as \textit{quote} \cite{EnclaveWritersGuide}) can then be provided 
+to the challenger system which in turn can verify the authenticity through Intel which has access to the shared secret of the target systems processor. If the quote is authentic, 
+the challenger system can analyze the measurement of the target enclave embedded in the quote to make sure, the target enclave is running the correct software.

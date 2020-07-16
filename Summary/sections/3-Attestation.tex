@@ -24,8 +24,8 @@ MAC of the report. This process works due to the fact that the target has to spe
 Only through EREPORT the target implicitly has access to the challenger's measurement which is used to compute the MAC the first time.
 
 \subsection{Remote Attestation}
-Intel SGX also supports attestation between different systems. For this process, both the SGX enabled processor on the target system and Intel have to share a secret. This means
-that Intel basically takes the role of a certificate authority. The remote attestation itself mostly relies on the local attestation process described above using an additional 
+Intel SGX also supports attestation between different systems. For this process, both the SGX enabled processor on the target system and Intel have to share a secret. This
+means that Intel takes the role of a certificate authority. The remote attestation itself mostly relies on the local attestation process described above using an additional 
 \textit{quoting enclave} which takes the role of the challenger on the target system. The quoting enclave verifies the report received from the target enclave and signs it using 
 a cryptographic key derived from the shared secret embedded in the processor. This signed report (referred to as \textit{quote} \cite{EnclaveWritersGuide}) can then be provided 
 to the challenger system which in turn can verify the authenticity through Intel which has access to the shared secret of the target systems processor. If the quote is authentic, 

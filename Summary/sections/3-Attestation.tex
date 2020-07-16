@@ -1,5 +1,5 @@
 \section{Software Attestation}
-Once created, third parties cannot directly access an enclave. To still be able to identify and verify the software running in an enclave, Intel SGX provides an attestation process.
+Once created, third parties cannot directly access an enclave. Intel SGX provides an attestation process, so that it can still identify and verify the software running in an enclave.
 Enclaves basically are identified by their signature which among other contains the enclave's measurement which is computed over its data and code. A third party requesting
 authentication can then verify the measurement reported by the trusted hardware (which is the processor) and compare it against some expected measurement \cite{Costan2016IntelSE}.
 Intel SGX supports two forms of attestation: local and remote attestation. The following sections give a brief overview of both attestation schemes. The reader is encouraged to

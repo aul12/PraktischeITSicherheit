@@ -1,6 +1,6 @@
 \section{Intel SGX}
 Intel SGX achieves its security guarantees by distinguishing between \textit{trusted} and \textit{untrusted} code \cite{IntelWebBasedTraining}. During development,
-the programmer has to specify which part of the software belongs to which category. The former are functions that manage and process security critical data e.g. passwords,
+the programmer has to specify which part of the software belongs to which category. The former are functions that manage and process security-critical data e.g. passwords,
 encryption keys etc. (the applications secrets) and in turn should be protected against unauthorized access. The latter are functions that perform security uncritical 
 tasks e.g. the user interface and therefore do not directly interact with the applications secrets. To ensure the integrity and confidentiality of said secrets, trusted 
 functions are placed in isolated execution environments which are referred to as \textit{enclaves} \cite{UseOfIntelSGX}. An application using Intel SGX consists of untrusted 

@@ -8,6 +8,7 @@ from \cite{IntelEnclaveSignature}). The signature contains among other informati
           measurement is updated using the EEXTEND instruction. When the enclave is ready to be initialized, the hash is compared against the expected measurement specified
           in the enclave's signature. A mismatch will prevent the enclave from executing \cite{IntelEnclaveSignature}.
     \item The author's public key and signature
-    \item Different version numbers i.e. a product ID which can be used during attestation and a security version number which reflects the security property of the enclave.
+    \item Different version numbers i.e. a product ID (which can be used during attestation and sealing) and a security version number which reflects the security property of the
+          enclave.
 \end{itemize}
-The enclave signature is not only used to verify that the enclave has been loaded correctly (by comparing the enclave measurement) but also during attestation.
+The enclave signature is not only used to verify that the enclave has been loaded correctly (by comparing the enclave measurement) but also during attestation and sealing.

@@ -1,0 +1,16 @@
+\section{Sealing}
+Once an enclave is destroyed, all contained secrets are gone as well. Intel SGX thus enables enclaves to seal data for persistent storage in a secure fashion. Very abstractly a
+secret unique to the platform (embedded in the processor) and an enclave's signature are used to derive the cryptographic material which is used to generate the encryption keys. 
+Intel distinguishes between two main different sealing policies (\cite{EnclaveWritersGuide}, \cite{IntelSealing}):
+\begin{enumerate}
+    \item Sealing to one particular enclave: Using an enclave's measurement for the key derivation, the sealed data can only be recovered by another enclave with an identical
+          measurement and thus identical structure. Even a different build or version of the same enclave will result in a different enclave measurement and prevent the enclave
+          from unsealing the data again.
+    \item Sealing to enclaves with the same signing identity: When requiring less strict access to the sealed data, instead of the enclave's measurement, other fields in its
+          signature are used to derive the sealing key. Included are the author's identity, the product ID and security version numbers. This enables enclaves by the same
+          author and the same product to share sealed secrets. It also means that when updating enclave code, the sealed data does not have to be unsealed by the old version
+          and resealed by the new version, providing greater flexibility to the developer.
+\end{enumerate}
+In both cases, the sealing key is obtained by the EGETKEY instruction which has access to the enclave's SECS and the secret stored inside the processor. The key derivation material
+is hereby fed to an AES-CMAC which provides a 128-bit symmetric key \cite{Costan2016IntelSE}. Since the key derivation process includes a secret embedded in the processor, it is
+impossible to reproduce the same key on a different platform even if the key derivation material is known.

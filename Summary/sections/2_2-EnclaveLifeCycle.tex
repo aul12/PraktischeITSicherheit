@@ -6,32 +6,32 @@ of an enclave is visualized in \cref{fig:enclaveLifeCycle}.
 \begin{figure}[h]
     \centering
     \incfig[8cm]{EnclaveLifeCycle}
-    \caption{Different states of an Intel SGX enclave \cite{Costan2016IntelSE}}
+    \caption{Different states of an Intel \ac{sgx} enclave \cite{Costan2016IntelSE}}
     \label{fig:enclaveLifeCycle}
 \end{figure}
 
 \subsubsection{Enclave Creation}
-To instantiate an Intel SGX enclave several steps have to be taken. The creation process of an enclave using instructions introduced in \cref{sec:Instructions} involves allocation
-of EP pages and thus cannot be initiated from user mode directly. Instead it is delegated to the (untrusted) OS. To ensure that the OS loads and creates enclaves correctly and
-especially does not temper with an enclave's content, the SGX implementation observes this process using an enclave's signature. The creation process works as follows
+To instantiate an Intel \ac{sgx} enclave several steps have to be taken. The creation process of an enclave using instructions introduced in \cref{sec:Instructions} involves allocation
+of \ac{ep} pages and thus cannot be initiated from user mode directly. Instead it is delegated to the (untrusted) \ac{os}. To ensure that the \ac{os} loads and creates enclaves correctly and
+especially does not temper with an enclave's content, the \ac{sgx} implementation observes this process using an enclave's signature. The creation process works as follows
 \cite{Costan2016IntelSE}:
 \begin{enumerate}
-    \item Using the ECREATE instruction a free EP is used to store the SECS of the enclave that is to be created. The SECS is marked as \textit{uninitialized}.
-    \item EADD is used to load the initial code and data into EPs.
+    \item Using the ECREATE instruction a free \ac{ep} is used to store the \ac{secs} of the enclave that is to be created. The \ac{secs} is marked as \textit{uninitialized}.
+    \item EADD is used to load the initial code and data into \acp{ep}.
     \item Each page that was added with EADD, is added to the enclave measurement using EEXTEND.
     \item EINIT is used to finalize the enclave creation process. This includes comparing the enclave measurement against the expected measurement to make sure that the enclave's
-          content has been loaded correctly. The SECS is marked as \textit{initialized} and the enclave is now ready to use.
+          content has been loaded correctly. The \ac{secs} is marked as \textit{initialized} and the enclave is now ready to use.
 \end{enumerate}
 
 \subsubsection{Calling an Enclave}
 An initialized enclave can be entered using the EENTER instruction. As stated previously, this can only be done from user mode. Similarly to a system call the context of the current
 process is saved (registers, instruction pointer, \dots). The processor then switches to enclave mode and executes the desired code inside the enclave. When done the host processes
 execution can be resumed by using EEXIT. This causes the processor to switch to normal mode and restore the host processes context. Apart from a synchronous entry and exit there
-exists also the possibility to exit an enclave asynchronously. This will happen when a hardware fault or interrupt occurs during execution of an enclave's code. The SGX
+exists also the possibility to exit an enclave asynchronously. This will happen when a hardware fault or interrupt occurs during execution of an enclave's code. The \ac{sgx}
 implementation will then save the enclave code's execution context, restore the state saved by EENTER and set up the processors registers so that the system software’s hardware 
 exception handler will return to an asynchronous exit handler in the enclave’s host process \cite{Costan2016IntelSE}. The enclave computation is resumed by using the ERESUME
 instruction from the exit handler. Further details of asynchronous enclave exits and recovering from said exits is described in \cite{Costan2016IntelSE}.
 
 \subsubsection{Enclave Destruction}
-The EREMOVE instruction is used by the OS to destroy unused enclaves by deallocating their respective EPs. An enclave is completely destroyed when the EP holding its SECS is freed
-\cite{Costan2016IntelSE}. The last step can only be performed after all other EPs have already been deallocated.
+The EREMOVE instruction is used by the \ac{os} to destroy unused enclaves by deallocating their respective \acp{ep}. An enclave is completely destroyed when the \ac{ep} holding its \ac{secs} is freed
+\cite{Costan2016IntelSE}. The last step can only be performed after all other \acp{ep} have already been deallocated.

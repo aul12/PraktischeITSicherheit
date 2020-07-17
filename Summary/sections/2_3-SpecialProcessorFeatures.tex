@@ -1,22 +1,22 @@
 \subsection{Special Processor Features}
-Intel processors supporting Intel SGX have an additional processor mode as well as new instructions which are used to create, tear down and communicate with enclaves.
+Intel processors supporting Intel \ac{sgx} have an additional processor mode as well as new instructions which are used to create, tear down and communicate with enclaves.
 
 \subsubsection{Enclave Mode}
 \label{sec:EnclaveMode}
-When executing enclave code the processor is said to be in \textit{enclave mode} \cite{Costan2016IntelSE}. In order to access memory pages within the EPC, the processor has to
+When executing enclave code the processor is said to be in \textit{enclave mode} \cite{Costan2016IntelSE}. In order to access memory pages within the \ac{epc}, the processor has to
 be in enclave mode. While in enclave mode, untrusted memory can still be accessed. Untrusted application code on the other hand runs in \textit{untrusted mode} and can only
 access untrusted memory. Using special instructions the processor modes can be switched. This behaves similarly to a system call used to switch from user mode to kernel mode in 
 order to execute code that requires kernel level privileges. However, code running in enclave mode still (and always) runs at user level privileges to ensure that the standard 
-security mechanisms of the OS can be applied \cite{Costan2016IntelSE}.
+security mechanisms of the \ac{os} can be applied \cite{Costan2016IntelSE}.
 
 \subsubsection{Special Instructions}
 \label{sec:Instructions}
-Intel SGX introduces a set of new instructions which have to be supported by the processor. The following is an excerpt of the most important ones \cite{OverviewOfIntelSGX}:
+Intel \ac{sgx} introduces a set of new instructions which have to be supported by the processor. The following is an excerpt of the most important ones \cite{OverviewOfIntelSGX}:
 \begin{enumerate}
     \item EENTER, EEXIT are used to enter or exit enclave mode respectively. Both can only be called from user mode and do not perform a privilege level switch as explained
           in \cref{sec:EnclaveMode}.
     \item ECREATE, EREMOVE, EINIT, EADD, EEXTEND are used during the creation or destruction of enclaves. They require kernel level privileges as they involve (de-)allocation
-          of memory pages to or from the EPC.
+          of memory pages to or from the \ac{epc}.
     \item EREPORT and EGETKEY are used to derive cryptographic signatures used during the attestation process. They need the processor to be in enclave mode and therefore
           require user level privileges.
 \end{enumerate}

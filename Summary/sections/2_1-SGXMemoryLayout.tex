@@ -1,39 +1,38 @@
-\subsection{Memory Layout of Intel SGX}
-Intel SGX stores sensitive data (enclave content, metadata) in an encrypted part of the system memory which is reserved for and can only be accessed by the SGX 
-implementation. This part of the system memory is referred to as Processor Reserved Memory -- PRM. Direct access to the PRM is denied by the CPU, en- and decryption 
-is preformed in hardware. The encryption keys are generated at boot time and never leave the CPU \cite{IntelSGXExplanation}. The PRM itself holds enclave data (Enclave 
-Page Cache -- EPC) and metadata (e.g. Enclave Page Cache Map -- EPCM) used to manage enclave creation, destruction and access.
+\subsection{Memory Layout of Intel \ac{sgx}}
+Intel \ac{sgx} stores sensitive data (enclave content, metadata) in an encrypted part of the system memory which is reserved for and can only be accessed by the \ac{sgx} 
+implementation. This part of the system memory is referred to as \ac{prm}. Direct access to the \ac{prm} is denied by the CPU, en- and decryption 
+is preformed in hardware. The encryption keys are generated at boot time and never leave the CPU \cite{IntelSGXExplanation}. The \ac{prm} itself holds enclave data (\ac{epc}) and metadata (e.g. \ac{epcm}) used to manage enclave creation, destruction and access.
 
 \subsubsection{Enclave Page Cache}
-The content of Intel SGX enclaves is stored in one or more Enclave Pages (EP) which reside inside the Enclave Page Cache (EPC) which itself is part of the EPC. An EP
-can only be owned by exactly one enclave. It follows that different enclaves cannot communicate over shared EPs, however they can used standard untrusted memory to
-do so \cite{Costan2016IntelSE}. Access between running enclaves and their corresponding EPs is managed by the Enclave Page Cache Map (EPCM). The EPCM also records
-the corresponding virtual addresses for each EP. This information is used to ensure that page and address mapping, which is still performed by the untrusted OS, 
-are according to the SGX specification (see \cref{sec:AddressTranslation}). 
+The content of Intel \ac{sgx} enclaves is stored in one or more \ac{ep} which reside inside the \ac{epc} which itself is part of the \ac{epc}. An \ac{ep}
+can only be owned by exactly one enclave. It follows that different enclaves cannot communicate over shared \acp{ep}, however they can used standard untrusted memory to
+do so \cite{Costan2016IntelSE}. Access between running enclaves and their corresponding \acp{ep} is managed by the \ac{epcm}. The \ac{epcm} also records
+the corresponding virtual addresses for each \ac{ep}. This information is used to ensure that page and address mapping, which is still performed by the untrusted \ac{os}, 
+are according to the \ac{sgx} specification (see \cref{sec:AddressTranslation}). 
 
 \subsubsection{Enclave Control Structure}
-Additional metadata of an enclave is stored in a special EP containing the SGX Enclave Control Structure (SECS). It contains for example a unique identifier, the
+Additional metadata of an enclave is stored in a special \ac{ep} containing the \ac{secs}. It contains for example a unique identifier, the
 state of the corresponding enclave (un- / initialized), the enclave's size and a cryptographic hash over the enclave content called the \textit{enclave measurement} (see
 also \cref{sec:EnclaveSignature}). The latter plays an important role during the creation of an enclave and is also used to derive cryptographic keys used for attestation 
-and / or sealing. It is noteworthy, that even though the SECS is part of an enclave, it can only be accessed by the Intel SGX implementation and not from trusted functions. 
-Allowing access even by trusted code would pose the risk of corrupting the SGX memory layout or exposure of cryptographic secrets \cite{Costan2016IntelSE}.
+and / or sealing. It is noteworthy, that even though the \ac{secs} is part of an enclave, it can only be accessed by the Intel \ac{sgx} implementation and not from trusted functions. 
+Allowing access even by trusted code would pose the risk of corrupting the \ac{sgx} memory layout or exposure of cryptographic secrets \cite{Costan2016IntelSE}.
 
 \subsubsection{Extended Address Translation and Page Mapping}
 \label{sec:AddressTranslation}
-Intel SGX adds  on top of the standard address mapping between virtual and physical addresses performed by the OS \cite{Costan2016IntelSE}. Since the PRM is still part of the 
-system memory, address translation and page mapping can be delegated to the OS, minimizing the the amount of changes required to add SGX support to existing system software 
-\cite{IntelSGXSSLab}. However, given that the OS itself is not trusted, additional checks have to be performed by the CPU to ensure the integrity and confidentiality of PRM 
-data. In particular, the SGX implementation uses metadata stored within the PRM (such as the EPCM) to ensure that:
+Intel \ac{sgx} adds  on top of the standard address mapping between virtual and physical addresses performed by the \ac{os} \cite{Costan2016IntelSE}. Since the \ac{prm} is still part of the 
+system memory, address translation and page mapping can be delegated to the \ac{os}, minimizing the the amount of changes required to add \ac{sgx} support to existing system software 
+\cite{IntelSGXSSLab}. However, given that the \ac{os} itself is not trusted, additional checks have to be performed by the CPU to ensure the integrity and confidentiality of \ac{prm} 
+data. In particular, the \ac{sgx} implementation uses metadata stored within the \ac{prm} (such as the \ac{epcm}) to ensure that:
 \begin{enumerate}
-    \item Virtual addresses pointing to enclave code or data can only be mapped to EPs. This ensures that enclave content is always protected inside the PRM and not mapped to
+    \item Virtual addresses pointing to enclave code or data can only be mapped to \acp{ep}. This ensures that enclave content is always protected inside the \ac{prm} and not mapped to
           standard unencrypted memory.
-    \item EPs can only be mapped to one specific virtual address. This implies a one-to-one mapping between EPs and virtual addresses and guarantees that only virtual addresses
+    \item \acp{ep} can only be mapped to one specific virtual address. This implies a one-to-one mapping between \acp{ep} and virtual addresses and guarantees that only virtual addresses
           located within the address space of an enclave can access the enclave content.
-    \item EPs can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific EP.
+    \item \acp{ep} can only be mapped to one specific virtual address and therefore no more than one enclave has access to a specific \ac{ep}.
 \end{enumerate}
-Furthermore, standard address translation is extended by subsequent checks: if code running within an untrusted context requests access to a memory page inside the EPC,
-the CPU loads a so called abort page signaling the application that the requested page does not exist \cite{Costan2016IntelSE}. If however an EP is requested from within a
-running enclave, the CPU checks whether the enclave owns the requested page using the EPCM. Only if the check succeeds, the access is allowed.
+Furthermore, standard address translation is extended by subsequent checks: if code running within an untrusted context requests access to a memory page inside the \ac{epc},
+the CPU loads a so called abort page signaling the application that the requested page does not exist \cite{Costan2016IntelSE}. If however an \ac{ep} is requested from within a
+running enclave, the CPU checks whether the enclave owns the requested page using the \ac{epcm}. Only if the check succeeds, the access is allowed.
 
 \begin{figure}[h!]
     \centering

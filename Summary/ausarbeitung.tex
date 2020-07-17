@@ -58,6 +58,8 @@
 
 \usepackage{import}
 \usepackage{cleveref}
+\usepackage[printonlyused]{acronym}
+
 \newcommand{\incfig}[2][\columnwidth]{%
     \def\svgwidth{#1}
     \import{Images/}{#2.eps_tex}
@@ -87,5 +89,7 @@
 \bibliographystyle{ACM-Reference-Format}
 \nocite{*}
 \bibliography{references}
+\section*{Acronyms}
+\footnotesize{\input{acronyms.tex}}
 \hbadness=1000
 \end{document}

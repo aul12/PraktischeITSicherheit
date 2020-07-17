@@ -1,18 +1,18 @@
 \section{Intel SGX}
-Intel SGX achieves its security guarantees by distinguishing between \textit{trusted} and \textit{untrusted} code \cite{IntelWebBasedTraining}. During development,
+Intel \ac{sgx} achieves its security guarantees by distinguishing between \textit{trusted} and \textit{untrusted} code \cite{IntelWebBasedTraining}. During development,
 the programmer has to specify which part of the software belongs to which category. The former are functions that manage and process security-critical data e.g. passwords,
 encryption keys etc. (the applications secrets) and in turn should be protected against unauthorized access. The latter are functions that perform security uncritical 
 tasks e.g. the user interface and therefore do not directly interact with the applications secrets. To ensure the integrity and confidentiality of said secrets, trusted 
-functions are placed in isolated execution environments which are referred to as \textit{enclaves} \cite{UseOfIntelSGX}. An application using Intel SGX consists of untrusted 
+functions are placed in isolated execution environments which are referred to as \textit{enclaves} \cite{UseOfIntelSGX}. An application using Intel \ac{sgx} consists of untrusted 
 code and one or more enclaves. Enclave code is compiled separately and is dynamically loaded at runtime by the host process, similarly to dynamic libraries \cite{Costan2016IntelSE}.
-At runtime, the host process can instantiate an enclave using special processor instructions which ensure that enclaves are loaded correctly by the untrusted operating system
-(OS). Once instantiated, the host process can enter enclaves -- again using special instructions -- and access the contained secrets and code. When done, the enclave is exited,
+At runtime, the host process can instantiate an enclave using special processor instructions which ensure that enclaves are loaded correctly by the untrusted \ac{os}. 
+Once instantiated, the host process can enter enclaves -- again using special instructions -- and access the contained secrets and code. When done, the enclave is exited,
 the host processes context is restored and the program execution is continued. Only when inside an enclave, the corresponding application secretes can be accessed and the
-Intel SGX implementation prevents even high level privilege entities from illegally accessing an enclave's content.
+Intel \ac{sgx} implementation prevents even high level privilege entities from illegally accessing an enclave's content.
 \begin{figure}[h!]
     \centering
     \incfig[8cm]{AppOverview}
-    \caption{Concept of Intel SGX. Graphic inspired by \cite{IntelSGXExplanation}.}
+    \caption{Concept of Intel \ac{sgx}. Graphic inspired by \cite{IntelSGXExplanation}.}
     \label{fig:enclaveCall}
 \end{figure}
 

@@ -13,5 +13,7 @@ in order to store data in special memory which can not be accessed by unauthoriz
 privileged. Additionally Intel \ac{sgx} provides the necessary instructions for attestation, so that it is possible to
 verify the integrity of the program handling the confidential data.
 
-This report will first explain how Intel \ac{sgx} works by explaining the mechanisms implemented by Intel. In the next
-part there will be stuff.
+This report first describes how Intel \ac{sgx} works by explaining the mechanisms implemented by Intel, such as a
+dedicated memory layout and new instructions. The next part explains local and remote attestation, two ways to
+verify the integrity of an enclave. The last part describes sealing which can be used to store the enclave data
+persistently.
